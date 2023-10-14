@@ -47,9 +47,10 @@ import specialProductBanner from '../../Images/specialProductBanner.png';
 import tNeLeft from '../../Images/t&eLeft.png';
 import tNeMiddleTop from '../../Images/t&eMiddleTop.png';
 import tNeMiddleBottom from '../../Images/t&eMiddleBottom.png';
-import tNeRight from '../../Images/t&eRight.png'; 
+import tNeRight from '../../Images/t&eRight.png';
 
 import followUs from '../../Images/followUs.png';
+import followUsInsta from '../../Images/followUsInsta.png';
 const Home = () => {
 
   //useState for animation activation
@@ -111,7 +112,7 @@ const Home = () => {
 
         {/*HERO-CAROUSEL */}
         <div className="w-full h-full lg:-z-10 outline-none">
-          <img src={MainBanner} alt="mainBanner" className=" h-screen w-screen"/>
+          <img src={MainBanner} alt="mainBanner" className=" h-screen w-screen" />
           {/* <HeroCarousal /> */}
         </div>
 
@@ -306,7 +307,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Popular Sub-Categories */}
         <div className="flex my-6 bg-white gap-2 px-12 flex-col">
           <p className="relative my-4 left-8 font-bold tracking-wide text-2xl">Popular Categories</p>
@@ -481,7 +482,7 @@ const Home = () => {
 
         {/*REVIEW-SLIDER*/}
         <div className="w-[85%] flex flex-col gap-4 text-center m-auto h-full mt-6">
-          <p className="capitalize text-3xl font-semibold tracking-wide">what our customers<br/> said about us</p>
+          <p className="capitalize text-3xl font-semibold tracking-wide">what our customers<br /> said about us</p>
           <p className="w-2/3 m-auto font-light capitalize">"Our customers' voices echo the love and trust they've found in our pet products, shaping our journey with heartfelt testimonials."</p>
           <div className="h-full w-full">
             <ReviewCarousel />
@@ -490,48 +491,49 @@ const Home = () => {
 
         {/* Special Product Banner */}
         <div className="my-4">
-          <img src={specialProductBanner} alt="productBanner" className="w-full"/>
+          <img src={specialProductBanner} alt="productBanner" className="w-full" />
         </div>
 
         {/* Toys & Entertainment */}
         <div className="h-full w-[90%] flex flex-col gap-4 py-12 m-auto">
           <div className="flex tracking-wider justify-between h-full w-full">
-            <p className="w-[32%] font-semibold h-full uppercase text-3xl">Toys & <br/>Entertainment</p>
-            <p className="w-[67%] text-right text-2xl">"A Tail-Wagging Wonderland: Explore Our Diverse Selection<br/> of Pet Products and Accessories for Your Furry Friends"</p>
+            <p className="w-[32%] font-semibold h-full uppercase text-3xl">Toys & <br />Entertainment</p>
+            <p className="w-[67%] text-right text-2xl">"A Tail-Wagging Wonderland: Explore Our Diverse Selection<br /> of Pet Products and Accessories for Your Furry Friends"</p>
           </div>
           <div className="h-full w-full flex justify-between items-center">
             <div className="w-[32.78%] h-full flex flex-col gap-2">
-               <button className="w-1/2 rounded-full bg-[#FF6969] tracking-wider text-xl text-white font-[500] py-5 my-6">SHOP NOW</button>
-               <img src={tNeLeft} alt="tNeLeftImage" className="rounded-lg w-full"/>
+              <button className="w-1/2 rounded-full bg-[#FF6969] tracking-wider text-xl text-white font-[500] py-5 my-6">SHOP NOW</button>
+              <img src={tNeLeft} alt="tNeLeftImage" className="rounded-lg w-full" />
             </div>
             <div className="w-[33.33%] h-full flex flex-col gap-2">
-              <img src={tNeMiddleTop} alt="tNeMiddleTopImage" className="rounded-lg w-full"/>
-              <img src={tNeMiddleBottom} alt="tNeMiddleBottomImage" className="rounded-lg w-full"/>
+              <img src={tNeMiddleTop} alt="tNeMiddleTopImage" className="rounded-lg w-full" />
+              <img src={tNeMiddleBottom} alt="tNeMiddleBottomImage" className="rounded-lg w-full" />
             </div>
             <div className="w-[32.67%] h-full flex flex-col">
-              <img src={tNeRight} alt="tNeRightImage" className="rounded-lg w-full"/>
+              <img src={tNeRight} alt="tNeRightImage" className="rounded-lg w-full" />
             </div>
           </div>
         </div>
 
         {/* Follow Us */}
-        <div className="relative w-full h-full">
-          <img src={followUs} alt="followUsImage" className="w-full"/>
-          <div className="w-2/3 flex flex-col gap-8 text-center absolute top-[20%] left-[20%] m-auto">
-            <p className="text-white font-semibold text-7xl tracking-wider">FOLLOW US</p>
-            <a href="https://www.instagram.com/gopawpi" target="_blank" className="text-white font-extrabold text-9xl tracking-widest">@gopawpi</a>
-          </div>
-          <div className="absolute flex items-center gap-12 bottom-[20%] px-12  left-0 w-full overflow-x-auto">
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
-            <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300"/>
+        <div className="w-full h-full relative">
+          <img src={followUsInsta} alt="followUsImage" className="w-full" />
+          <div className="w-[60%] absolute top-[15%] left-[3%]">
+            <div className="w-2/3 flex flex-col gap-8 text-center m-auto">
+              <p className="text-white drop-shadow-2xl font-semibold text-5xl tracking-wider">FOLLOW US</p>
+              <a href="https://www.instagram.com/gopawpi" target="_blank" className="text-white font-extrabold text-7xl drop-shadow-2xl tracking-widest">@gopawpi</a>
+            </div>
+            <div className="flex items-center gap-12 mx-4 pt-32 w-full flex-wrap">
+              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+             
+            </div>
           </div>
         </div>
 
@@ -544,7 +546,7 @@ const Home = () => {
           />
         </Link> */}
 
-        
+
 
         {/*PET-PROFILE-BANNER*/}
         {/* <Link to="petprofile" className="h-full w-full cursor-pointer">
@@ -560,7 +562,7 @@ const Home = () => {
           className="h-full w-full bg-center bg-cover bg-fixed "
           style={{ backgroundImage: `url(${BrandBG})` }}
         >
-          <Brands/>
+          <Brands />
         </div>
       </div>
     </>

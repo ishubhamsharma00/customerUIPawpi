@@ -111,7 +111,7 @@ export default function SignIn({ isOpen, setIsOpen }) {
                       className="h-14 -mt-4 w-14 opacity-50 hover:animate-spin " />
                   </Dialog.Title>
                   <div className="w-full flex py-4 gap-12 px-6 justify-around items-center">
-                    <div className='w-1/3 flex justify-center text-lg font-paw font-semibold py-2 bg-pawpi-purple rounded-lg text-white cursor-pointer hover:ring-pawpi-purple hover:ring-4 hover:duration-500'
+                    <div className='w-1/3 flex justify-center text-lg font-paw font-semibold py-2 bg-purple-500 rounded-lg text-white cursor-pointer hover:ring-purple-500 hover:ring-4 hover:duration-500'
                       onClick={LocationDetect}
                     >
                       Detect my location

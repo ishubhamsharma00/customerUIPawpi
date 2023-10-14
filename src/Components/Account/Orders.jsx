@@ -25,7 +25,7 @@ const OrderCardDetails = () => {
                         </span>
                     </div>
                 </div>
-                <div className='flex justify-between items-center bg-pawpi-purple rounded-md p-1 gap-2'>
+                <div className='flex justify-between items-center bg-purple-500 rounded-md p-1 gap-2'>
                     <p className='text-white px-2'>5</p>
                 </div>
             </div>
@@ -38,9 +38,9 @@ const Orders = () => {
         <>
             <div className='p-3 md:p-8'>
                 <div className='flex flex-col'>
-                    <div className='flex gap-5 text-pawpi-purple py-4 px-5 items-center cursor-pointer border rounded-t-md hover:bg-purple-100'>
+                    <div className='flex gap-5 text-purple-500 py-4 px-5 items-center cursor-pointer border rounded-t-md hover:bg-purple-100'>
                         <FaClipboardList className='text-xl' />
-                        <span className='font-paw text-pawpi-purple'>My Orders</span>
+                        <span className='font-paw text-purple-500'>My Orders</span>
                     </div>
                     <div className='h-[350px] flex flex-col gap-2 overflow-y-auto border-l border-b border-r p-2 rounded-b-md'>
                         <OrderCardDetails />

@@ -22,6 +22,10 @@ import TestingImage8 from '../../Images/DogsPage/toys.png';
 import {BsChevronDown, BsChevronUp} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
+import codIcon from '../../Images/codIcon.png';
+import exchangeIcon from '../../Images/exchangeIcon.png';
+import securePaymentIcon from '../../Images/securePaymentIcon.png';
+
 const HeroProductPage = () => {
 
     // useState for main-image and sub-images
@@ -180,13 +184,13 @@ const HeroProductPage = () => {
     ];
 
   return (
-    <div className='md:mt-24 pt-2 h-full w-full flex flex-col gap-4 bg-white md:px-6 px-2'>
+    <div className='md:mt-24 pt-2 h-full w-full flex flex-col gap-6 bg-white md:px-6 px-2'>
         {/* Path and Share option */}
         <div className='flex items-center justify-between'>
-            <div className='h-full font-paw max-w-[70%] md:max-w-[50%] truncate text-xs md:text-lg capitalize'>
+            <div className='h-full font-paw max-w-[70%] md:max-w-[50%] truncate text-xs md:text-lg capitalize pl-4'>
                 home/dog/Dog_Food/Dry_Food/Royal_Canin
             </div>
-            <div className='h-full flex font-paw items-center text-sm md:text-lg text-pawpi-purple cursor-pointer'>
+            <div className='h-full flex font-paw items-center text-sm md:text-lg text-purple-500 cursor-pointer'>
                 <RiShareForwardFill className='scale-125 mr-1'/> 
                 Share
             </div>
@@ -195,7 +199,7 @@ const HeroProductPage = () => {
         {/* Image and Product brief description */}
         <div className='lg:flex-row h-full w-full flex flex-col bg-white md:gap-6'>
             {/* Main and sub-images */}
-            <div className='h-full gap-1 pb-6 lg:pb-10 w-full lg:w-[40%] bg-white sticky top-16 md:top-24 lg:flex-col md:gap-6 flex flex-row-reverse px-2 md:px-0'>
+            <div className='h-full gap-1 pb-6 lg:pb-10 w-full lg:w-[40%] bg-white sticky top-16 md:top-24 lg:flex-col md:gap-6 flex flex-row-reverse px-2 md:px-4'>
                 {/* Main Image with veg/nonveg and wishlist icons */}
                 <div className='h-60 md:h-[440px] w-[80%] lg:w-full bg-[#F2F2F2] flex justify-center rounded-2xl'>
                     <div className='h-full w-full flex items-center'>
@@ -227,10 +231,10 @@ const HeroProductPage = () => {
             </div>
             
             {/* Brief description */}
-            <div className='flex flex-col gap-2 pl-2'>
-                <div className='uppercase font-paw text-sm md:text-lg'>Royal canin</div>
-                <div className='uppercase font-paw text-lg md:text-xl font-bold'>Royal Canin Starter mini 10 kg</div>
-                <div className='capitalize font-paw text-sm md:text-base'>High-quality,wholesome,balanced dog food</div>
+            <div className='flex lg:w-[55%] flex-col lg:gap-3 gap-1 pl-2'>
+                <div className='uppercase font-paw text-sm md:text-lg tracking-wider'>Royal canin</div>
+                <div className='uppercase font-paw text-lg md:text-xl font-bold tracking-wide'>Royal Canin Starter mini 10 kg</div>
+                <div className='capitalize font-paw text-sm md:text-base tracking-wide'>High-quality,wholesome,balanced dog food</div>
                 <div className='flex gap-2 items-center justify-start'>
                     <div className='flex'>
                         <AiFillStar className="text-yellow-300 text-lg md:text-3xl" />
@@ -239,16 +243,16 @@ const HeroProductPage = () => {
                         <AiFillStar className="text-yellow-300 text-lg md:text-3xl" />
                         <AiFillStar className="text-yellow-300 text-lg md:text-3xl" />
                     </div>
-                    <div className='border-r-2 font-paw text-lg border-black pr-2'>4.9</div>
-                    <div className='font-paw text-base md:text-lg'>435 Reviews</div>
+                    <div className='border-r-2 font-paw text-lg border-black font-light pr-2'>4.9</div>
+                    <div className='font-paw text-base md:text-lg font-light'>435 Reviews</div>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <div className='font-paw flex items-center border-r-2 border-black pr-2 text-xl'>
-                        <div className='flex text-3xl text-pawpi-purple'>
+                        <div className='flex text-3xl items-center text-purple-500'>
                             <BiRupee />
-                            <p>150</p>
+                            <p className='text-purple-500'>150</p>
                         </div>
-                        <div className='flex text-xl font-semibold line-through text-gray-500'>
+                        <div className='flex text-xl font-semibold items-center line-through text-gray-500'>
                             <BiRupee/>
                             <p>166</p>
                         </div>
@@ -256,19 +260,19 @@ const HeroProductPage = () => {
                     <div className='text-green-500 font-paw text-base md:text-xl'>10% OFF</div>
                     <div className='md:text-sm text-xs font-paw'>(Inclusive of all taxes)</div>
                 </div>
-                <div className='flex text-sm font-paw md:text-base gap-2 border-b-2 pb-1 border-black'>
+                <div className='flex text-sm font-paw md:text-base gap-2 border-b-2 pb-1 border-gray-400'>
                     <div className='uppercase'>Seller:</div>
-                    <div>XYZ Suppliers</div>
+                    <div className='font-light'>XYZ Suppliers</div>
                 </div>
                 
                 {/* Sizes of product */}
-                <div className='flex flex-wrap md:gap-4 gap-2 pt-2 font-paw text-base md:text-lg w-full items-center'>
-                    <span className='font-paw'>Sizes:</span>
+                <div className='flex flex-wrap md:gap-4 gap-2 font-paw text-base md:text-lg w-full pt-2 items-center'>
+                    <span className='font-paw font-semibold'>Sizes:</span>
                     {SizesAvailable.map((data)=>(
                     <div className='flex gap-2 text-sm md:text-lg items-center'>
                         <div 
-                            className={`flex items-center justify-center cursor-pointer w-16 md:w-20 border rounded-md
-                            ${selectedOption === `${data}` ? 'text-white bg-pawpi-purple border-white' : 'text-pawpi-purple bg-white border-pawpi-purple'}`}
+                            className={`flex border-purple-500 font-semibold items-center justify-center cursor-pointer w-16 md:w-20 border-2 rounded-md
+                            ${selectedOption === `${data}` ? 'text-white bg-purple-500' : 'text-purple-700 bg-white'}`}
                             onClick={() => handleOptionClick(`${data}`)}
                             >
                             <span>{data}</span>
@@ -278,41 +282,41 @@ const HeroProductPage = () => {
                 </div>
                 
                 {/* Quantity selection */}
-                <div className='flex h-full gap-4 my-1 items-center'>
-                    <div className='md:text-xl text-lg font-paw'>Quantity:</div>
-                    <div className='flex h-8 items-center w-1/4 font-paw text-lg border-2 border-black rounded-md bg-gray-200'>
-                        <FaMinus className='w-1/3 h-6 cursor-pointer flex text-green-500 bg-gray-300 items-center justify-center border-black' onClick={decreaseQuantity}/>
-                        <p className='w-1/3 text-xl flex items-center justify-center border-black p-2'>{quantity}</p>
-                        <FaPlus className='w-1/3 flex cursor-pointer h-6 text-green-500 bg-gray-300 items-center justify-center border-black' onClick={increaseQuantity}/>
+                <div className='flex h-full gap-4 my-1 items-center border-b-2 pt-2 pb-4 border-gray-400'>
+                    <div className='md:text-xl text-lg font-paw font-semibold'>Quantity:</div>
+                    <div className='flex drop-shadow-md h-14 items-center w-1/3 font-paw text-lg border border-gray-400 rounded-md bg-gray-50'>
+                        <FaMinus className='w-1/3 h-3/4 cursor-pointer flex text-amber-300 items-center justify-center' onClick={decreaseQuantity}/>
+                        <p className='w-1/3 text-3xl font-semibold flex items-center justify-center border-black p-2'>{quantity}</p>
+                        <FaPlus className='w-1/3 flex cursor-pointer h-3/4 text-amber-300 items-center justify-center' onClick={increaseQuantity}/>
                     </div>
                 </div>
 
-                <div className='flex gap-3 w-full text-base md:text-xl font-semibold my-1'>
-                    <button className={`border-2 py-2 w-1/2 font-paw rounded-md md:rounded-sm uppercase border-pawpi-purple ${isAddedToCart==='Add To Cart'?'text-pawpi-purple':'text-white bg-pawpi-purple'}`} onClick={handleCart}>{isAddedToCart}</button>
-                    <Link to={'/auth/checkout'} className='border-2 py-2 border-pawpi-purple font-paw uppercase text-center lg:animate-pulse rounded-md md:rounded-sm w-1/2 text-pawpi-purple'>BUY NOW</Link>
+                <div className='flex gap-3 w-full text-base md:text-xl font-semibold my-3'>
+                    <button className={`shadow-xl border-2 py-2 w-1/2 font-paw rounded-md md:rounded-sm uppercase border-purple-400 ${isAddedToCart==='Add To Cart'?'text-purple-500':'text-white bg-purple-300'}`} onClick={handleCart}>{isAddedToCart}</button>
+                    <Link to={'/auth/checkout'} className='shadow-xl font-semibold tracking-widest text-white border-2 py-2 bg-green-500 font-paw uppercase text-center lg:animate-pulse rounded-md md:rounded-sm w-1/2 text-white-500'>BUY NOW</Link>
                 </div>
 
                 {/* Offers Section */}
                 <div className='flex gap-2 font-paw text-xs md:text-base flex-col w-full items-start'>
                     {Offers.map((data)=>(
-                        <div className='flex py-1 items-center justify-center border-2 w-full rounded-lg bg-green-100 border-green-400'>{data}</div>
+                        <div className='flex py-2 items-center justify-center border font-light tracking-wide w-full rounded-lg bg-green-100 border-green-400'>{data}</div>
                     ))}
                 </div>
 
                 {/* Delivery & Services section */}
-                <div className='flex flex-col font-paw w-full my-2'> 
-                    <div className='font-paw text-lg'>Delivery & Services</div>
-                    <div className='flex md:gap-2 gap-1 bg-purple-100 rounded-md w-full md:w-2/3 md:p-2 items-center justify-between'>
-                        <IoLocationSharp className='md:h-8 md:w-8 h-6 w-6 text-pawpi-purple m-auto'/>
+                <div className='flex flex-col font-paw w-full gap-2 my-2'> 
+                    <div className='font-paw text-lg font-semibold'>Delivery & Services</div>
+                    <div className='flex md:gap-2 shadow-xl gap-1 bg-white rounded-xl w-full md:w-2/3 md:p-4 border border-gray-400 items-center justify-between'>
+                        <IoLocationSharp className='md:h-8 md:w-8 h-6 w-6 text-green-500 m-auto'/>
                         <div className='m-auto w-1/2'>
                             <input type='search'
                             placeholder='Enter Delivery Pincode'
-                            className='bg-purple-100 outline-none md:text-xl text-base placeholder:text-base md:placeholder:text-xl text-black'
+                            className='bg-white outline-none md:text-xl text-base placeholder:text-base md:placeholder:text-xl text-black'
                             value={isPinCode}
                             onChange={(e)=>setIsPinCode(e.target.value)}
                             />
                         </div>
-                        <button className='text-pawpi-purple text-lg m-auto w-1/4'onClick={()=>setPinCodeDisplay(true)}>Check</button>
+                        <button className='text-green-500 font-semibold text-lg m-auto w-1/4'onClick={()=>setPinCodeDisplay(true)}>Check</button>
                     </div>
                     {pinCodeDisplay && 
                     <div>
@@ -332,11 +336,24 @@ const HeroProductPage = () => {
                             </>
                         ):
                         (
-                            <div>invalid pincode</div>
+                            <div className='text-gray-400 uppercase'>invalid pincode</div>
                         )}
                     </div>}
                 </div>
-                <div>small banner of cod,exchange payment details</div>
+                <div className='p-4 rounded-md border-2 border-[#F97B22] flex items-center justify-around'>
+                    <div className='flex flex-col items-center justify-center '>
+                        <img src={codIcon} alt='codIcon' className='rounded-full border-2 border-[#F97B22] p-2'/>
+                        <p className='text-sm mt-1 font-light'>COD Available</p>
+                    </div>
+                    <div className='flex flex-col items-center justify-center '>
+                        <img src={exchangeIcon} alt='exchangeIcon' className='rounded-full border-2 border-[#F97B22] p-2'/>
+                        <p className='text-sm mt-1 font-light'>No Exchange & Returns</p>
+                    </div>
+                    <div className='flex flex-col items-center justify-center '>
+                        <img src={securePaymentIcon} alt='securePaymentIcon' className='rounded-full border-2 border-[#F97B22] p-2'/>
+                        <p className='text-sm mt-1 font-light'>Secure Payments</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -353,7 +370,7 @@ const HeroProductPage = () => {
         <div className='flex flex-col gap-4 w-full'>
             {/* Point-wise product-description */}
             <div className='bg-white w-full'>
-                <div className='px-4 md:px-8 sticky top-16 md:top-24 lg:top-0 font-paw font-semibold bg-gray-200 rounded-lg text-lg justify-between md:text-3xl pt-4 pb-1 capitalize flex items-center shadow-sm z-10 active:text-pawpi-purple ' 
+                <div className='px-4 md:px-8 sticky top-16 md:top-24 lg:top-0 font-paw font-semibold bg-gray-200 rounded-lg text-lg justify-between md:text-3xl pt-4 pb-1 capitalize flex items-center shadow-sm z-10 active:text-purple-500 ' 
                     onClick={handleisOpenProductDescription}>
                     <p>Product Description</p>
                     {isOpenProductDescription?(<BsChevronUp/>):(<BsChevronDown/>)}
@@ -399,7 +416,7 @@ const HeroProductPage = () => {
 
             {/* Additional info */}
             <div className='flex flex-col font-paw'>
-                <div className='px-4 md:px-8 sticky top-16 md:top-24 lg:top-0 font-paw font-semibold bg-gray-200 rounded-lg text-lg justify-between md:text-3xl pt-4 pb-1 capitalize flex items-center shadow-sm z-10 active:text-pawpi-purple ' 
+                <div className='px-4 md:px-8 sticky top-16 md:top-24 lg:top-0 font-paw font-semibold bg-gray-200 rounded-lg text-lg justify-between md:text-3xl pt-4 pb-1 capitalize flex items-center shadow-sm z-10 active:text-purple-500 ' 
                     onClick={handleisOpenAdditionalInfo}>
                     <p>Additional Information</p>
                     {isOpenAdditionalInfo?(<BsChevronUp/>):(<BsChevronDown/>)}                
@@ -460,7 +477,7 @@ const HeroProductPage = () => {
                 
                 <div className='sticky top-[119px] md:top-36 lg:top-12 py-2 md:py-4 flex items-center justify-around w-full bg-white'>
                     {SortingButtons.map((data)=>(
-                        <button className={`lg:w-[15%] w-[23%] py-1 md:p-2 text-sm md:text-lg rounded-2xl ${isSelected===`${data}`?'bg-pawpi-purple text-white':'bg-gray-200'}`}
+                        <button className={`lg:w-[15%] w-[23%] py-1 md:p-2 text-sm md:text-lg rounded-2xl ${isSelected===`${data}`?'bg-purple-500 text-white':'bg-gray-200'}`}
                             onClick={()=>handleisSelected(`${data}`)}>{data}
                         </button>
                     ))}   

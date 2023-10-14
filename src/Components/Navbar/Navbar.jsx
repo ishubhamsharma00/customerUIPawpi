@@ -93,7 +93,7 @@ const NavSm = ({ login, cart }) => {
                 </>
               ) : (
                 <>
-                  <div className="flex items-center justify-center w-full h-full bg-pawpi-purple font-paw text-white text-xl rounded-md " onClick={login}>
+                  <div className="flex items-center justify-center w-full h-full bg-purple-500 font-paw text-white text-xl rounded-md " onClick={login}>
                     <h1 >
                       {/* <CgProfile /> */}
                     </h1>
@@ -184,8 +184,8 @@ const NavMd = ({ login, cart }) => {
                           <>
                             <div className="absolute shadow-lg top-8 right-0 w-32 z-10 bg-white flex flex-col gap-2 border-2 rounded-lg font-paw">
                               <div className='flex flex-col gap-2 items-center py-4'>
-                                <Link to={"/user/profile"} className='text-md hover:bg-pawpi-purple px-4 hover:text-white rounded-md py-1'>My Profile</Link>
-                                <button className='hover:bg-pawpi-purple px-4 hover:text-white rounded-md py-1'>Sign Out</button>
+                                <Link to={"/user/profile"} className='text-md hover:bg-purple-500 px-4 hover:text-white rounded-md py-1'>My Profile</Link>
+                                <button className='hover:bg-purple-500 px-4 hover:text-white rounded-md py-1'>Sign Out</button>
                               </div>
                             </div>
                           </>
@@ -196,7 +196,7 @@ const NavMd = ({ login, cart }) => {
                 </>
               ) : (
                 <>
-                  <div className="flex items-center justify-center w-full h-full bg-pawpi-purple font-paw text-white text-3xl rounded-md" onClick={login}>
+                  <div className="flex items-center justify-center w-full h-full bg-purple-500 font-paw text-white text-3xl rounded-md" onClick={login}>
                     <h1>
                       {/* <CgProfile /> */}
                     </h1>
@@ -383,7 +383,7 @@ const NavLg = ({ location, login, cart }) => {
                         isDropDownOpen && (
                           <>
                             <div className="absolute shadow-lg top-10 right-0 w-40 z-20 bg-white flex flex-col gap-3 p-2 border-2 rounded-lg font-paw">
-                              <Link to={"/user/profile"} className='text-lg hover:text-pawpi-purple  hover:border-white border-blue-100 rounded-xl pl-1'>My Profile</Link>
+                              <Link to={"/user/profile"} className='text-lg hover:text-purple-500  hover:border-white border-blue-100 rounded-xl pl-1'>My Profile</Link>
                               <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white  hover:border-white border-blue-100 rounded-xl px-2'>My Profile</Link>
                               <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1'>My Profile</Link>
                               <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1'>My Profile</Link>
@@ -445,7 +445,7 @@ const NavLg = ({ location, login, cart }) => {
 
           <div className="flex items-center justify-around h-full w-1/4">
             <div className="flex items-center justify-center h-full w-1/3">
-              <div className='flex gap-1 justify-center cursor-pointer outline-none hover:text-pawpi-purple items-center' onClick={location}>
+              <div className='flex gap-1 justify-center cursor-pointer outline-none hover:text-purple-500 items-center' onClick={location}>
                 <span className="font-paw text-2xl">
                   Jaipur
                 </span>
@@ -469,7 +469,7 @@ const NavLg = ({ location, login, cart }) => {
                           isDropDownOpen && (
                             <>
                               <div className="absolute shadow-lg top-10 right-0 w-40 z-20 bg-white flex flex-col gap-3 p-2 border-2 rounded-lg font-paw">
-                                <Link to={"/user/profile"} className='text-lg hover:text-pawpi-purple  hover:border-white border-blue-100 rounded-xl pl-1'>My Profile</Link>
+                                <Link to={"/user/profile"} className='text-lg hover:text-purple-500  hover:border-white border-blue-100 rounded-xl pl-1'>My Profile</Link>
                                 <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white  hover:border-white border-blue-100 rounded-xl px-2'>My Profile</Link>
                                 <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1'>My Profile</Link>
                                 <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1'>My Profile</Link>

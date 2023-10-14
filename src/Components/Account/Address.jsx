@@ -10,9 +10,9 @@ const Address = () => {
     <>
         <AddressPopUp isOpen={openAddressPopUp} setIsOpen={setOpenAddressPopUp} />
         <div className='p-3 md:p-8'>
-            <div className='flex gap-5 text-pawpi-purple py-4 px-5 items-center cursor-pointer border rounded-t-md hover:bg-purple-100' onClick={openAddressPopUpModel}>
+            <div className='flex gap-5 text-purple-500 py-4 px-5 items-center cursor-pointer border rounded-t-md hover:bg-purple-100' onClick={openAddressPopUpModel}>
                 <IoMdAddCircleOutline className='text-xl' />
-                <span className='font-paw text-pawpi-purple'>Add New Address</span>
+                <span className='font-paw text-purple-500'>Add New Address</span>
             </div>
             <div className='border-l border-b border-r flex gap-5 py-4 px-5 items-start cursor-text'>
                 <GrLocation className='text-xl'/>

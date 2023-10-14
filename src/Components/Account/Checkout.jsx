@@ -31,7 +31,7 @@ const CartProduct = () => {
                         </span>
                     </div>
                 </div>
-                <div className='flex justify-between items-center bg-pawpi-purple rounded-md p-1 gap-2'>
+                <div className='flex justify-between items-center bg-purple-500 rounded-md p-1 gap-2'>
                     <p className='text-white px-3'>5</p>
                 </div>
             </div>
@@ -62,7 +62,7 @@ const Checkout = (products) => {
             <div className='flex flex-col lg:flex-row-reverse gap-5 lg:gap-10 w-full px-2 md:px-5 lg:px-0 lg:w-1/2 '>
                 <div className='w-full lg:w-2/5 flex flex-col gap-2'>
                     <div>
-                        <h1 className='text-xl font-semibold text-pawpi-purple font-paw'>My Items</h1>
+                        <h1 className='text-xl font-semibold text-purple-500 font-paw'>My Items</h1>
                     </div>
                     <div className='h-[300px] border rounded-md flex flex-col gap-2 overflow-y-auto p-2'>
                         <CartProduct />
@@ -76,12 +76,12 @@ const Checkout = (products) => {
                         <div className='flex flex-col gap-2 border-t'>
                             <div className='flex justify-between py-2'>
                                 <h1 className='py-1 text-lg font-semibold font-paw'>Coupon</h1>
-                                <h1 className='py-1 text-md text-pawpi-purple font-semibold font-paw cursor-pointer'>VIEW ALL</h1>
+                                <h1 className='py-1 text-md text-purple-500 font-semibold font-paw cursor-pointer'>VIEW ALL</h1>
 
                             </div>
                             <div className='flex gap-6 justify-between'>
-                                <input className='outline-none border-2 border-pawpi-purple rounded-md pl-4' type="text" name="" id="" placeholder='Add Coupon' />
-                                <span className='text-center px-5 py-2 text-white rounded-md bg-pawpi-purple cursor-pointer'>Apply</span>
+                                <input className='outline-none border-2 border-purple-500 rounded-md pl-4' type="text" name="" id="" placeholder='Add Coupon' />
+                                <span className='text-center px-5 py-2 text-white rounded-md bg-purple-500 cursor-pointer'>Apply</span>
                             </div>
                             <div>
                                 <div className='flex justify-between border-t py-3'>
@@ -98,7 +98,7 @@ const Checkout = (products) => {
                 </div>
                 <div className='w-full lg:w-3/5 flex flex-col gap-4'>
                     <div>
-                        <h1 className='text-xl font-semibold text-pawpi-purple font-paw'>Contact information</h1>
+                        <h1 className='text-xl font-semibold text-purple-500 font-paw'>Contact information</h1>
                         <div className='flex gap-3 justify-center items-center'>
                             <div className='w-14 h-14'>
                                 <img src="https://yt3.ggpht.com/ygl2Z8enlHOjF0jy86ZGvxiudkz27hGnLToUpXZNtus9T8gsBywcfOFkH_N6YiAch2_gB1muJlg=s108-c-k-c0x00ffffff-no-rj" alt="" className='rounded-lg w-full h-full' />
@@ -115,11 +115,11 @@ const Checkout = (products) => {
                         <h1 className='text-lg font-semibold py-2'>Shiping Address</h1>
                         <div>
                             <div className='flex flex-col gap-2'>
-                                <div className='flex gap-5 text-pawpi-purple py-4 px-5 items-center cursor-pointer border rounded-t-md hover:bg-purple-100'
+                                <div className='flex gap-5 text-purple-500 py-4 px-5 items-center cursor-pointer border rounded-t-md hover:bg-purple-100'
                                     onClick={openAddressPopUpModel}
                                 >
                                     <IoMdAddCircleOutline className='text-xl' />
-                                    <span className='font-paw text-pawpi-purple'>Add New Address</span>
+                                    <span className='font-paw text-purple-500'>Add New Address</span>
                                 </div>
                                 <div className='flex border-l border-r border-b px-3 rounded-b-md'>
                                     <div className='flex flex-col gap-2 py-4'>
@@ -169,7 +169,7 @@ const Checkout = (products) => {
                     </div>
                     <div className='flex justify-between items-center'>
                         <Link to={"/"} className='text-md text-gray-600 cursor-pointer underline'>Go home</Link>
-                        <button className='px-4 py-2 bg-pawpi-purple rounded-md text-white cursor-pointer' onClick={PayNow} >Continue</button>
+                        <button className='px-4 py-2 bg-purple-500 rounded-md text-white cursor-pointer' onClick={PayNow} >Continue</button>
                     </div>
                 </div>
             </div>

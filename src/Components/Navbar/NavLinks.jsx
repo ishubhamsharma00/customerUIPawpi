@@ -15,7 +15,7 @@ const NavLinks = (props) => {
                 <div className=''  key={link.id}>
                     {/* Pc */}
                     <div className='text-left lg:cursor-pointer group h-full w-full'>
-                        <h1 className='flex items-center justify-between  uppercase group-hover:text-pawpi-purple lg:cursor-pointer font-paw md:text-2xl lg:text-lg px-3 lg:capitalize font-semibold lg:font-normal' 
+                        <h1 className='flex items-center justify-between  uppercase group-hover:text-purple-500 lg:cursor-pointer font-paw md:text-2xl lg:text-lg px-3 lg:capitalize font-semibold lg:font-normal' 
                         onClick={()=>
                             {
                                 heading !== link.name ? setHeading(link.name) : 
@@ -65,7 +65,7 @@ const NavLinks = (props) => {
                                                         mysublinks.sublink.map((slink)=>(  
                                                             <li className='text-sm font-paw pl-2 mt-1' key={slink.sublinkid} >
                                                                 <Link to={slink.link}
-                                                                className="text-gray-500 hover:border-b-2 hover:border-pawpi-purple hover:duration-100" >
+                                                                className="text-gray-500 hover:border-b-2 hover:border-purple-500 hover:duration-100" >
                                                                     {slink.name}
                                                                 </Link>
                                                             </li>

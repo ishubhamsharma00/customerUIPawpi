@@ -60,14 +60,14 @@ export default function AddressPopUp({ isOpen, setIsOpen }) {
                                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                     <div className="mt-4">
                                         <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6">
-                                            <h2 className="text-2xl font-bold mb-4 text-pawpi-purple">Add Address</h2>
+                                            <h2 className="text-2xl font-bold mb-4 text-purple-500">Add Address</h2>
                                             <form onSubmit={handleSubmit} className="space-y-4 font-paw">
                                                 <input
                                                     type="text"
                                                     placeholder="Full Name"
                                                     value={address.fullname}
                                                     onChange={(e) => handleChange('fullname', e.target.value)}
-                                                    className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-pawpi-purple"
+                                                    className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-purple-500"
                                                 />
 
                                                 <input
@@ -75,7 +75,7 @@ export default function AddressPopUp({ isOpen, setIsOpen }) {
                                                     placeholder="Address"
                                                     value={address.address}
                                                     onChange={(e) => handleChange('address', e.target.value)}
-                                                    className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-pawpi-purple"
+                                                    className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-purple-500"
                                                 />
                                                 <div className='flex gap-4'>
                                                     <input
@@ -83,14 +83,14 @@ export default function AddressPopUp({ isOpen, setIsOpen }) {
                                                         placeholder="City"
                                                         value={address.city}
                                                         onChange={(e) => handleChange('city', e.target.value)}
-                                                        className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-pawpi-purple"
+                                                        className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-purple-500"
                                                     />
                                                     <input
                                                         type="text"
                                                         placeholder="State"
                                                         value={address.state}
                                                         onChange={(e) => handleChange('state', e.target.value)}
-                                                        className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-pawpi-purple"
+                                                        className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-purple-500"
                                                     />
                                                 </div>
                                                 <div className='flex gap-4'>
@@ -99,14 +99,14 @@ export default function AddressPopUp({ isOpen, setIsOpen }) {
                                                         placeholder="Country"
                                                         value={address.country}
                                                         onChange={(e) => handleChange('country', e.target.value)}
-                                                        className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-pawpi-purple"
+                                                        className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-purple-500"
                                                     />
                                                     <input
                                                         type="text"
                                                         placeholder="ZIP"
                                                         value={address.zip}
                                                         onChange={(e) => handleChange('zip', e.target.value)}
-                                                        className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-pawpi-purple"
+                                                        className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-purple-500"
                                                     />
                                                 </div>
                                                 <input
@@ -114,9 +114,9 @@ export default function AddressPopUp({ isOpen, setIsOpen }) {
                                                     placeholder="Phone"
                                                     value={address.phone}
                                                     onChange={(e) => handleChange('phone', e.target.value)}
-                                                    className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-pawpi-purple"
+                                                    className="input-field py-1 px-3 outline-none border border-gray-500 w-full rounded-sm hover:border-purple-500"
                                                 />
-                                                <button type="submit" className="bg-pawpi-purple text-white py-2 rounded-md w-full">
+                                                <button type="submit" className="bg-purple-500 text-white py-2 rounded-md w-full">
                                                     Save Address
                                                 </button>
                                             </form>

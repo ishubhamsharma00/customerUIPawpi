@@ -7,7 +7,7 @@ const Contact = () => {
                 <div className='flex flex-col w-full md:flex-row bg-white h-full border rounded-md shadow-md'>
                     <div className='w-full md:w-1/2 h-full p-6 md:rounded-l-md lg:rounded-l-md bg-white flex flex-col gap-4 font-paw md:border-r'>
                         <div className='flex flex-col gap-2'>
-                            <h1 className='text-pawpi-purple text-xl font-bold'>Info</h1>
+                            <h1 className='text-purple-500 text-xl font-bold'>Info</h1>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis explicabo repellendus harum distinctio fugit quia?</p>
                         </div>
                         <div>
@@ -38,7 +38,7 @@ const Contact = () => {
                                     <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-600">Message</label>
                                     <textarea id="message" className="w-full p-2 border border-gray-300 rounded-md" rows="4" placeholder="Enter your message"></textarea>
                                 </div>
-                                <button type="submit" className="w-full py-2 px-4 mt-4 font-semibold text-white bg-pawpi-purple rounded-md hover:bg-pawpi-purple focus:bg-blue-600">
+                                <button type="submit" className="w-full py-2 px-4 mt-4 font-semibold text-white bg-purple-500 rounded-md hover:bg-purple-500 focus:bg-blue-600">
                                     Send Message
                                 </button>
                             </form>

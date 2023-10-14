@@ -135,7 +135,7 @@ const Cart = ({ open, setOpen }) => {
                                                             Orders cannot be cancelled once packed for delivery. In case of unexpected delays, a refund will be provided, if applicable.</p>
                                                     </div>
                                                 </div>
-                                                <Link to={"/auth/checkout"} className='flex font-paw justify-between items-center bg-pawpi-purple text-white rounded-lg px-4 md:py-4 py-2 cursor-pointer mt-4 hover:bg-purple-600' >
+                                                <Link to={"/auth/checkout"} className='flex font-paw justify-between items-center bg-purple-500 text-white rounded-lg px-4 md:py-4 py-2 cursor-pointer mt-4 hover:bg-purple-600' >
                                                     <div className='flex gap-3 items-center'>
                                                         <div>Total</div>
                                                         <p className='text-2xl'>1950</p>

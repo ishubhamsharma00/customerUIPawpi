@@ -74,7 +74,7 @@ export default function PaymentModal({isOpen, setIsOpen, price}) {
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="w-full inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-pawpi-purple focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
+                      className="w-full inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
                       onClick={launchRazorPay}
                     >
                        Pay ₹{price}
