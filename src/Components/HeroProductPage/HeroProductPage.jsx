@@ -82,10 +82,17 @@ const HeroProductPage = () => {
     
     //useState function for AddToCart button
     const [isAddedToCart,setIsAddedToCart]=useState('Add To Cart');
-    const handleCart=()=>{
+    const handleCart=(_id)=>{
         if(isAddedToCart==='Add To Cart')
         {
             setIsAddedToCart('Added to cart');
+            let cart = localStorage.getItem("product") || [];
+            if(!cart || cart.length === 0){
+                cart = [];
+            }
+            cart = JSON.stringify(cart);
+            cart.push(_id);
+            localStorage.setItem("product",JSON.parse(cart));
         }
         else{
             setIsAddedToCart('Add To Cart');
@@ -292,7 +299,7 @@ const HeroProductPage = () => {
                 </div>
 
                 <div className='flex gap-3 w-full text-base md:text-xl font-semibold my-3'>
-                    <button className={`shadow-xl border-2 py-2 w-1/2 font-paw rounded-md md:rounded-sm uppercase border-purple-400 ${isAddedToCart==='Add To Cart'?'text-purple-500':'text-white bg-purple-300'}`} onClick={handleCart}>{isAddedToCart}</button>
+                    <button className={`shadow-xl border-2 py-2 w-1/2 font-paw rounded-md md:rounded-sm uppercase border-purple-400 ${isAddedToCart==='Add To Cart'?'text-purple-500':'text-white bg-purple-300'}`} onClick={()=> handleCart(54321)}>{isAddedToCart}</button>
                     <Link to={'/auth/checkout'} className='shadow-xl font-semibold tracking-widest text-white border-2 py-2 bg-green-500 font-paw uppercase text-center lg:animate-pulse rounded-md md:rounded-sm w-1/2 text-white-500'>BUY NOW</Link>
                 </div>
 

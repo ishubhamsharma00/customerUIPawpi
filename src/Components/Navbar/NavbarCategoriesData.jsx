@@ -16,12 +16,11 @@ export const links = [
           sublinksid : "/dog/food",
           sublink: [
             { name: "Dry Food", link: "/" , sublinkid :  "dogdryfood"},            
-            { name: "Wet Food", link: "/" , sublinkid :  "Wet Food"},
-            { name: "Puppy Food", link: "/" , sublinkid :  "Puppy Food"},            
-            { name: "Grain Free Food", link: "/" , sublinkid :  "Grain Free Food"},
-            { name: "Protien Rich Food", link: "/" , sublinkid :  "Protien Rich Food"},
+            { name: "Wet Food", link: "/" , sublinkid :  "WetFood"},
+            { name: "Puppy Food", link: "/" , sublinkid :  "PuppyFood"},            
+            { name: "Grain Free Food", link: "/" , sublinkid :  "GrainFreeFood"},
+            { name: "Protien Rich Food", link: "/" , sublinkid :  "ProtienRichFood"},
             { name: "Supplements", link: "/" , sublinkid :  "Supplements"},
-            
           ],
         },
         {
@@ -29,10 +28,10 @@ export const links = [
           sublinksid : "/dog/bisc-treats-chews",
           sublink: [
             { name: "Biscuits", link: "/", sublinkid :  "Biscuits"  },
-            { name: "Veg Treats", link: "/" , sublinkid :  "Veg Treats"},
-            { name: "Natural Treats", link: "/" , sublinkid :  "Natural Treats"},
-            { name: "Puppy Dental", link: "/" , sublinkid :  "Puppy Dental"},
-            { name: "Soft & Hard", link: "/" , sublinkid :  "Soft & Hard"},
+            { name: "Veg Treats", link: "/" , sublinkid :  "VegTreats"},
+            { name: "Natural Treats", link: "/" , sublinkid :  "NaturalTreats"},
+            { name: "Puppy Dental", link: "/" , sublinkid :  "PuppyDental"},
+            { name: "Soft & Hard", link: "/" , sublinkid :  "SoftHard"},
 
           ],
         },
@@ -43,8 +42,8 @@ export const links = [
             { name: "Collars", link: "/", sublinkid :  "Collars"  },
             { name: "Leashes", link: "/" , sublinkid :  "Leashes"},
             { name: "Harness", link: "/" , sublinkid :  "Harness"},
-            { name: "Name Tags", link: "/" , sublinkid :  "Name Tags"},
-            { name: "Collar & Leash Set", link: "/" , sublinkid :  "Collar & Leash Set"},
+            { name: "Name Tags", link: "/" , sublinkid :  "NameTags"},
+            { name: "Collar & Leash Set", link: "/" , sublinkid :  "CollarLeashSet"},
             { name: "Personalised", link: "/" , sublinkid :  "Personalised"},
 
           ],
@@ -55,9 +54,9 @@ export const links = [
           sublink: [
             { name: "Beds", link: "/", sublinkid :  "Beds"  },
             { name: "Mats", link: "/" , sublinkid :  "Mats"},
-            { name: "Blankets & Cushion", link: "/" , sublinkid :  "Blankets & Cushion"},
-            { name: "Bed Covers", link: "/" , sublinkid :  "Bed Covers"},
-            { name: "Personalised Bedding", link: "/" , sublinkid :  "Personalised Bedding"},
+            { name: "Blankets & Cushion", link: "/" , sublinkid :  "BlanketsCushion"},
+            { name: "Bed Covers", link: "/" , sublinkid :  "BedCovers"},
+            { name: "Personalised Bedding", link: "/" , sublinkid :  "PersonalisedBedding"},
 
           ],
         },
@@ -67,22 +66,22 @@ export const links = [
           sublink: [
             { name: "Shampoos", link: "/", sublinkid :  "Shampoos"  },
             { name: "Conditioner", link: "/" , sublinkid :  "Conditioner"},
-            { name: "Brushes & Combs", link: "/" , sublinkid :  "Brushes & Combs"},
-            { name: "Tick & Flea", link: "/" , sublinkid :  "Tick & Flea"},
-            { name: "Paw Care", link: "/" , sublinkid :  "Paw Care"},
-            { name: "Dentangling Solutions", link: "/" , sublinkid :  "Dentangling Solutions"},
+            { name: "Brushes & Combs", link: "/" , sublinkid :  "BrushesCombs"},
+            { name: "Tick & Flea", link: "/" , sublinkid :  "TickFlea"},
+            { name: "Paw Care", link: "/" , sublinkid :  "PawCare"},
+            { name: "Dentangling Solutions", link: "/" , sublinkid :  "DentanglingSolutions"},
           ],
         },
         {
           Head: "Toys",
           sublinksid : "toys",
           sublink: [
-            { name: "Chew Toys", link: "/", sublinkid :  "Chew Toys"  },
-            { name: "Plush Toys", link: "/" , sublinkid :  "Plush Toys"},
+            { name: "Chew Toys", link: "/", sublinkid :  "ChewToys"  },
+            { name: "Plush Toys", link: "/" , sublinkid :  "PlushToys"},
             { name: "Balls", link: "/" , sublinkid :  "Balls"},
-            { name: "Interactive Toys", link: "/" , sublinkid :  "Interactive Toys"},
-            { name: "Tough Chewers", link: "/" , sublinkid :  "Tough Chewers"},
-            { name: "Rope Toys", link: "/" , sublinkid :  "Rope Toys"},
+            { name: "Interactive Toys", link: "/" , sublinkid :  "InteractiveToys"},
+            { name: "Tough Chewers", link: "/" , sublinkid :  "ToughChewers"},
+            { name: "Rope Toys", link: "/" , sublinkid :  "RopeToys"},
 
             ],
         },
@@ -90,10 +89,10 @@ export const links = [
           Head: "Clothing",
           sublinksid : "clothing",
           sublink: [
-            { name: "Winter Wear", link: "/", sublinkid :  "Winter Wear"  },
-            { name: "Rian Coats", link: "/" , sublinkid :  "Rian Coats"},
-            { name: "Tshirts & Shirts", link: "/" , sublinkid :  "Tshirts & Shirts"},
-            { name: "Occasional Dresswear", link: "/" , sublinkid :  "Occasional Dresswear"},
+            { name: "Winter Wear", link: "/", sublinkid :  "WinterWear"  },
+            { name: "Rian Coats", link: "/" , sublinkid :  "RianCoats"},
+            { name: "Tshirts & Shirts", link: "/" , sublinkid :  "TshirtsShirts"},
+            { name: "Occasional Dresswear", link: "/" , sublinkid :  "OccasionalDresswear"},
             ],
         },
         
@@ -101,11 +100,11 @@ export const links = [
           Head: "Bowls & Diner ",
           sublinksid : "bowls & diner",
           sublink: [
-            { name: "Steel Bowls", link: "/", sublinkid :  "Steel Bowls"  },
-            { name: "Elevated Bowls", link: "/" , sublinkid :  "Elevated Bowls"},
-            { name: "Slow Feeders", link: "/" , sublinkid :  "Slow Feeders"},
-            { name: "Licki Mats", link: "/" , sublinkid :  "Licki Mats"},
-            { name: "Anti Spills Mats", link: "/" , sublinkid :  "Anti Spills Mats"},
+            { name: "Steel Bowls", link: "/", sublinkid :  "SteelBowls"  },
+            { name: "Elevated Bowls", link: "/" , sublinkid :  "ElevatedBowls"},
+            { name: "Slow Feeders", link: "/" , sublinkid :  "SlowFeeders"},
+            { name: "Licki Mats", link: "/" , sublinkid :  "LickiMats"},
+            { name: "Anti Spills Mats", link: "/" , sublinkid :  "AntiSpillsMats"},
 
             ],
         },
@@ -113,11 +112,11 @@ export const links = [
           Head: "Health & Hygiene ",
           sublinksid : "health & hygiene",
           sublink: [
-            { name: "Oral Care", link: "/", sublinkid :  "Oral Care"  },
+            { name: "Oral Care", link: "/", sublinkid :  "OralCare"  },
             { name: "Supplements", link: "/" , sublinkid :  "Supplements"},
-            { name: "Tick & Flea", link: "/" , sublinkid :  "Tick & Flea"},
-            { name: "Stain & Odour", link: "/" , sublinkid :  "Stain & Odour"},
-            { name: "Pee Lock Powder", link: "/" , sublinkid :  "Pee Lock Powder"},
+            { name: "Tick & Flea", link: "/" , sublinkid :  "TickFlea"},
+            { name: "Stain & Odour", link: "/" , sublinkid :  "StainOdour"},
+            { name: "Pee Lock Powder", link: "/" , sublinkid :  "PeeLockPowder"},
 
 
             ],
@@ -126,18 +125,18 @@ export const links = [
           Head: "Accessories",
           sublinksid : "accessories",
           sublink: [
-            { name: "Bow Ties & Bandanas", link: "/", sublinkid :  "Bow Ties & Bandanas"  },
-            { name: "Party Accessories", link: "/" , sublinkid :  "Party Accessories"},
-            { name: "Shoes & Socks", link: "/" , sublinkid :  "Shoes & Socks"},
-            { name: "Personalised Accessories", link: "/" , sublinkid :  "Personalised Accessories"},
+            { name: "Bow Ties & Bandanas", link: "/", sublinkid :  "BowTiesBandanas"  },
+            { name: "Party Accessories", link: "/" , sublinkid :  "PartyAccessories"},
+            { name: "Shoes & Socks", link: "/" , sublinkid :  "ShoesSocks"},
+            { name: "Personalised Accessories", link: "/" , sublinkid :  "PersonalisedAccessories"},
             ],
         },
         {
           Head: "Travel",
           sublinksid : "travel",
           sublink: [
-            { name: "Ramps & Steps", link: "/", sublinkid :  "Ramps & Steps"  },
-            { name: "Crates & Carriers ", link: "/" , sublinkid :  "Crates & Carriers"},
+            { name: "Ramps & Steps", link: "/", sublinkid :  "RampsSteps"  },
+            { name: "Crates & Carriers ", link: "/" , sublinkid :  "CratesCarriers"},
             ],
         },
         
@@ -153,9 +152,9 @@ export const links = [
           Head: "Food",
           sublinksid : "/cats/foods",
           sublink: [
-            { name: "Dry Food", link: "/" , sublinkid :  "Dry Food"},            
-            { name: "Wet Food", link: "/" , sublinkid :  "Wet Food"},
-            { name: "Kitten Food", link: "/" , sublinkid :  "Kitten Food"},
+            { name: "Dry Food", link: "/" , sublinkid :  "DryFood"},            
+            { name: "Wet Food", link: "/" , sublinkid :  "WetFood"},
+            { name: "Kitten Food", link: "/" , sublinkid :  "KittenFood"},
        
           ],
         },
@@ -164,9 +163,9 @@ export const links = [
           sublinksid : "litter & supplies",
           sublink: [
             { name: "Litter", link: "/" , sublinkid :  "Litter"},            
-            { name: "Toilets & Trays", link: "/" , sublinkid :  "Toilets & Trays"},
-            { name: "Scoopers", link: "/" , sublinkid :  "Kitten Food"},
-            { name: "Odour", link: "/" , sublinkid :  "Kitten Odour"},
+            { name: "Toilets & Trays", link: "/" , sublinkid :  "ToiletsTrays"},
+            { name: "Scoopers", link: "/" , sublinkid :  "KittenFood"},
+            { name: "Odour", link: "/" , sublinkid :  "KittenOdour"},
           ],
         },
        
@@ -174,10 +173,10 @@ export const links = [
           Head: "Treats",
           sublinksid : "treats",
           sublink: [
-            { name: "Natural Treats", link: "/" , sublinkid :  "Natural Treats"},            
-            { name: "Creamy Treats", link: "/" , sublinkid :  "Creamy Treats"},
-            { name: "All Treats", link: "/" , sublinkid :  "All Treats"},
-            { name: "Medicated Treats", link: "/" , sublinkid :  "Medicated Treats"},
+            { name: "Natural Treats", link: "/" , sublinkid :  "NaturalTreats"},            
+            { name: "Creamy Treats", link: "/" , sublinkid :  "CreamyTreats"},
+            { name: "All Treats", link: "/" , sublinkid :  "AllTreats"},
+            { name: "Medicated Treats", link: "/" , sublinkid :  "MedicatedTreats"},
 
           ],
         },
@@ -194,11 +193,11 @@ export const links = [
           Head: "Toys",
           sublinksid : "toys",
           sublink: [
-            { name: "Plush Toys", link: "/" , sublinkid :  "Plush Toys"},            
-            { name: "Interactive Toys", link: "/" , sublinkid :  "Interactive Toys"},
+            { name: "Plush Toys", link: "/" , sublinkid :  "PlushToys"},            
+            { name: "Interactive Toys", link: "/" , sublinkid :  "InteractiveToys"},
             { name: "Catnip", link: "/" , sublinkid :  "Catnip"},
             { name: "Stretcher", link: "/" , sublinkid :  "Stretcher"},
-            { name: "Teasers & Wands", link: "/" , sublinkid :  "Teasers & Wands"},            
+            { name: "Teasers & Wands", link: "/" , sublinkid :  "TeasersWands"},            
           ],
         },
        
@@ -209,8 +208,8 @@ export const links = [
             { name: "Shampoos", link: "/" , sublinkid :  "Shampoos"},            
             { name: "Towels", link: "/" , sublinkid :  "Towels"},
             { name: "Wipes", link: "/" , sublinkid :  "Wipes"},
-            { name: "Stain & Odour", link: "/" , sublinkid :  "Stain & Odour"},
-            { name: "Tick & Flea", link: "/" , sublinkid :  "Tick & Flea"},            
+            { name: "Stain & Odour", link: "/" , sublinkid :  "StainOdour"},
+            { name: "Tick & Flea", link: "/" , sublinkid :  "TickFlea"},            
             { name: "Brushes", link: "/" , sublinkid :  "Brushes"},            
 
           ],
@@ -238,7 +237,7 @@ export const links = [
           Head: "Dining",
           sublinksid : "dining",
           sublink: [
-            { name: "Cat Bowls", link: "/" , sublinkid :  "Cat Bowls"},            
+            { name: "Cat Bowls", link: "/" , sublinkid :  "CatBowls"},            
           ],
         },
       ],

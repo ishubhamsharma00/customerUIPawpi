@@ -24,6 +24,7 @@ import LoginPopup from '../Login and Signup/LoginPopup';
 import NavLinks from './NavLinks';
 import LocationPopUpModel from './LocationPopUp';
 import Cart from './Cart';
+import axios from 'axios';
 
 
 //for small devices/mobile
@@ -243,16 +244,39 @@ const NavLg = ({ location, login, cart }) => {
   const [navbarBreedsActive, setNavbarBreedsActive] = useState(false);
   const [navbarLifestageActive, setNavbarLifestageActive] = useState(false);
 
-  const [authUser, setAuthUser] = useState(true);
+  const [authUser, setAuthUser] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   //useState for selected item
   const [selectedItem, setSelectedItem] = useState(null);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [userData, setUserData] = useState("");
+
 
   const toggleDropdown = (option) => {
     setSelectedItem(option === selectedItem ? null : option);
     setShowDropdown(true);
   };
+
+  const getUserData = async()=>{
+    try {
+      if (localStorage.getItem("_id")){
+        const response = await axios.get(`https://pawpi-back-end.onrender.com/user/${localStorage.getItem("_id")}`);
+        if(response.status === 200){
+          setUserData(response.data);
+          setAuthUser(true);
+        }
+        else{
+          alert("user not found");
+        }
+      }
+    } catch (error) {
+    }
+  }
+  useEffect(()=>{
+    getUserData();
+  })
+
+
 
   return (
     <>
@@ -362,11 +386,13 @@ const NavLg = ({ location, login, cart }) => {
         </div>
 
         <div className='flex h-10 w-[20%] text-sm font-semibold tracking-wide px-3 items-center justify-between'>
+          
           <img
             src={locationPin}
             alt='locationIcon'
             className='h-8 w-8'
             onClick={location} />
+            {localStorage.getItem("pincode")}
 
           <div className=''>
             {
@@ -388,7 +414,7 @@ const NavLg = ({ location, login, cart }) => {
                               <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1'>My Profile</Link>
                               <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1'>My Profile</Link>
                               <Link to={"/user/profile"} className='text-lg hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1'>My Profile</Link>
-                              <p className='text-lg cursor-pointer hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1' onClick={()=>setAuthUser(false)}>Log Out</p>
+                              <p className='text-lg cursor-pointer hover:bg-purple-500 hover:text-white border-l-8 hover:border-white border-blue-100 rounded-r-xl pl-1' onClick={()=>{setAuthUser(false); localStorage.clear()}}>Log Out</p>
                             </div>
                           </>
                         )
@@ -532,6 +558,11 @@ const Navbar = () => {
     }
     // setPrevScrollPos(currentScrollPos)
   }
+
+  useEffect(()=>{
+    if(!localStorage.getItem("pincode"))
+    openLocationmodal()
+  },[])
 
   useEffect(() => {
     let previousScrollPosition = 0;

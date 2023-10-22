@@ -52,6 +52,7 @@ export default function SignIn({ isOpen, setIsOpen }) {
           for (const component of results[0].address_components) {
             if (component.types.includes('postal_code')) {
               setPincode(component.long_name);
+              localStorage.setItem("location",component.long_name)
               return;
             }
           }
@@ -66,7 +67,13 @@ export default function SignIn({ isOpen, setIsOpen }) {
     fetchData();
   }, [latitude, longitude]);
 
-
+  useEffect(()=>{
+    if (pincode?.length==6){
+      localStorage.setItem("pincode",pincode);
+      setIsOpen(false);
+      setPincode(null);
+    }
+  })
 
   return (
     <>
@@ -121,7 +128,7 @@ export default function SignIn({ isOpen, setIsOpen }) {
                       OR
                     </div>
                     <div className='w-1/2'>
-                      <input type="search" name="location" id="location" placeholder='Pin-code / CityName ' className='py-2 border-2 border-gray-300 outline-none px-4 w-full rounded-lg text-lg' />
+                      <input type="number" name="location" id="location" placeholder='Pincode' className='py-2 border-2 border-gray-300 outline-none px-4 w-full rounded-lg text-lg' onChange={(e)=>setPincode(e.target.value)}/>
                     </div>
                     {
                       latitude && (
