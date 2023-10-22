@@ -1,6 +1,6 @@
 import React from 'react'
 import FAQImg from "../../Images/FAQ/F.A.Q..png"
-import FAQCartoon from "../../Images/FAQ/faqcartoon.png"
+import FAQCartoon from"../../Images/FAQ/faqcartoon.png";
 import BGImg from "../../Images/FAQ/bgimg.png"
 
 const FAQ = () => {
