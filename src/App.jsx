@@ -16,65 +16,73 @@ import DefaultBreed from "./pages/DefaultBreed";
 import DefaultLifeStage from "./pages/DefaultLifeStage";
 import Start from "./Components/Start/Start";
 import StartDog from "./Components/Start/Dog";
-
+import OrderTracking from "./Components/OrderTracking/OrderTracking";
+import OrderOverview from "./Components/OrderOverview/OrderOverview";
+import FAQ from "./Components/FAQ/FAQ";
+import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
+import AboutUs from "./Components/AboutUs/AboutUs";
 
 
 function App() {
   return (
     <>
-      <DefaultHOC path="/" exact component={Home}/>
-      
-      <CheckoutHOC path="/start/welcome" exact component={Start}/>
-      <CheckoutHOC path="/start/welcome/dog" exact component={StartDog}/>
+      <DefaultHOC path="/" exact component={Home} />
 
-      <CheckoutHOC path="/auth/checkout" exact component={AuthPage}/>
+      <CheckoutHOC path="/start/welcome" exact component={Start} />
+      <CheckoutHOC path="/start/welcome/dog" exact component={StartDog} />
 
-
-      <DefaultHOC path="/:type" exact component={DefaultHome}/>
+      <CheckoutHOC path="/auth/checkout" exact component={AuthPage} />
 
 
-      <DefaultHOC path="/dog/:type" exact component={DefaultDog}/>
-      <DefaultHOC path="/dog/:type/:subtype" exact component={DefaultDog}/>
-
-      <DefaultHOC path="/cat/:type" exact component={DefaultCat}/>
-      <DefaultHOC path="/cat/:type/:subtype" exact component={DefaultCat}/>
-
-      <DefaultHOC path="/breed/:type" exact component={DefaultBreed}/>
-      <DefaultHOC path="/breed/:type/:subtype" exact component={DefaultBreed}/>
-
-      <DefaultHOC path="/brand/:type" exact component={DefaultBrands}/>
-      <DefaultHOC path="/brand/:type/:subtype" exact component={DefaultBrands}/>
-
-      <DefaultHOC path="/lifestage/:type" exact component={DefaultLifeStage}/>
-      <DefaultHOC path="/lifestage/:type/:subtype" exact component={DefaultLifeStage}/>
+      <DefaultHOC path="/:type" exact component={DefaultHome} />
 
 
-      <DefaultHOC path="/product/:pt" exact component={DefaultHome}/>
+      <DefaultHOC path="/dog/:type" exact component={DefaultDog} />
+      <DefaultHOC path="/dog/:type/:subtype" exact component={DefaultDog} />
+
+      <DefaultHOC path="/cat/:type" exact component={DefaultCat} />
+      <DefaultHOC path="/cat/:type/:subtype" exact component={DefaultCat} />
+
+      <DefaultHOC path="/breed/:type" exact component={DefaultBreed} />
+      <DefaultHOC path="/breed/:type/:subtype" exact component={DefaultBreed} />
+
+      <DefaultHOC path="/brand/:type" exact component={DefaultBrands} />
+      <DefaultHOC path="/brand/:type/:subtype" exact component={DefaultBrands} />
+
+      <DefaultHOC path="/lifestage/:type" exact component={DefaultLifeStage} />
+      <DefaultHOC path="/lifestage/:type/:subtype" exact component={DefaultLifeStage} />
+
+
+      <DefaultHOC path="/product/:pt" exact component={DefaultHome} />
 
       {/* 
       pt = product type (like - food, toys, extras..etc) 
       */}
 
       {/* Access product by using product id */}
-      <DefaultHOC path="/products/:id" exact component={HeroProductPage}/>
+      <DefaultHOC path="/products/:id" exact component={HeroProductPage} />
 
 
-      <DefaultHOC path="/user/:at" exact component={AccountPage}/>
+      <DefaultHOC path="/user/:at" exact component={AccountPage} />
       {/* 
       at = account type (like - address, profile, order..etc) 
       */}
 
 
-      <DefaultHOC path="/support/:st" exact component={SupportPage}/>
+      <DefaultHOC path="/support/:st" exact component={SupportPage} />
       {/* 
       st = support type (like - contact, about, term&condition..etc all footer liks) 
       */}
+      <CheckoutHOC path="/ordertracking" exact component={OrderTracking} />
+      <CheckoutHOC path="/orderoverview" exact component={OrderOverview} />
+      <CheckoutHOC path="/faq" exact component={FAQ} />
+      <CheckoutHOC path="/privacypolicy" exact component={PrivacyPolicy} />
+      <CheckoutHOC path="/aboutus" exact component={AboutUs} />
 
 
-      <DefaultHOC path="/checkout/:ct" exact component={AuthPage}/>
+      <DefaultHOC path="/checkout/:ct" exact component={AuthPage} />
     </>
   );
 };
 
 export default App;
- 
