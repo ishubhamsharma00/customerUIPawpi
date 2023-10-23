@@ -1,52 +1,88 @@
 import React from 'react';
-
+import dog from "../../Images/ContactUs/contactus.png"
 const Contact = () => {
     return (
-        <div className='p-8 h-full w-full'>
-            <div className='flex items-center justify-center rounded-md bg-gray-100 font-paw w-full h-full'>
-                <div className='flex flex-col w-full md:flex-row bg-white h-full border rounded-md shadow-md'>
-                    <div className='w-full md:w-1/2 h-full p-6 md:rounded-l-md lg:rounded-l-md bg-white flex flex-col gap-4 font-paw md:border-r'>
-                        <div className='flex flex-col gap-2'>
-                            <h1 className='text-purple-500 text-xl font-bold'>Info</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis explicabo repellendus harum distinctio fugit quia?</p>
-                        </div>
-                        <div>
-                            <h1 className='text-lg font-bold'>Call At Us</h1>
-                            <p>+1234567890</p>
-                        </div>
-                        <div>
-                            <h1 className='text-lg font-bold'>For Support and Queries:</h1>
-                            <p>tarachand122333@gmail.com</p>
-                        </div>
-                        <div className='w-48 h-48'>
-                            <img src="https://cdn.shopify.com/s/files/1/0086/0795/7054/files/Image02.jpg?v=1681122090" alt="" className='w-full h-full' />
-                        </div>
-                    </div>
-                    <div className="w-full md:w-1/2 flex flex-col items-center justify-center h-full font-paw">
-                        <div className="w-full p-6 bg-white rounded-b-md md:rounded-r-md">
-                            <h2 className="text-3xl font-bold text-center text-gray-800">Contact Us</h2>
-                            <form className="mt-6">
-                                <div className="mb-4">
-                                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-600">Name</label>
-                                    <input type="text" id="name" className="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter your name" />
+        <>
+            <div className="relative flex flex-col items-center  ">
+                {/* Top Image */}
+                <img
+                    src={dog}
+                    alt="Contact Us Image"
+                    className="w-full h-full "
+                />
+            </div>
+            {/* Contact Info Section */}
+
+            <div className=' absolute top-[580px] xl:top[900px] p-8 h-auto w-full'>
+                <div className='flex items-center justify-center rounded-xl  shadow-2xl border-2 w-full h-full'>
+                    <div className='flex flex-col :w-[80%] md:flex-row bg-white w-full h-full border rounded-xl shadow-2xl'>
+                        <div className="  p-4 h-full w-full md:w-96 ">
+                            <div className="  grid grid-cols-2 gap-4 font-Raleway font-semibold">
+                                <div className="col-span-2 md:col-span-1 outline-none">
+                                    <input
+                                        type="text"
+                                        placeholder="First Name"
+                                        className="w-full rounded p-2  outline-none bg-[#F5F5F5] border border-white "
+                                    />
                                 </div>
-                                <div className="mb-4">
-                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-600">Email</label>
-                                    <input type="email" id="email" className="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter your email" />
+                                <div className="col-span-2 md:col-span-1">
+                                    <input
+                                        type="text"
+                                        placeholder="Last Name"
+                                        className="w-full rounded p-2  outline-none bg-[#F5F5F5] border border-white "
+                                    />
                                 </div>
-                                <div className="mb-4">
-                                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-600">Message</label>
-                                    <textarea id="message" className="w-full p-2 border border-gray-300 rounded-md" rows="4" placeholder="Enter your message"></textarea>
+                                <div className="col-span-2 md:col-span-1">
+                                    <input
+                                        type="text"
+                                        placeholder="Subject"
+                                        className="w-full rounded p-2   outline-none bg-[#F5F5F5] border border-white "
+                                    />
                                 </div>
-                                <button type="submit" className="w-full py-2 px-4 mt-4 font-semibold text-white bg-purple-500 rounded-md hover:bg-purple-500 focus:bg-blue-600">
-                                    Send Message
-                                </button>
-                            </form>
+                                <div className="col-span-2 md:col-span-1">
+                                    <input
+                                        type="text"
+                                        placeholder="Priority "
+                                        className="w-full rounded p-2  outline-none bg-[#F5F5F5] border border-white "
+                                    />
+                                </div>
+                                <div className="col-span-2">
+                                    <textarea
+                                        rows="4"
+                                        placeholder="Type your message in here......."
+                                        className="w-full rounded p-2  outline-none bg-[#F5F5F5] border border-white "
+                                    />
+                                </div>
+
+                            </div>
+                            <button className="bg-[#FCDD58] text-black font-semibold font-Raleway rounded-lg p-2 mt-4 w-full ">
+                                Send Message
+                            </button>
+                        </div>
+                        <div className="w-full md:w-1/2 flex flex-col items-center justify-center h-full ">
+                            <div className="w-full px-6 py-3  bg-white  rounded-b-md md:rounded-r-md">
+                                <div className=' p-4 border-2 border-gray bg-[#FFFFFF] shadow-lg  rounded-xl text-sm text-center' >
+                                    <h2 className=' font-Raleway font-semibold  border-b-2'>Email/Phone</h2>
+                                    <p className='font-Raleway font-medium text-black mt-2'>care@pawpi.co</p>
+                                    <p className='font-Raleway font-medium text-black'>+91- 701-486-3354</p>
+                                    <p className='font-Raleway font-medium text-black'>+91- 701-486-3354</p>
+                                </div>
+                            </div>
+                            <div className="w-full px-6  py-2 bg-white rounded-b-md md:rounded-r-md">
+                                <div className='p-4 border-2 border-gray bg-[#FFFFFF] shadow-lg  rounded-xl text-sm  text-center' >
+                                    <h2 className=' font-Raleway font-semibold  border-b-2'>Address</h2>
+                                    <p className='font-Raleway font-medium text-black mt-2' >Block C, Bode Thomas Avenue,
+                                        Wuse II, Zone X, FCT, Abuja,
+                                        Jaipur, Rajashtan,
+                                        302001</p>
+                                </div>
+                            </div>
+                            <h2 className='mt-2'>Opening Hours: <span className='text-[#FCDD58]'>8AM-6PM</span> Everyday</h2>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
