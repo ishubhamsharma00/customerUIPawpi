@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Dog from '../Components/Dog/Dog';
-import axios from 'axios';
+// import axios from 'axios';
 
 
 const DefaultDog = () => {
