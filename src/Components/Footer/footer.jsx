@@ -31,6 +31,8 @@ const footer = () => {
                             <Link to="/aboutus" className="lg:hover:text-[#5e17eb] lg:hover:underline">About Us</Link>
                             <Link to="/faq" className="lg:hover:text-[#5e17eb] lg:hover:underline">F.A.Q</Link>
                             <Link to="/privacypolicy" className="lg:hover:text-[#5e17eb] lg:hover:underline">Privacy Policy</Link>
+                            <Link to="/thankyou" className="lg:hover:text-[#5e17eb] lg:hover:underline">Thank You</Link>
+
                             <h3 className='pr-16 text-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere beatae deleniti .</h3>
                             
                             

@@ -21,6 +21,7 @@ import OrderOverview from "./Components/OrderOverview/OrderOverview";
 import FAQ from "./Components/FAQ/FAQ";
 import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
 import AboutUs from "./Components/AboutUs/AboutUs";
+import Thankyou from "./Components/Thankyou/Thankyou";
 
 
 function App() {
@@ -78,6 +79,8 @@ function App() {
       <CheckoutHOC path="/faq" exact component={FAQ} />
       <CheckoutHOC path="/privacypolicy" exact component={PrivacyPolicy} />
       <CheckoutHOC path="/aboutus" exact component={AboutUs} />
+      <CheckoutHOC path="/thankyou" exact component={Thankyou} />
+
 
 
       <DefaultHOC path="/checkout/:ct" exact component={AuthPage} />
