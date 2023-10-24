@@ -77,7 +77,7 @@ const Contact = () => {
                                         302001</p>
                                 </div>
                             </div>
-                            <h2 className='mt-2'>Opening Hours: <span className='text-[#FCDD58]'>8AM-6PM</span> Everyday</h2>
+                            <h2 className=' px-6 mt-2'>Opening Hours: <span className='text-[#FCDD58]'>8AM-6PM</span> Everyday</h2>
                         </div>
                     </div>
                 </div>

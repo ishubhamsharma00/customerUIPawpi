@@ -23,6 +23,7 @@ import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Thankyou from "./Components/Thankyou/Thankyou";
 import Contact from "./Components/Support/Contact";
+import Vet from "./Components/Vet/Vet";
 
 
 function App() {
@@ -82,6 +83,8 @@ function App() {
       <CheckoutHOC path="/aboutus" exact component={AboutUs} />
       <CheckoutHOC path="/thankyou" exact component={Thankyou} />
       <CheckoutHOC path="/contactus" exact component={Contact} />
+      <CheckoutHOC path="/vet" exact component={Vet} />
+
 
 
 
