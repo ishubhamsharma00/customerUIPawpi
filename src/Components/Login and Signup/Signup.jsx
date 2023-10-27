@@ -1,167 +1,92 @@
 import React from 'react'
-import { Link }  from"react-router-dom";
-import SignupImage from"../../Images/couplecat.png";
+import LOGO from "../../Images/order overview/logo.png";
+import user from "../../Images/registration page/user.png"
+import Email from "../../Images/registration page/email.png"
+import Whatsapp from "../../Images/registration page/whatsapp.png"
+import Key from "../../Images/registration page/key.png"
+import BgImg from "../../Images/registration page/bg img.png"
+import Cartoon from "../../Images/registration page/happy cartoon.png"
 
 const Signup = () => {
   return (
-    <section class="bg-white">
-  <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-    <aside
-      class="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6"
-    >
-      <img
-        alt="LoginImage"
-        src={SignupImage}
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-    </aside>
-
-    <main
-      aria-label="Main"
-      class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
-    >
-      <div class="max-w-xl lg:max-w-3xl">
-        <a class="block text-blue-600" href="/">
-          <span class="sr-only">Home</span>
-          
-        </a>
-
-        <h1
-          class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
-        >
-          Welcome to Pawpi 
-        </h1>
-
-        <p class="mt-4 leading-relaxed text-gray-500">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
-          dolorum aliquam, quibusdam aperiam voluptatum.
-        </p>
-
-        <form action="#" class="mt-8 grid grid-cols-6 gap-6">
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="FirstName"
-              class="block text-sm font-medium text-gray-700"
-            >
-              First Name
-            </label>
-
-            <input
-              type="text"
-              id="FirstName"
-              name="first_name"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="LastName"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Last Name
-            </label>
-
-            <input
-              type="text"
-              id="LastName"
-              name="last_name"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6">
-            <label for="Email" class="block text-sm font-medium text-gray-700">
-              Email
-            </label>
-
-            <input
-              type="email"
-              id="Email"
-              name="email"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="Password"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Password
-            </label>
-
-            <input
-              type="password"
-              id="Password"
-              name="password"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="PasswordConfirmation"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Password Confirmation
-            </label>
-
-            <input
-              type="password"
-              id="PasswordConfirmation"
-              name="password_confirmation"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6">
-            <label for="MarketingAccept" class="flex gap-4">
-              <input
-                type="checkbox"
-                id="MarketingAccept"
-                name="marketing_accept"
-                class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
-              />
-
-              <span class="text-sm text-gray-700">
-                I want to receive emails about events, product updates and
-                company announcements.
-              </span>
-            </label>
-          </div>
-
-          <div class="col-span-6">
-            <p class="text-sm text-gray-500">
-              By creating an account, you agree to our
-              <a href="#" class="text-gray-700 underline">
-                terms and conditions
-              </a>
-              and
-              <a href="#" class="text-gray-700 underline">privacy policy</a>.
-            </p>
-          </div>
-
-          <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-            <button
-              class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-            >
-              Create an account
-            </button>
-
-            <p class="mt-4 text-sm text-gray-500 sm:mt-0">
-              Already have an account?
-              
-              <Link  to="/login"className="text-gray-700 underline">Login OnClick</Link>
-            </p>
-          </div>
-        </form>
+    <section className='flex'>
+      {/* Image side */}
+      <div className='bg-[#EFF3FC] h-screen w-[60%]  bg-gradient-to-br from-[#EFF3FC] to-[#EFF3FC] rounded-br-[20%]'>
+        <div className="relative">
+          <img
+            src={BgImg}
+            alt="BackgroundImage"
+            className="w-full h-auto"
+          />
+          <img
+            src={Cartoon}
+            alt="Overlayimage"
+            className="absolute top-96 left-80 z-10"
+          />
+        </div>
       </div>
-    </main>
-  </div>
-</section>
 
+
+
+      {/* Register side  */}
+      <div className='bg-red-300 h-full w-[40%] mx-auto  my-32'>
+        <div className='w-full h-[100vh] bg-white p-32'>
+
+          <div className='items-center justify-center  mx-20   w-[90%]'>
+            <img src={LOGO} alt="Logo" className='items-center justify-center mx-16 my-3  ' />
+            <h1 className=' font-Raleway font-bold text-5xl text-[#3C4D64]  '>Register Yourself!</h1>
+            <p className='font-Nunito text-[16px] font-normal ml-12 text-[#3C4D64] py-3'>see what is going on with your business</p>
+          </div>
+          {/* ..... */}
+
+          <form className="w-[90%] mx-auto  border  bg-[#3C4D64] border-[#3C4D64] rounded-xl mb-4 shadow-xl hover:shadow-none focus:outline-none focus:shadow-outline-blue focus:border-blue-60">
+            <div className="flex items-center ">
+              <img src={user} alt="Card Logo" className="w-8 h-6 p-1  mx-2" />
+              <input
+                type="text"
+                className="w-full border-none  font-Nunito text-black rounded-r-xl font-bold outline-none p-3"
+                placeholder="Pet Parent Name"
+              />
+            </div>
+          </form>
+          <form className="w-[90%] mx-auto  border  bg-[#3C4D64] border-[#3C4D64] rounded-xl mb-4 shadow-xl hover:shadow-none focus:outline-none focus:shadow-outline-blue focus:border-blue-60">
+            <div className="flex items-center ">
+              <img src={Email} alt="EmailLogo" className="w-8 h-6 p-1 mx-2" />
+              <input
+                type="text"
+                className="w-full border-none  font-Nunito text-black rounded-r-xl font-bold outline-none p-3"
+                placeholder="Email"
+              />
+            </div>
+          </form>
+          <form className="w-[90%] mx-auto  border  bg-[#3C4D64] border-[#3C4D64] rounded-xl mb-4 shadow-xl hover:shadow-none focus:outline-none focus:shadow-outline-blue focus:border-blue-60">
+            <div className="flex items-center ">
+              <img src={Whatsapp} alt="WhatsappLogo" className="w-8 h-6 p-1  mx-2" />
+              <input
+                type="text"
+                className="w-full border-none  font-Nunito text-black rounded-r-xl font-bold outline-none p-3"
+                placeholder="WhatsApp Number"
+              />
+            </div>
+          </form>
+          <form className="w-[90%] mx-auto  border  bg-[#3C4D64] border-[#3C4D64] rounded-xl mb-4 shadow-xl hover:shadow-none focus:outline-none focus:shadow-outline-blue focus:border-blue-60">
+            <div className="flex items-center   ">
+              <img src={Key} alt="KeyLogo" className="w-8 h-6 p-1   items-center justify-center mx-2" />
+              <input
+                type="text"
+                className="w-full border-none  font-Nunito text-black rounded-r-xl font-bold outline-none p-3"
+                placeholder="Password"
+              />
+            </div>
+          </form>
+          <button className="bg-[#3C4D64] w-[90%] mx-auto text-white p-4 mt-8 font-Raleway font-bold text-2xl flex items-center justify-center rounded-2xl">
+            <p>Register</p>
+          </button>
+        </div>
+
+      </div>
+    </section>
   )
 }
 
-export default Signup;
+export default Signup

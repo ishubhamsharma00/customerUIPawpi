@@ -13,7 +13,7 @@ const Contact = () => {
             </div>
             {/* Contact Info Section */}
 
-            <div className=' absolute top-[580px] xl:top[900px] p-8 h-auto w-full'>
+            <div className=' absolute top-[580px] xl:top-[850px] 2xl:top-[1300px] p-8 h-auto w-full'>
                 <div className='flex items-center justify-center rounded-xl  shadow-2xl border-2 w-full h-full'>
                     <div className='flex flex-col :w-[80%] md:flex-row bg-white w-full h-full border rounded-xl shadow-2xl'>
                         <div className="  p-4 h-full w-full md:w-96 ">
@@ -77,7 +77,7 @@ const Contact = () => {
                                         302001</p>
                                 </div>
                             </div>
-                            <h2 className=' px-6 mt-2'>Opening Hours: <span className='text-[#FCDD58]'>8AM-6PM</span> Everyday</h2>
+                            <h2 className=' mx-10 px-6 mt-2'>Opening Hours: <span className='text-[#FCDD58]'>8AM-6PM</span> Everyday</h2>
                         </div>
                     </div>
                 </div>

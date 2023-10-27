@@ -24,6 +24,8 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import Thankyou from "./Components/Thankyou/Thankyou";
 import Contact from "./Components/Support/Contact";
 import Vet from "./Components/Vet/Vet";
+import Blog from "./Components/Blog/Blog";
+import Signup from "./Components/Login and Signup/Signup";
 
 
 function App() {
@@ -84,6 +86,10 @@ function App() {
       <CheckoutHOC path="/thankyou" exact component={Thankyou} />
       <CheckoutHOC path="/contactus" exact component={Contact} />
       <CheckoutHOC path="/vet" exact component={Vet} />
+      <CheckoutHOC path="/blog" exact component={Blog} />
+      <CheckoutHOC path="/signup" exact component={Signup} />
+
+
 
 
 

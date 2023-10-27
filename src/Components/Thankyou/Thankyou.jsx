@@ -31,7 +31,7 @@ const Thankyou = () => {
                 </Link>
 
             </div>
-            <div className='flex items-center my-8  gap-8'>
+            <div className='flex items-center my-8  mx-10 gap-8'>
                 <Link to="/contactus" className="lg:hover:text-[#5e17eb] lg:hover:underline">Contact Us</Link>
                 <Link to="/privacypolicy" className="lg:hover:text-[#5e17eb] lg:hover:underline">Privacy Policy</Link>
                 <Link to="/termsofservice" className="lg:hover:text-[#5e17eb] lg:hover:underline">Terms Of Service</Link>
