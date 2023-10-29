@@ -601,7 +601,7 @@ const Navbar = () => {
         </div>
 
 
-        <div className={`hidden transition-all ease-in-out lg:flex z-10 overflow-hidden ${show ? "fixed top-0 duration-200" : "fixed top-[-100%] duration-1000"}`}>
+        <div className={`hidden lg:flex z-50 overflow-hidden`}>
           <LocationPopUpModel isOpen={openLocation} setIsOpen={setOpenLocation} />
 
           <NavLg location={openLocationmodal} login={openLoginPopUp} cart={openCartPopUp} />
