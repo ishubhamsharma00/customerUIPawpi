@@ -14,6 +14,7 @@ import Signup from '../Components/Login and Signup/Signup';
 import LoginPopup from '../Components/Login and Signup/LoginPopup';
 import HeroProductPage from '../Components/HeroProductPage/HeroProductPage';
 import DogSuppliesBanner from "../Images/DogsPage/dogsupplies.png";
+import Contact from '../Components/Support/Contact';
 
 
 const DefaultHome = () => {
@@ -27,6 +28,9 @@ const DefaultHome = () => {
           {type === 'breed' && <Dog />}
           {type === 'brands' && <Dog />}
           {type === 'lifestage' && <Dog />}
+
+          {/* These are pages from footer */}
+          {type === 'contactus' && <Contact/>}
 
 
           {pt === 'food' && <Dog/> }

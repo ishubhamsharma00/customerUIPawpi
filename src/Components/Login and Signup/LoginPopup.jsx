@@ -36,6 +36,7 @@ export default function LoginPopup({ isOpen, setIsOpen }) {
           localStorage.setItem("_id", response.data._id);
         }
       } catch (error) {
+        alert('Oops!! Wrong Credentials.');
       }
     }
   }
@@ -110,7 +111,7 @@ export default function LoginPopup({ isOpen, setIsOpen }) {
                     </div>
 
                     <div className="mt-12 flex justify-between text-sm text-gray-500" >
-                      <Link to="/signup"  className="w-1/8 flex items-center font-paw justify-self-start hover:text-[#5E17EB] cursor-pointer">
+                      <Link to="/newUser/signup"  className="w-1/8 flex items-center font-paw justify-self-start hover:text-[#5E17EB] cursor-pointer">
                         Go to Signup
                       </Link>
                       <Link className="w-1/8 flex items-center font-paw  hover:text-[#5E17EB] cursor-pointer">
