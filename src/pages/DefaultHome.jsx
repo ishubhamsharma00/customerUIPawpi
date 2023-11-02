@@ -45,7 +45,6 @@ const DefaultHome = () => {
           {type === 'thankyou' && <Thankyou/>}
           {type === 'aboutus' && <AboutUs/>}
           {type === 'privacypolicy' && <PrivacyPolicy/>}
-          {type === 'orderoverview' && <OrderOverview/>}
           {type === 'ordertracking' && <OrderTracking/>}
 
 

@@ -81,7 +81,7 @@ function App() {
       
 
 
-
+      <CheckoutHOC path="/checkout/orderoverview" exact component={OrderOverview} />
       <CheckoutHOC path="/newUser/signup" exact component={Signup} />
       <DefaultHOC path="/checkout/:ct" exact component={AuthPage} />
     </>
