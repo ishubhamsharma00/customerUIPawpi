@@ -37,12 +37,12 @@ const PrivacyPolicy = () => {
         <img
           src={Text}
           alt="BackgroundImage"
-          className=" absolute  md:top-16 md:left-12  z-0 lg:left-12  md:w-[40%]   h-auto"
+          className=" absolute  md:top-16 md:left-12  lg:left-12 z-10 md:w-[40%]   h-auto"
         />
         <img
           src={PrivacyPolicyImg}
           alt="Overlayimage"
-          className="absolute md:top-0 md:right-0 z-0 lg:top-0 lg:right-0 h-auto md:w-[50%]"
+          className="absolute md:top-0 md:right-0 z-10 lg:top-0 lg:right-0 h-auto md:w-[50%]"
         />
       </div>
     </div>
