@@ -22,6 +22,7 @@ import AboutUs from '../Components/AboutUs/AboutUs';
 import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
 import OrderTracking from '../Components/OrderTracking/OrderTracking';
 import FAQ from '../Components/FAQ/FAQ';
+import ProfilePage from '../Components/ProfilePage/ProfilePage';
 
 
 const DefaultHome = () => {
@@ -40,6 +41,8 @@ const DefaultHome = () => {
           {type === 'toys' && <Toys />}
           {type === 'accessories' && <Accessories />}
           {type === 'food' && <Food />}
+          {type === 'profilepage' && <ProfilePage />}
+
 
 
 
