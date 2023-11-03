@@ -23,6 +23,7 @@ import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
 import OrderTracking from '../Components/OrderTracking/OrderTracking';
 import FAQ from '../Components/FAQ/FAQ';
 import ProfilePage from '../Components/ProfilePage/ProfilePage';
+import PetProfile from '../Components/PetProfile/PetProfile';
 
 
 const DefaultHome = () => {
@@ -42,6 +43,8 @@ const DefaultHome = () => {
           {type === 'accessories' && <Accessories />}
           {type === 'food' && <Food />}
           {type === 'profilepage' && <ProfilePage />}
+          {type === 'petprofilepage' && <PetProfile />}
+
 
 
 
