@@ -32,8 +32,8 @@ const PrivacyPolicy = () => {
   return (<>
     <div className='block bg-[#FDF2EC] sm:hidden '>
     <div className='bg-[#FDF2EC] relative '>
-      <img src={PrivacyPolicyImg} alt="image" className=' h-32 w-auto  absolute top-8 right-0 mr-5' />
-      <img src={Text} alt="image" className='h-16 w-auto   absolute top-16 left-0 mx-3' />
+      <img src={PrivacyPolicyImg} alt="dogsandfamily" className=' h-32 w-auto  absolute top-8 right-0 mr-5' />
+      <img src={Text} alt="text" className='h-16 w-auto   absolute top-16 left-0 mx-3' />
     </div>
   </div>
 
@@ -42,12 +42,12 @@ const PrivacyPolicy = () => {
   <div className="relative z-0">
     <img
       src={Text}
-      alt="BackgroundImage"
+      alt="Background"
       className="absolute md:top-16 md:left-12 lg:left-12 md:w-[40%] h-auto"
     />
     <img
       src={PrivacyPolicyImg}
-      alt="Overlayimage"
+      alt="Overlay"
       className="absolute md:top-0 md:right-0 lg:top-0 lg:right-0 h-auto md:w-[50%]"
     />
   </div>

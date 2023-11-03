@@ -75,6 +75,7 @@ function App() {
 
 
       <DefaultHOC path="/support/:st" exact component={SupportPage} />
+      
       {/* 
       st = support type (like - contact, about, term&condition..etc all footer liks) 
       */}
