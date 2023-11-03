@@ -46,7 +46,7 @@ const DefaultHome = () => {
           {/* These are pages from footer */}
           {type === 'contactus' && <Contact/>}
           {type === 'blog' && <Blog/>}
-          {type === 'vet' && <Vet/>}
+          {type === 'vet' && <Vet/>} 
           {type === 'faq' && <FAQ/>} 
           {type === 'thankyou' && <Thankyou/>}
           {type === 'aboutus' && <AboutUs/>}

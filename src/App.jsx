@@ -1,5 +1,6 @@
 import DefaultHOC from "./HOC/DefaultHOC";
 import DefaultHome from "./pages/DefaultHome";
+import NavHOC from "./HOC/NavHOC" 
 import Temp from "./pages/Temp";
 import Home from "./Components/Home/Home";
 import AccountPage from "./pages/AccountPage";
@@ -85,6 +86,10 @@ function App() {
       <CheckoutHOC path="/checkout/orderoverview" exact component={OrderOverview} />
       <CheckoutHOC path="/newUser/signup" exact component={Signup} />
       <DefaultHOC path="/checkout/:ct" exact component={AuthPage} />
+
+
+      {/* pages where only navbar exist (no footer) */}
+      {/* <NavHOC  path="/vet" exact component={Vet} /> */}
     </>
   );
 };
