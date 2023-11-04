@@ -10,8 +10,8 @@ import Food from '../Components/Food/Food';
 import Toys from '../Components/Toys/Toys';
 import Clothes from '../Components/Clothes/Clothes';
 import Accessories from '../Components/Accessories/Accessories';
-import Signup from '../Components/Login and Signup/Signup';
-import LoginPopup from '../Components/Login and Signup/LoginPopup';
+// import Signup from '../Components/Login and Signup/Signup';
+// import LoginPopup from '../Components/Login and Signup/LoginPopup';
 import HeroProductPage from '../Components/HeroProductPage/HeroProductPage';
 import DogSuppliesBanner from "../Images/DogsPage/dogsupplies.png";
 import Contact from '../Components/Support/Contact';
@@ -22,12 +22,19 @@ const DefaultHome = () => {
     const {type} = useParams();
   return (
     <>
+    {/* main pages link */}
         <div className='my-12'>
-          {type === 'dog' && <Dog img={DogSuppliesBanner}/>}
-          {type === 'cat' && <Dog />}
-          {type === 'breed' && <Dog />}
-          {type === 'brands' && <Dog />}
-          {type === 'lifestage' && <Dog />}
+          {type === 'dog' && <Dog/>}
+          {type === 'cat' && <Cat />}
+          {/* {type === 'breed' && <Breed />} */}
+          {/* {type === 'brands' && <Brands />} */}
+          {/* {type === 'lifestage' && <Lifestage />} */}
+          {type === 'clothes' && <Clothes />}
+          {type === 'toys' && <Toys />}
+          {type === 'accessories' && <Accessories />}
+          {type === 'food' && <Food />}
+
+
 
           {/* These are pages from footer */}
           {type === 'contactus' && <Contact/>}
