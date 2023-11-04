@@ -79,10 +79,18 @@ function App() {
       {/* 
       st = support type (like - contact, about, term&condition..etc all footer liks) 
       */}
-      
+      <CheckoutHOC path="/ordertracking" exact component={OrderTracking} />
+      <CheckoutHOC path="/orderoverview" exact component={OrderOverview} />
+      <CheckoutHOC path="/faq" exact component={FAQ} />
+      <CheckoutHOC path="/privacypolicy" exact component={PrivacyPolicy} />
+      <CheckoutHOC path="/aboutus" exact component={AboutUs} />
+      <CheckoutHOC path="/thankyou" exact component={Thankyou} />
+      {/* <CheckoutHOC path="/contactus" exact component={Contact} /> */}
+      <CheckoutHOC path="/vet" exact component={Vet} />
+      <CheckoutHOC path="/blog" exact component={Blog} />
 
 
-      <CheckoutHOC path="/checkout/orderoverview" exact component={OrderOverview} />
+
       <CheckoutHOC path="/newUser/signup" exact component={Signup} />
       <DefaultHOC path="/checkout/:ct" exact component={AuthPage} />
     </>

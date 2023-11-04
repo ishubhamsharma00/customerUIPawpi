@@ -17,7 +17,7 @@ const footer = () => {
                             <Link to="/accounts" className="lg:hover:text-[#5e17eb] lg:hover:underline">Accounts</Link>
                             <Link to="/helpandsupport" className="lg:hover:text-[#5e17eb] lg:hover:underline">Help & Support</Link>
                             <Link to="/ordertracking" className="lg:hover:text-[#5e17eb] lg:hover:underline">Order Tracking</Link>
-                            <Link to="/checkout/orderoverview" className="lg:hover:text-[#5e17eb] lg:hover:underline">Order Overview</Link>
+                            <Link to="/orderoverview" className="lg:hover:text-[#5e17eb] lg:hover:underline">Order Overview</Link>
                             <Link to="/vet" className="lg:hover:text-[#5e17eb] lg:hover:underline">Vetenary Team</Link>
 
 
