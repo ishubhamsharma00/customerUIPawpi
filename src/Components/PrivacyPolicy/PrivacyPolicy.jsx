@@ -63,6 +63,7 @@ const PrivacyPolicy = () => {
                   <a
                     href={`#${topic}`}
                     onClick={() => handleTopicSelect(topic)}
+                    alt="link"
                   >
                     {topic}
                   </a>
