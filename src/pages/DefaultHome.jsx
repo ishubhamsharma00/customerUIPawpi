@@ -15,6 +15,14 @@ import Accessories from '../Components/Accessories/Accessories';
 import HeroProductPage from '../Components/HeroProductPage/HeroProductPage';
 import DogSuppliesBanner from "../Images/DogsPage/dogsupplies.png";
 import Contact from '../Components/Support/Contact';
+import Blog from '../Components/Blog/Blog';
+import Vet from '../Components/Vet/Vet';
+import Thankyou from '../Components/Thankyou/Thankyou';
+import AboutUs from '../Components/AboutUs/AboutUs';
+import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
+import OrderTracking from '../Components/OrderTracking/OrderTracking';
+import FAQ from '../Components/FAQ/FAQ';
+import ProfilePage from '../Components/ProfilePage/ProfilePage
 
 
 const DefaultHome = () => {
@@ -33,6 +41,8 @@ const DefaultHome = () => {
           {type === 'toys' && <Toys />}
           {type === 'accessories' && <Accessories />}
           {type === 'food' && <Food />}
+          {type === 'profilepage' && <ProfilePage />}
+
 
 
 
