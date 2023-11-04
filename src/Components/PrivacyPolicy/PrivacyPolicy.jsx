@@ -71,6 +71,18 @@ const PrivacyPolicy = () => {
       <div className="w-full lg:w-2/3 p-4 font-Raleway md:mx-10 my-16">
         <div>
           <h1 className="text-4xl font-bold mb-6">Terms And Services</h1>
+
+          <h2 className="text-3xl font-bold mb-4">1.Introduction</h2>
+          <div>
+          {selectedTopic ? (
+            <div>
+              <h3 className="text-lg font-semibold">{selectedTopic.title}</h3>
+              <p className="text-gray-600">{selectedTopic.content}</p>
+            </div>
+          ) : (
+            <p className="text-gray-600">Select a topic to view information.</p>
+          )}
+        </div>
           <h2 className="text-3xl font-bold mb-4">{selectedTopic}</h2>
           <p className="font-Raleway font-semibold text-xl text-[#837E7E]">
             {topicContents[selectedTopic]}
