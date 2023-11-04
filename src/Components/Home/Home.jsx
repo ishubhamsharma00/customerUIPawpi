@@ -17,6 +17,32 @@ import SpecialSubCategory from "../SpecialSubCategory/SpecialSubCategory";
 //New development
 import MainBanner from '../../Images/MainBanner.png';
 import Dog from '../../Images/PopularCategoryHomepage/dog.png';
+import Cat from '../../Images/PopularCategoryHomepage/cats.png';
+import Cloths from '../../Images/PopularCategoryHomepage/cloths.png';
+import Food from '../../Images/PopularCategoryHomepage/foods.png';
+import Toys from '../../Images/PopularCategoryHomepage/toy.png';
+import Garbs from '../../Images/PopularCategoryHomepage/garbs.png';
+import Extra from '../../Images/PopularCategoryHomepage/extra.png';
+import Bed from '../../Images/PopularCategoryHomepage/beds.png';
+
+import Redshampoo from "../../Images/Popular Product/shampoo.png"
+import Xmint from "../../Images/Popular Product/xmint.png"
+import Bowjerky from "../../Images/Popular Product/bowjerky.png"
+import BubbleUp from "../../Images/Popular Product/bubbleup.png"
+
+import FideleText from "../../Images/Fideletext.png"
+import Fidele1 from "../../Images/fideleadult.png"
+import Fidele2 from "../../Images/fidelelargeadult.png"
+import Fidele3 from "../../Images/fidelelargepuppy.png"
+import Fidele4 from "../../Images/fidelepuppy.png"
+
+
+import Chews from "../../Images/PopularCategoryHomepage/chews.png"
+import BoneToys from "../../Images/PopularCategoryHomepage/bonetoys.png"
+import DandruffShampoo from "../../Images/PopularCategoryHomepage/dandruffshampoo.png"
+import Leashes from "../../Images/PopularCategoryHomepage/leashes.png"
+import Treats from "../../Images/PopularCategoryHomepage/treats.png"
+
 import popularProductsGif from '../../Images/popularProducts.gif';
 import appleGif from '../../Images/apple.gif';
 import clothGif from '../../Images/cloth.gif';
@@ -43,6 +69,12 @@ import ourValues2 from '../../Images/ourValues2.png';
 import ourValues3 from '../../Images/ourValues3.png';
 
 import specialProductBanner from '../../Images/specialProductBanner.png';
+
+import Image1 from "../../Images/instafam/image1.png"
+import Image2 from "../../Images/instafam/image2.png"
+import Image3 from "../../Images/instafam/image3.png"
+import Image4 from "../../Images/instafam/image4.png"
+
 
 import tNeLeft from '../../Images/t&eLeft.png';
 import tNeMiddleTop from '../../Images/t&eMiddleTop.png';
@@ -91,14 +123,7 @@ const Home = () => {
       id: 8,
       name: Dog
     },
-    {
-      id: 9,
-      name: Dog
-    },
-    {
-      id: 10,
-      name: Dog
-    },
+
   ]
 
   //useState for active Brand Product selection
@@ -122,37 +147,37 @@ const Home = () => {
             <img src={Dog} alt="dog" className="w-full h-full" />
             <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
           </div>
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
+          <div className="h-28 w-28 bg-[#AED2FF] rounded-xl">
+            <img src={Cat} alt="dog" className="w-full h-full" />
+            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#AED2FF] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
+          </div>
+          <div className="h-28 w-28 bg-[#A8DF8E] rounded-xl">
+            <img src={Food} alt="dog" className="w-full h-full" />
+            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#A8DF8E]  duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
+          </div>
+          <div className="h-28 w-28 bg-[#C23373] rounded-xl">
+            <img src={Toys} alt="dog" className="w-full h-full" />
+            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#C23373] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
+          </div>
+          <div className="h-28 w-28 bg-[#FBD85D] rounded-xl">
+            <img src={Garbs} alt="dog" className="w-full h-full" />
+            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#FBD85D] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
+          </div>
+          <div className="h-28 w-28 bg-[#E8D2A6] rounded-xl">
+            <img src={Extra} alt="dog" className="w-full h-full" />
+            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#E8D2A6] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
+          </div>
+          <div className="h-28 w-28 bg-[#BFACE2] rounded-xl">
+            <img src={Bed} alt="dog" className="w-full h-full" />
+            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#BFACE2] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
           </div>
           <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
+            <img src={Toys} alt="dog" className="w-full h-full" />
             <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
           </div>
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
+          <div className="h-28 w-28 bg-[#FBD85D] rounded-xl">
+            <img src={Garbs} alt="dog" className="w-full h-full" />
+            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#FBD85D] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
           </div>
         </div>
 
@@ -167,7 +192,7 @@ const Home = () => {
           <div className="flex items-center justify-between m-auto h-full gap-20 w-[90%] py-8 overflow-x-auto">
             <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
               <div>
-                <img src={Dog} className="h-44 w-36" />
+                <img src={Redshampoo} className="h-44 w-36" />
               </div>
               <div className="flex flex-col items-center gap-1">
                 <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
@@ -177,7 +202,7 @@ const Home = () => {
             </div>
             <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
               <div>
-                <img src={Dog} className="h-44 w-36" />
+                <img src={Xmint} className="h-44 w-36" />
               </div>
               <div className="flex flex-col items-center gap-1">
                 <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
@@ -187,7 +212,7 @@ const Home = () => {
             </div>
             <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
               <div>
-                <img src={Dog} className="h-44 w-36" />
+                <img src={Bowjerky} className="h-44 w-36" />
               </div>
               <div className="flex flex-col items-center gap-1">
                 <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
@@ -197,7 +222,7 @@ const Home = () => {
             </div>
             <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
               <div>
-                <img src={Dog} className="h-44 w-36" />
+                <img src={BubbleUp} className="h-44 w-36" />
               </div>
               <div className="flex flex-col items-center gap-1">
                 <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
@@ -207,7 +232,7 @@ const Home = () => {
             </div>
             <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
               <div>
-                <img src={Dog} className="h-44 w-36" />
+                <img src={Xmint} className="h-44 w-36" />
               </div>
               <div className="flex flex-col items-center gap-1">
                 <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
@@ -215,41 +240,6 @@ const Home = () => {
                 <p className="text-[#7ACB0C]">2100</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Information Texts */}
-        <div className="h-full w-full px-10 flex justify-around items-center">
-          <div className="w-[45%] h-full grid grid-cols-2 gap-5">
-            <div className="flex flex-col gap-1">
-              <img src={appleGif} alt="gif" className="h-12 w-12" />
-              <p className="font-semibold">Feed. Frolic.</p>
-              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <img src={clothGif} alt="gif" className="h-12 w-12" />
-              <p className="font-semibold">Style. Snuggle.</p>
-              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <img src={boatGif} alt="gif" className="h-12 w-12" />
-              <p className="font-semibold">Munch. Mingle.</p>
-              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <img src={pawGif} alt="gif" className="h-12 w-12" />
-              <p className="font-semibold">Groom. Jive.</p>
-              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
-            </div>
-          </div>
-
-          <div className="h-full w-[45%] flex flex-col">
-            <p className="font-bold pb-1 text-2xl">"Discover Unlimited Pet Delights!"</p>
-            <p className="text-xs tracking-wide leading-relaxed">amet libero consectetur repudiandae reprehenderit nostrum voluptate! Repudiandae quod provident iure deserunt dignissimos cupiditate eum ducimus placeat illum nostrum culpa, iusto quo ut officia dolore doloremque eligendi, eveniet expedita, deleniti repellendus temporibus accusantium. Aliquam ipsum harum labore explicabo aspernatur nihil enim? Beatae fugit dolores, tempora repudiandae assumenda non quasi architecto, commodi temporibus cum vel distinctio aliquam quia, ut harum eaque nulla provident. Animi, obcaecati eligendi excepturi fuga, sequi, autem laboriosam recusandae nam aspernatur quisquam iste a quia ratione quae ex delectus laborum sint laudantium aperiam dolor. Fugit itaque explicabo ea tenetur doloremque magni nemo expedita quidem. In quam autem reprehenderit voluptates possimus tenetur quae ullam voluptatem molestiae, alias magni delectus natus iure! Quasi quia incidunt blanditiis. Ipsam placeat atque veniam fugiat inventore. Placeat tenetur sed, ipsum libero optio, nobis perferendis amet incidunt, tempore dolores natus aspernatur illo. Laborum, hic. Magni ea repellat possimus mollitia nesciunt doloremque repellendus porro animi. Error accusantium distinctio ipsa. Porro, reiciendis! Provident, pariatur eum officiis quos quis exercitationem beatae eligendi cum rem atque ipsa nisi hic iste laborum in alias sunt, facilis nostrum voluptas? Provident aspernatur odit deleniti soluta dolore itaque minus vero distinctio neque quibusdam aut similique autem, iure facilis culpa quis accusamus illum ea doloribus praesentium dolorum id numquam voluptatibus nam? Perferendis maxime, aspernatur sequi voluptatum architecto adipisci commodi debitis ducimus officia id in labore, accusantium earum ipsa eaque vero repudiandae temporibus sunt nihil quidem soluta consequatur. Harum, assumenda! Quo, suscipit perspiciatis, unde ea, reiciendis consequatur eveniet iste molestias nisi porro cum cupiditate dicta modi?</p>
-            <button className="w-1/4 rounded-full bg-[#FF6969] p-1 text-white font-semibold py-1 mt-4">Shop Now</button>
           </div>
         </div>
 
@@ -308,33 +298,102 @@ const Home = () => {
           </div>
         </div>
 
+        {/* fidele products */}
+        <div className="h-full w-full flex flex-col">
+          {/* <div className="w-[90%] overflow-y-hidden px-4 pt-4 m-auto flex items-center justify-between gap-14 overflow-x-auto">
+            {brands.map((items) => <>
+              <img src={items.name} key={items.id} onClick={() => { handleActiveBrand(items.id) }}
+                className={`cursor-pointer duration-500 p-4 pb-0 rounded-t-full ${activeBrand === items.id ? 'bg-[#AED2FF] scale-110 duration-500' : 'bg-white'}`} />
+            </>)}
+          </div> */}
+         
+          <div className="w-full h-full bg-[#AED2FF]">
+            <div>
+            <img src={FideleText} alt="text"  className="h-44 w-40 z-50 ml-32 my-10 justify-start items-start"/>
+            </div>
+
+            <div className="w-[90%] flex justify-center gap-12 items-center h-full m-auto pb-14 -mt-20 ">
+
+              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
+                  <img src={Fidele1} className="h-full w-full" />
+              </div>
+              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
+                  <img src={Fidele2} className="h-full w-full" />
+              </div>
+              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
+                  <img src={Fidele3} className="h-full w-full" />
+              </div>
+              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
+                  <img src={Fidele4} className="h-full w-full" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Information Texts */}
+        <div className="h-full w-full px-10 flex justify-around items-center">
+          <div className="w-[45%] h-full grid grid-cols-2 gap-5">
+            <div className="flex flex-col gap-1">
+              <img src={appleGif} alt="gif" className="h-12 w-12" />
+              <p className="font-semibold">Feed. Frolic.</p>
+              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <img src={clothGif} alt="gif" className="h-12 w-12" />
+              <p className="font-semibold">Style. Snuggle.</p>
+              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <img src={boatGif} alt="gif" className="h-12 w-12" />
+              <p className="font-semibold">Munch. Mingle.</p>
+              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <img src={pawGif} alt="gif" className="h-12 w-12" />
+              <p className="font-semibold">Groom. Jive.</p>
+              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
+            </div>
+          </div>
+
+          <div className="h-full w-[45%] flex flex-col">
+            <p className="font-bold pb-1 text-2xl">"Discover Unlimited Pet Delights!"</p>
+            <p className="text-xs tracking-wide leading-relaxed">amet libero consectetur repudiandae reprehenderit nostrum voluptate! Repudiandae quod provident iure deserunt dignissimos cupiditate eum ducimus placeat illum nostrum culpa, iusto quo ut officia dolore doloremque eligendi, eveniet expedita, deleniti repellendus temporibus accusantium. Aliquam ipsum harum labore explicabo aspernatur nihil enim? Beatae fugit dolores, tempora repudiandae assumenda non quasi architecto, commodi temporibus cum vel distinctio aliquam quia, ut harum eaque nulla provident. Animi, obcaecati eligendi excepturi fuga, sequi, autem laboriosam recusandae nam aspernatur quisquam iste a quia ratione quae ex delectus laborum sint laudantium aperiam dolor. Fugit itaque explicabo ea tenetur doloremque magni nemo expedita quidem. In quam autem reprehenderit voluptates possimus tenetur quae ullam voluptatem molestiae, alias magni delectus natus iure! Quasi quia incidunt blanditiis. Ipsam placeat atque veniam fugiat inventore. Placeat tenetur sed, ipsum libero optio, nobis perferendis amet incidunt, tempore dolores natus aspernatur illo. Laborum, hic. Magni ea repellat possimus mollitia nesciunt doloremque repellendus porro animi. Error accusantium distinctio ipsa. Porro, reiciendis! Provident, pariatur eum officiis quos quis exercitationem beatae eligendi cum rem atque ipsa nisi hic iste laborum in alias sunt, facilis nostrum voluptas? Provident aspernatur odit deleniti soluta dolore itaque minus vero distinctio neque quibusdam aut similique autem, iure facilis culpa quis accusamus illum ea doloribus praesentium dolorum id numquam voluptatibus nam? Perferendis maxime, aspernatur sequi voluptatum architecto adipisci commodi debitis ducimus officia id in labore, accusantium earum ipsa eaque vero repudiandae temporibus sunt nihil quidem soluta consequatur. Harum, assumenda! Quo, suscipit perspiciatis, unde ea, reiciendis consequatur eveniet iste molestias nisi porro cum cupiditate dicta modi?</p>
+            <button className="w-1/4 rounded-full bg-[#FF6969] p-1 text-white font-semibold py-1 mt-4">Shop Now</button>
+          </div>
+        </div>
+
+        
+
         {/* Popular Sub-Categories */}
         <div className="flex my-6 bg-white gap-2 px-12 flex-col">
           <p className="relative my-4 left-8 font-bold tracking-wide text-2xl">Popular Categories</p>
           <div className="w-[88%] m-auto h-full flex items-center justify-between">
             <div className="flex flex-col items-center">
-              <img src={Dog} alt='popularSubCategories' className="bg-red-200 shadow-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p>Name</p>
+              <img src={Chews} alt='popularSubCategories' className="bg-[#FF9B82] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
+              <p className="font-Raleway font-semibold text-xl" >Chews</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={Dog} alt='popularSubCategories' className="bg-red-200 shadow-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p>Name</p>
+              <img src={BoneToys} alt='popularSubCategories' className="bg-[#AED2FF] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
+              <p className="font-Raleway font-semibold text-xl ">Toys</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={Dog} alt='popularSubCategories' className="bg-red-200 shadow-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p>Name</p>
+              <img src={Leashes} alt='popularSubCategories' className="bg-[#94dc94] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
+              <p className="font-Raleway font-semibold text-xl" >Leashes</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={Dog} alt='popularSubCategories' className="bg-red-200 shadow-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p>Name</p>
+              <img src={DandruffShampoo} alt='popularSubCategories' className="bg-[#FBD85D] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
+              <p className="font-Raleway font-semibold text-xl" >Shampoo</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={Dog} alt='popularSubCategories' className="bg-red-200 shadow-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p>Name</p>
+              <img src={Treats} alt='popularSubCategories' className="bg-[#FFA1F5] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
+              <p className="font-Raleway font-semibold text-xl">Treats</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={Dog} alt='popularSubCategories' className="bg-red-200 shadow-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p>Name</p>
+              <img src={Chews} alt='popularSubCategories' className="bg-[#FF9B82] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
+              <p className="font-Raleway font-semibold text-xl">Chews</p>
             </div>
           </div>
         </div>
@@ -369,7 +428,7 @@ const Home = () => {
           <p className="text-4xl font-semibold tracking-wide mt-6">Our Values</p>
 
           <div className="h-full w-full flex items-center justify-around">
-            <img src={ourValues1} alt="ourValuesImage1" className="w-[33%] scale-x-110 h-full rounded-md" />
+            <img src={ourValues1} alt="ourValuesImage1" className="w-[33%] scale-x-110 h-full rounded-md -z-10" />
             <div className="h-full w-[42%]  flex flex-col gap-4">
               <p className="text-2xl tracking-wider pr-6">"Our Compassionate Commitment: Elevating Pet Wellbeing Through Quality Products and Careful Curation."</p>
               <p className="text-sm tracking-wide font-light">At Pawpi, we hold an unwavering commitment to the wellbeing of your beloved pets. Our journey is driven by a deep sense of compassion, ensuring that every product we offer meets the highest standards of quality and safety. We understand the importance of pets in your life, and our dedication to their happiness and health guides every decision we make.</p>
@@ -409,11 +468,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <img src={ourValues2} alt="ourValuesImage2" className="w-[33%] scale-x-110 h-full rounded-md" />
+            <img src={ourValues2} alt="ourValuesImage2" className="w-[33%] scale-x-110 h-full rounded-md -z-10" />
           </div>
 
           <div className="h-full w-full flex items-center justify-around">
-            <img src={ourValues3} alt="ourValuesImage3" className="w-[33%] scale-x-110 h-full rounded-md" />
+            <img src={ourValues3} alt="ourValuesImage3" className="w-[33%] scale-x-110 h-full rounded-md -z-10" />
             <div className="h-full w-[42%]  flex flex-col gap-4">
               <p className="text-2xl tracking-wider pr-6">"Community Connection: Fostering Relationships, Sharing Knowledge, and Celebrating the Love of Pets."</p>
               <p className="text-sm tracking-wide font-light"> Our pet-loving community isn't just about transactions; it's about building relationships. We're here to foster a sense of connection among pet enthusiasts. Our store is a hub where you can not only find the best products for your pets but also share experiences, knowledge, and the love you have for your furry companions. Together, we celebrate the joy of pet ownership.</p>
@@ -472,19 +531,19 @@ const Home = () => {
 
         {/*EVERYTHING-YOUR-PET-NEEDS-BANNER&CAROUSEL*/}
         <div
-          className="lg:h-full w-full h-52 md:h-full md:my-14 my-8 bg-cover bg-bottom"
+          className="lg:h-screen w-full h-52 md:h-full md:my-14 my-8 bg-cover bg-bottom"
           style={{ backgroundImage: `url(${BlueBanner})` }}
         >
-          <div className="lg:pt-80 lg:pb-12 lg:mx-20 md:pt-44 pt-28 md:mx-12 mx-12">
+          <div className="lg:pt-[600px] lg:pb-12 lg:mx-20 md:pt-44 pt-28 md:mx-12 mx-12 -z-50">
             <EverythingForPetCarousel />
           </div>
         </div>
 
         {/*REVIEW-SLIDER*/}
         <div className="w-[85%] flex flex-col gap-4 text-center m-auto h-full mt-6">
-          <p className="capitalize text-3xl font-semibold tracking-wide">what our customers<br /> said about us</p>
-          <p className="w-2/3 m-auto font-light capitalize">"Our customers' voices echo the love and trust they've found in our pet products, shaping our journey with heartfelt testimonials."</p>
-          <div className="h-full w-full">
+          <p className=" text-3xl  uppercase font-bold font-Raleway tracking-wide">what our customers<br /> said about us</p>
+          <p className="w-2/3 m-auto  font-semibold font-Raleway uppercase text-black">"Our customers' voices echo the love and trust they've found in our pet products, shaping our journey with heartfelt testimonials."</p>
+          <div className="h-full w-full -z-10">
             <ReviewCarousel />
           </div>
         </div>
@@ -520,17 +579,17 @@ const Home = () => {
           <img src={followUsInsta} alt="followUsImage" className="w-full" />
           <div className="w-[60%] absolute top-[15%] left-[3%]">
             <div className="w-2/3 flex flex-col gap-8 text-center m-auto">
-              <p className="text-white drop-shadow-2xl font-semibold text-5xl tracking-wider">FOLLOW US</p>
+              <p className="text-white drop-shadow-2xl font-Raleway font-semibold text-5xl tracking-wider border-b-8 rounded-full border-white uppercase">Be Our instafam <br /> follow us </p>
               <a href="https://www.instagram.com/gopawpi" target="_blank" className="text-white font-extrabold text-7xl drop-shadow-2xl tracking-widest">@gopawpi</a>
             </div>
             <div className="flex items-center gap-12 mx-4 pt-32 w-full flex-wrap">
+              <img src={Image1} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image2} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image3} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image4} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image3} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
               <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image1} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
               <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
              
             </div>

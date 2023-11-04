@@ -57,7 +57,7 @@ const DogCategoryCarousel = () => {
                   </div>
                   <img src={data.image} 
                       alt="EverythingForPet"
-                      className="h-36 w-32 z-10 relative left-5 -top-40 hover:animate-pulse"
+                      className="h-36 w-32 z-0 relative left-5 -top-40 hover:animate-pulse"
                     />
                 </Link>
               </div>

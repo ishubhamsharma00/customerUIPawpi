@@ -6,6 +6,13 @@ import Litter from '../../Images/litter.png';
 import Food from '../../Images/food2.png';
 import Toys from '../../Images/toys2.png';
 import Treats from '../../Images/treats.png';
+
+// import Hardbone from "../../Images/hardchewbone.png"
+// import Jinny from "../../Images/jinny.png"
+// import Mrdog from "../../Images/mrdog.png"
+// import NylonLeash from "../../Images/nylonleash.png"
+// import Printedcollar from "../../Images/printedcollar.png"
+
 import { PetNextArrow, PetPrevArrow } from "../HeroCarousal/ArrowCarousel";
 import { Link } from "react-router-dom";
 
@@ -46,6 +53,7 @@ const EverythingForPetCarousel = () => {
       autoplay : true,
       pauseOnHover: true,
       swipeToSlide:true,
+    
     };
 
     const EverythingForPetDetails=[
@@ -54,15 +62,15 @@ const EverythingForPetCarousel = () => {
 
     return (
     <>
-    <div className="hidden lg:contents">
+    <div className="hidden lg:contents  ">
       <Slider {...settingsLg}>
       {
         EverythingForPetDetails.map((data)=>(
               <Link to={'/product/treats'} className="h-48 w-full px-1">
-                  <div className="h-full w-full flex items-center justify-center">
+                  <div className="h-full w-full flex items-center justify-center -z-50">
                       <img src={data} 
                       alt="EverythingForPet"
-                      className="h-44 w-auto"
+                      className="h-44 w-auto -z-50"
                       />
                   </div>
               </Link>
