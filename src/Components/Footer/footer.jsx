@@ -36,6 +36,8 @@ const footer = () => {
                             <Link to="/thankyou" className="lg:hover:text-[#5e17eb] lg:hover:underline">Thank You</Link>
                             <Link to="/blog" className="lg:hover:text-[#5e17eb] lg:hover:underline">Blogs</Link>
                             <Link to="/profilepage" className="lg:hover:text-[#5e17eb] lg:hover:underline">Profile</Link>
+                            <Link to="/petprofilepage" className="lg:hover:text-[#5e17eb] lg:hover:underline">Pet Profile</Link>
+
 
 
 
