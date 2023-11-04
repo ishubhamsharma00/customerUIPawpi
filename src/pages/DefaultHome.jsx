@@ -15,13 +15,6 @@ import Accessories from '../Components/Accessories/Accessories';
 import HeroProductPage from '../Components/HeroProductPage/HeroProductPage';
 import DogSuppliesBanner from "../Images/DogsPage/dogsupplies.png";
 import Contact from '../Components/Support/Contact';
-import Blog from '../Components/Blog/Blog';
-import Vet from '../Components/Vet/Vet';
-import Thankyou from '../Components/Thankyou/Thankyou';
-import AboutUs from '../Components/AboutUs/AboutUs';
-import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
-import OrderTracking from '../Components/OrderTracking/OrderTracking';
-import FAQ from '../Components/FAQ/FAQ';
 
 
 const DefaultHome = () => {
@@ -45,15 +38,6 @@ const DefaultHome = () => {
 
           {/* These are pages from footer */}
           {type === 'contactus' && <Contact/>}
-          {type === 'blog' && <Blog/>}
-          {type === 'vet' && <Vet/>}
-          {type === 'faq' && <FAQ/>} 
-          {type === 'thankyou' && <Thankyou/>}
-          {type === 'aboutus' && <AboutUs/>}
-          {type === 'privacypolicy' && <PrivacyPolicy/>}
-          {type === 'ordertracking' && <OrderTracking/>}
-
-
 
 
           {pt === 'food' && <Dog/> }

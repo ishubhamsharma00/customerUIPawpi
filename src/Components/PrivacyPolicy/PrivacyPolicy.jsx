@@ -35,7 +35,6 @@ const PrivacyPolicy = () => {
       <img src={PrivacyPolicyImg} alt="dogsandfamily" className=' h-32 w-auto  absolute top-8 right-0 mr-5' />
       <img src={Text} alt="text" className='h-16 w-auto   absolute top-16 left-0 mx-3' />
     </div>
-  </div>
 
 
   <div className='relative z-0 hidden md:block md:h-[40vh] lg:h-[55vh] xl:h-[70vh] w-screen bg-[#FDF2EC] mx-auto mt-24'>
