@@ -26,7 +26,7 @@ const ContactPage = () => {
     };
 
     return (<>
-        <div className="relative flex flex-col items-center  min-h-screen ">
+        <div className="relative flex flex-col items-center  md:min-h-screen sm:h-full ">
             {/* Top Image */}
             <img
                 src={dog}
@@ -34,7 +34,7 @@ const ContactPage = () => {
                 className="w-full h-full "
             />
         </div>
-        <div className='absolute top-[200px] md:top-[300px] xl:top-[850px] 2xl:top-[800px] p-8 h-auto w-full'>
+        <div className=' sm:absolute top-[200px] md:top-[350px] xl:top-[500px] 2xl:top-[700px] p-8 h-auto w-full '>
             <div className='flex items-center justify-center rounded-xl shadow-2xl border-2 w-full h-full'>
                 <div className='flex flex-col :w-[80%] md:flex-row bg-white w-full h-full border rounded-xl shadow-2xl'>
                     <div className='p-4 h-full w-full md:w-96'>
