@@ -24,6 +24,7 @@ import OrderTracking from '../Components/OrderTracking/OrderTracking';
 import FAQ from '../Components/FAQ/FAQ';
 import ProfilePage from '../Components/ProfilePage/ProfilePage';
 import PetProfile from '../Components/PetProfile/PetProfile';
+import OrderOverview from '../Components/OrderOverview/OrderOverview';
 
 
 const DefaultHome = () => {
@@ -42,8 +43,7 @@ const DefaultHome = () => {
           {type === 'toys' && <Toys />}
           {type === 'accessories' && <Accessories />}
           {type === 'food' && <Food />}
-          {type === 'profilepage' && <ProfilePage />}
-          {type === 'petprofilepage' && <PetProfile />}
+   
 
 
 
@@ -51,6 +51,20 @@ const DefaultHome = () => {
 
           {/* These are pages from footer */}
           {type === 'contactus' && <Contact/>}
+          {type === 'profilepage' && <ProfilePage />}
+          {type === 'petprofilepage' && <PetProfile />}
+          {type === 'ordertracking' && <OrderTracking />}
+          {type === 'orderoverview' && <OrderOverview />}
+          {type === 'faq' && <FAQ />}
+          {type === 'privacypolicy' && <PrivacyPolicy />}
+          {type === 'aboutus' && <AboutUs />}
+          {type === 'thankyou' && <Thankyou />}
+          {type === 'vet' && <Vet />}
+          {type === 'blog' && <Blog />}
+
+
+
+
 
 
           {pt === 'food' && <Dog/> }
