@@ -23,6 +23,7 @@ import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
 import OrderOverview from '../Components/OrderOverview/OrderOverview';
 import OrderTracking from '../Components/OrderTracking/OrderTracking';
 import FAQ from '../Components/FAQ/FAQ';
+import CartUi from '../Components/CartUI/CartUi';
 
 
 const DefaultHome = () => {
@@ -46,6 +47,8 @@ const DefaultHome = () => {
           {type === 'aboutus' && <AboutUs/>}
           {type === 'privacypolicy' && <PrivacyPolicy/>}
           {type === 'ordertracking' && <OrderTracking/>}
+          {type === 'cartui' && <CartUi/>}
+
 
 
 

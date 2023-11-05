@@ -19,6 +19,8 @@ const footer = () => {
                             <Link to="/ordertracking" className="lg:hover:text-[#5e17eb] lg:hover:underline">Order Tracking</Link>
                             <Link to="/checkout/orderoverview" className="lg:hover:text-[#5e17eb] lg:hover:underline">Order Overview</Link>
                             <Link to="/vet" className="lg:hover:text-[#5e17eb] lg:hover:underline">Vetenary Team</Link>
+                            <Link to="/cartui" className="lg:hover:text-[#5e17eb] lg:hover:underline">Cart </Link>
+
 
 
 
