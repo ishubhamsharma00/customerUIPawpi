@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import instagram from "../../Images/Footer Images/insta.png";
-import whatsapp from "../../Images/Footer Images/whatsapp.png";
-import arrow from "../../Images/Footer Images/arrow.png";
-
+import instagram from "../../Images/Footer Images/insta.png"
+import whatsapp from "../../Images/Footer Images/whatsapp.png"
+import arrow from "../../Images/Footer Images/arrow.png"
 const Footer = () => {
     return (
         <div className="flex flex-col lg:px-32 md:px-14 px-2 font-paw bg-black text-white">
@@ -11,29 +10,6 @@ const Footer = () => {
                 <div className="md:w-1/4 w-1/3">
                     <div className="lg:text-2xl md:text-xl text-lg my-3">
                         Information
-                    </div>
-                    <div className="lg:text-xs md:text-md text-sm flex flex-col">
-                        <Link to="/contactus" className="lg:hover:text-[#5e17eb] lg:hover:underline">
-                            Contact Us
-                        </Link>
-                        <Link to="/accounts" className="lg:hover:text-[#5e17eb] lg:hover:underline">
-                            Accounts
-                        </Link>
-                        <Link to="/helpandsupport" className="lg:hover:text-[#5e17eb] lg:hover:underline">
-                            Help & Support
-                        </Link>
-                        <Link to="/ordertracking" className="lg:hover:text-[#5e17eb] lg:hover:underline">
-                            Order Tracking
-                        </Link>
-                        <Link to="/checkout/orderoverview" className="lg:hover:text-[#5e17eb] lg:hover:underline">
-                            Order Overview
-                        </Link>
-                        <Link to="/vet" className="lg:hover:text-[#5e17eb] lg:hover:underline">
-                            Veterinary Team
-                        </Link>
-                        <Link to="/cartui" className="lg:hover:text-[#5e17eb] lg:hover:underline">
-                            Cart
-                        </Link>
                     </div>
                 </div>
 

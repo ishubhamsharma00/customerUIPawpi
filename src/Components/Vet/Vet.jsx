@@ -64,12 +64,39 @@ const Vet = () => {
             rating: 4.5,
             image: "../../Images/Vet/doctor.png",
         },
-        
+        {
+            name: ' Dr. John Smith',
+            address: '123 Main St, City, State',
+            phoneNumber: '123-456-7890',
+            rating: 4.5,
+            image: "../../Images/Vet/doctor.png",
+        },
+        {
+            name: ' Dr. John Smith',
+            address: '123 Main St, City, State',
+            phoneNumber: '123-456-7890',
+            rating: 4.5,
+            image: "../../Images/Vet/doctor.png",
+        },
+        {
+            name: ' Dr. John Smith',
+            address: '123 Main St, City, State',
+            phoneNumber: '123-456-7890',
+            rating: 4.5,
+            image: "../../Images/Vet/doctor.png",
+        },
+        {
+            name: ' Dr. John Smith',
+            address: '123 Main St, City, State',
+            phoneNumber: '123-456-7890',
+            rating: 4.5,
+            image: "../../Images/Vet/doctor.png",
+        },
         // Add more doctor objects as needed
     ];
 
     return (
-        <div className=" p-4">
+        <div className=" min-h-screen  p-4">
             <h1 className="text-3xl font-bold  font-Raleway text-center my-4">Our Expert Veterinary Team</h1>
             <h3 className='text-xl font-semibold font-Raleway text-center my-4'>Passionate Professionals Dedicated to Your Pet's Health and Wellbeing"</h3>
 

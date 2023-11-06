@@ -3,6 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { BiRupee, BiSort } from "react-icons/bi";
 import { FaFilter, FaHeart } from "react-icons/fa";
 import CardDetails from "./DogCardDetail";
+import DogImage1 from  "../../Images/dogimage1.png"
 import WoofBanner from "../../Images/DogsPage/woof.png";
 import Sort from "../Sort/sort";
 import DogCategoryCarousel from "./DogCategoryCarousel";
@@ -36,7 +37,7 @@ const Dog = (props) => {
   };
   return (
     <>
-      <div className={`w-full h-full mt-24`}>
+      <div className={`w-full h-full `}>
 
         {/* Filter and Sort Button for Mobile and Tab screen */}
         <div className="lg:hidden w-full h-full z-50">
@@ -104,16 +105,16 @@ const Dog = (props) => {
         </div>
 
         {/* dog image banner */}
-        <div className="w-full h-full">
+        <div className="w-full h-[70vh]">
           <img
-            src={props.img}
+            src={DogImage1}
             alt="DogSuppliesBanner"
             className="w-full h-full"
           />
         </div>
 
         {/* Dog Category Carousel*/}
-        <div className="md:mx-6 md:mb-6 -mt-2">
+        <div className="md:mx-6 md:mb-6  -z-10 -mt-2">
           <DogCategoryCarousel />
         </div>
 

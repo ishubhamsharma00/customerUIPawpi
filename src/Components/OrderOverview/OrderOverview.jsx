@@ -18,7 +18,7 @@ import AddressRadioButtons from '../AddressRadioButton/AddressRadioButtons';
 const OrderOverview = () => {
   return (
     <>
-  <nav className="p-4 flex flex-col sm:flex-row justify-between items-center border-solid border-b border-[1px] border-[#CDCDCD]  sm:mt-24">
+  <nav className="p-4 flex flex-col sm:flex-row justify-between items-center border-solid border-b border-[1px] border-[#CDCDCD] mt-6 sm:mt-24">
   <div className="flex items-center space-x-6">
     <img src={LOGO} alt="Logo" className="h-16 w-40" />
     <div className="bg-[#A4A3A6] h-6 w-1"></div>
@@ -37,7 +37,7 @@ const OrderOverview = () => {
 
       <section className='  w-screen h-screen flex mx-auto  '>
         {/* left section */}
-        <div className='bg-red-300 h-screen w-[100%] md:w-[50%] p-6'>
+        <div className='bg-white h-full w-[100%] md:w-[50%] p-6'>
           <h3 className='font-Raleway text-xl font-bold text-black mx-12 '>Summary Order</h3>
           <p className='font-Raleway font-medium text-[#837E7E] w-[90%] md:w-[50%] mx-12 my-2'>Check your item and select your shipping for better experience.</p>
 
