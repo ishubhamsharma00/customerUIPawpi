@@ -22,9 +22,10 @@ import AboutUs from '../Components/AboutUs/AboutUs';
 import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
 import OrderTracking from '../Components/OrderTracking/OrderTracking';
 import FAQ from '../Components/FAQ/FAQ';
+import CartUi from '../Components/CartUI/CartUi';
 import ProfilePage from '../Components/ProfilePage/ProfilePage';
 import PetProfile from '../Components/PetProfile/PetProfile';
-import OrderOverview from '../Components/OrderOverview/OrderOverview';
+import OrderOverview from '../Components/OrderOverview/OrderOverview';  
 
 
 const DefaultHome = () => {
@@ -61,7 +62,6 @@ const DefaultHome = () => {
           {type === 'thankyou' && <Thankyou />}
           {type === 'vet' && <Vet />}
           {type === 'blog' && <Blog />}
-
 
 
 
