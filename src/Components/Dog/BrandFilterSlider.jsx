@@ -6,7 +6,7 @@ import Hills from "../../Images/Brands/hills.png";
 import Kong from "../../Images/Brands/kong.png";
 import Nulo from "../../Images/Brands/nulo.png";
 import Nutro from "../../Images/Brands/nutro.png";
-import RoyalCannin from "../../Images/Brands/royalcanin.png";
+import RoyalCannin from "../../Images/Brands/royalCanin.png";
 import Trixie from "../../Images/Brands/trixie.png";
 
 
