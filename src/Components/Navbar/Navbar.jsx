@@ -281,7 +281,7 @@ const NavLg = ({ location, login, cart }) => {
   return (
     <>
       <div className='fixed h-16 text-xs w-screen bg-white flex items-center shadow-xl py-2 px-5 justify-between'>
-        <Link to="/" className='h-14 w-[10%] p-1'>
+        <Link to="/" className='h-16 w-32 p-1'>
           <img
             src={yellowLogo}
             alt='logo'
@@ -386,13 +386,17 @@ const NavLg = ({ location, login, cart }) => {
         </div>
 
         <div className='flex h-10 w-[20%] text-sm font-semibold tracking-wide px-3 items-center justify-between'>
-          
+          <div className='flex flex-col items-center gap-1'>
           <img
             src={locationPin}
             alt='locationIcon'
             className='h-8 w-8'
             onClick={location} />
+            <p className='text-xs text-gray-400'>
             {localStorage.getItem("pincode")}
+            </p>
+          </div>
+          
 
           <div className=''>
             {
