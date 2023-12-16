@@ -83,6 +83,17 @@ import tNeRight from '../../Images/t&eRight.png';
 
 import followUs from '../../Images/followUs.png';
 import followUsInsta from '../../Images/followUsInsta.png';
+
+//brands
+import NUTRO from "../../Images/Brands/nutro.png";
+import ROYALCANIN from "../../Images/Brands/royalcanin.png";
+import ACANA from "../../Images/Brands/acana.png";
+import KONG from "../../Images/Brands/kong.png";
+import NULO from "../../Images/Brands/nulo.png";
+import AJ from "../../Images/Brands/aj.png";
+import HILLS from "../../Images/Brands/hills.png";
+import TRIXIE from "../../Images/Brands/trixie.png";
+import Marquee from 'react-fast-marquee';
 const Home = () => {
 
   //useState for animation activation
@@ -90,47 +101,92 @@ const Home = () => {
   const [greenAnimationActivate, setGreenAnimationActivate] = useState(false);
   const [pinkAnimationActivate, setPinkAnimationActivate] = useState(false);
 
+
+
+
   const brands = [
     {
       id: 1,
-      name: Dog
+      name: NUTRO
     },
     {
       id: 2,
-      name: Dog
+      name: ROYALCANIN
     },
     {
       id: 3,
-      name: Dog
+      name: ACANA
     },
     {
       id: 4,
-      name: Dog
+      name: KONG
     },
     {
       id: 5,
-      name: Dog
+      name: NULO
     },
     {
       id: 6,
-      name: Dog
+      name: AJ
     },
     {
       id: 7,
-      name: Dog
+      name: HILLS
     },
     {
       id: 8,
-      name: Dog
+      name: TRIXIE
     },
 
   ]
+
+  const data = [
+    { id: 1, name: NUTRO, brand: 1, description: 'Description for Product 1', rating: 4.5, price: 2999 },
+    { id: 2, name: NUTRO, brand: 1, description: 'Description for Product 2', rating: 4.2, price: 3999 },
+    { id: 3, name: NUTRO, brand: 1, description: 'Description for Product 3', rating: 4.8, price: 4999 },
+    { id: 4, name: NUTRO, brand: 1, description: 'Description for Product 4', rating: 4.0, price: 1999 },
+    { id: 1, name: ROYALCANIN, brand: 2, description: 'Description for Product 1', rating: 4.5, price: 2999 },
+    { id: 2, name: ROYALCANIN, brand: 2, description: 'Description for Product 2', rating: 4.2, price: 3999 },
+    { id: 3, name: ROYALCANIN, brand: 2, description: 'Description for Product 3', rating: 4.8, price: 4999 },
+    { id: 4, name: ROYALCANIN, brand: 2, description: 'Description for Product 4', rating: 4.0, price: 1999 },
+    { id: 1, name: ACANA, brand: 3, description: 'Description for Product 1', rating: 4.5, price: 2999 },
+    { id: 2, name: ACANA, brand: 3, description: 'Description for Product 2', rating: 4.2, price: 3999 },
+    { id: 3, name: ACANA, brand: 3, description: 'Description for Product 3', rating: 4.8, price: 4999 },
+    { id: 4, name: ACANA, brand: 3, description: 'Description for Product 4', rating: 4.0, price: 1999 },
+    { id: 1, name: KONG, brand: 4, description: 'Description for Product 1', rating: 4.5, price: 2999 },
+    { id: 2, name: KONG, brand: 4, description: 'Description for Product 2', rating: 4.2, price: 3999 },
+    { id: 3, name: KONG, brand: 4, description: 'Description for Product 3', rating: 4.8, price: 4999 },
+    { id: 4, name: KONG, brand: 4, description: 'Description for Product 4', rating: 4.0, price: 1999 },
+    { id: 1, name: NULO, brand: 5, description: 'Description for Product 1', rating: 4.5, price: 2999 },
+    { id: 2, name: NULO, brand: 5, description: 'Description for Product 2', rating: 4.2, price: 3999 },
+    { id: 3, name: NULO, brand: 5, description: 'Description for Product 3', rating: 4.8, price: 4999 },
+    { id: 4, name: NULO, brand: 5, description: 'Description for Product 4', rating: 4.0, price: 1999 },
+    { id: 1, name: AJ, brand: 6, description: 'Description for Product 1', rating: 4.5, price: 2999 },
+    { id: 2, name: AJ, brand: 6, description: 'Description for Product 2', rating: 4.2, price: 3999 },
+    { id: 3, name: AJ, brand: 6, description: 'Description for Product 3', rating: 4.8, price: 4999 },
+    { id: 4, name: AJ, brand: 6, description: 'Description for Product 4', rating: 4.0, price: 1999 },
+    { id: 1, name: HILLS, brand: 7, description: 'Description for Product 1', rating: 4.5, price: 2999 },
+    { id: 2, name: HILLS, brand: 7, description: 'Description for Product 2', rating: 4.2, price: 3999 },
+    { id: 3, name: HILLS, brand: 7, description: 'Description for Product 3', rating: 4.8, price: 4999 },
+    { id: 4, name: HILLS, brand: 7, description: 'Description for Product 4', rating: 4.0, price: 1999 },
+    { id: 1, name: TRIXIE, brand: 8, description: 'Description for Product 1', rating: 4.5, price: 2999 },
+    { id: 2, name: TRIXIE, brand: 8, description: 'Description for Product 2', rating: 4.2, price: 3999 },
+    { id: 3, name: TRIXIE, brand: 8, description: 'Description for Product 3', rating: 4.8, price: 4999 },
+    { id: 4, name: TRIXIE, brand: 8, description: 'Description for Product 4', rating: 4.0, price: 1999 },
+    // Add more products as needed
+  ];
+
+
 
   //useState for active Brand Product selection
   const [activeBrand, setActiveBrand] = useState(1);
   const handleActiveBrand = (option) => {
     setActiveBrand(option);
   }
+
+  // Filter products based on the active brand
+  const filteredProducts = data.filter(item => item.brand === activeBrand);
+
   return (
     <>
       <div className="w-full h-full flex flex-col gap-6">
@@ -246,54 +302,26 @@ const Home = () => {
         {/* Brands & Selected Brand's top products */}
         <div className="h-full w-full flex flex-col">
           <div className="w-[90%] overflow-y-hidden px-4 pt-4 m-auto flex items-center justify-between gap-14 overflow-x-auto">
-            {brands.map((items) => <>
-              <img src={items.name} key={items.id} onClick={() => { handleActiveBrand(items.id) }}
-                className={`cursor-pointer duration-500 p-4 pb-0 rounded-t-full ${activeBrand === items.id ? 'bg-[#AED2FF] scale-110 duration-500' : 'bg-white'}`} />
-            </>)}
+            {brands.map((items) => (
+              <img
+                src={items.name}
+                key={items.id}
+                onClick={() => handleActiveBrand(items.id)}
+                className={`cursor-pointer duration-500 p-8 rounded-t-full h-32 w-40 ${activeBrand === items.id ? 'bg-[#AED2FF] scale-110 duration-500' : 'bg-white'}`}
+              />
+            ))}
           </div>
-
-          <div className="w-full h-full bg-[#AED2FF]">
-            <div className="w-[90%] flex justify-center gap-12 items-center h-full m-auto py-14">
-              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                <div>
-                  <img src={Dog} className="h-44 w-40" />
+          {/* cards */}
+          <div className="w-full h-full bg-[#AED2FF]  border-2 border-blue-300">
+            <div className="w-[90%] flex justify-between flex-wrap items-center h-full m-auto py-14">
+              {filteredProducts.map((item) => (
+                <div key={item.id} className="flex flex-col items-center gap-1 w-[22%] mb-8 bg-white rounded-lg">
+                  <img src={item.name} alt={`Dog ${item.id}`} className="h-48 w-40 p-8" />
+                  <p className="text-[#1D4BEF] line-clamp-3 text-xs text-center overflow-hidden max-h-[3.5rem]">{item.description}</p>
+                  <p>{item.rating}</p>
+                  <p className="text-[#7ACB0C]">{item.price}</p>
                 </div>
-                <div className="flex flex-col items-center gap-1">
-                  <p className="text-[#1D4BEF] line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                  <p>@@@@@</p>
-                  <p className="text-[#7ACB0C]">2100</p>
-                </div>
-              </div>
-              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                <div>
-                  <img src={Dog} className="h-44 w-36" />
-                </div>
-                <div className="flex flex-col items-center gap-1">
-                  <p className="text-[#1D4BEF] line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                  <p>@@@@@</p>
-                  <p className="text-[#7ACB0C]">2100</p>
-                </div>
-              </div>
-              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                <div>
-                  <img src={Dog} className="h-44 w-36" />
-                </div>
-                <div className="flex flex-col items-center gap-1">
-                  <p className="text-[#1D4BEF] line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                  <p>@@@@@</p>
-                  <p className="text-[#7ACB0C]">2100</p>
-                </div>
-              </div>
-              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                <div>
-                  <img src={Dog} className="h-44 w-36" />
-                </div>
-                <div className="flex flex-col items-center gap-1">
-                  <p className="text-[#1D4BEF] line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                  <p>@@@@@</p>
-                  <p className="text-[#7ACB0C]">2100</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -306,25 +334,25 @@ const Home = () => {
                 className={`cursor-pointer duration-500 p-4 pb-0 rounded-t-full ${activeBrand === items.id ? 'bg-[#AED2FF] scale-110 duration-500' : 'bg-white'}`} />
             </>)}
           </div> */}
-         
+
           <div className="w-full h-full bg-[#AED2FF]">
             <div>
-            <img src={FideleText} alt="text"  className="h-44 w-40 z-50 ml-32 my-10 justify-start items-start"/>
+              <img src={FideleText} alt="text" className="h-44 w-40 z-50 ml-32 my-10 justify-start items-start" />
             </div>
 
             <div className="w-[90%] flex justify-center gap-12 items-center h-full m-auto pb-14 -mt-20 ">
 
               <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                  <img src={Fidele1} className="h-full w-full" />
+                <img src={Fidele1} className="h-full w-full" />
               </div>
               <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                  <img src={Fidele2} className="h-full w-full" />
+                <img src={Fidele2} className="h-full w-full" />
               </div>
               <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                  <img src={Fidele3} className="h-full w-full" />
+                <img src={Fidele3} className="h-full w-full" />
               </div>
               <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                  <img src={Fidele4} className="h-full w-full" />
+                <img src={Fidele4} className="h-full w-full" />
               </div>
             </div>
           </div>
@@ -365,7 +393,7 @@ const Home = () => {
           </div>
         </div>
 
-        
+
 
         {/* Popular Sub-Categories */}
         <div className="flex my-6 bg-white gap-2 px-12 flex-col">
@@ -591,7 +619,7 @@ const Home = () => {
               <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
               <img src={Image1} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
               <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-             
+
             </div>
           </div>
         </div>
