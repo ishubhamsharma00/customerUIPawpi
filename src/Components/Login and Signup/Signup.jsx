@@ -121,16 +121,23 @@ const Signup = () => {
 
       {/* Register side  */}
       <div className='h-auto sm:w-2/3 lg:w-1/2 mx-auto  '>
+      <div className="relative hidden md:block">
+          <button className="absolute top-0 right-0 m-4 p-2 ">
+            <Link to={"/"}>
+              <img src={Back} alt="back" className='h-10 w-10 ' />
+            </Link>
+          </button>
+        </div>
         <div className='w-full h-screen  items-center justify-center p-20 lg:p-10 xl:py-44  '>
-         
-         <div className="flex items-center justify-center">
+
+          <div className="flex items-center justify-center">
             <img src={LOGO} alt="logo" />
           </div>
           <div className='justify-center text-center w-full'>
             <h1 className=' font-Raleway font-bold text-5xl text-[#3C4D64]  '>Register Yourself!</h1>
             <p className='font-Nunito text-[16px] font-semibold  text-[#3C4D64] py-3'>see what is going on with your business</p>
           </div>
-       
+
           {/* ..... */}
 
           <form className="w-full md:w-4/5 lg:w-4/5 xl:w-3/5 mx-auto border bg-[#3C4D64]  border-[#3C4D64] rounded-xl  hover:shadow-none mb-4 shadow-xl focus:outline-none focus:shadow-outline-blue focus:border-blue-60">
@@ -152,10 +159,10 @@ const Signup = () => {
             <div className="flex items-center justify-between md:justify-start">
               <img src={Email} alt="Card Logo" className="w-8 h-6 p-1 mx-2" />
               <input
-                 type="text"
-                 name="email"
-                 value={formData.email}
-                 onChange={handleInputChange}
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 className="w-full border-none font-Nunito text-black   text-sm rounded-r-xl font-bold outline-none p-3"
                 placeholder="Email"
               />
@@ -208,20 +215,20 @@ const Signup = () => {
             <div className="flex items-center justify-between md:justify-start">
               <img src={Key} alt="Card Logo" className="w-8 h-6 p-1 mx-2" />
               <input
-               type={showConfirmPassword ? 'text' : 'password'}
-               name="confirmPassword"
-               value={formData.confirmPassword}
-               onChange={handleInputChange}
+                type={showConfirmPassword ? 'text' : 'password'}
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleInputChange}
                 className="w-full border-none font-Nunito text-black  text-sm rounded-r-xl font-bold outline-none p-3"
                 placeholder=" Confirm Password"
               />
               <button
                 type="button"
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}                className="focus:outline-none"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="focus:outline-none"
               >
                 <img
-                   src={showConfirmPassword ? View : Close}
-                   alt={showConfirmPassword ? 'View' : 'Close'}
+                  src={showConfirmPassword ? View : Close}
+                  alt={showConfirmPassword ? 'View' : 'Close'}
                   className="w-10 h-8 p-1"
                 />
               </button>
@@ -232,7 +239,7 @@ const Signup = () => {
 
 
           <button
-          onClick={handleSubmit} className="w-full md:w-4/5 lg:w-4/5 xl:w-3/5  bg-[#3C4D64] mx-auto text-white p-4 mt-8 font-Raleway font-bold text-2xl flex items-center justify-center rounded-2xl hover:bg-slate-700" >
+            onClick={handleSubmit} className="w-full md:w-4/5 lg:w-4/5 xl:w-3/5  bg-[#3C4D64] mx-auto text-white p-4 mt-8 font-Raleway font-bold text-2xl flex items-center justify-center rounded-2xl hover:bg-slate-700" >
             Register
           </button>
         </div>
