@@ -11,7 +11,7 @@ const ReviewCarousel = () => {
         arrows: false,
         dots: false,
         infinite: true,
-        speed: 1000,
+        speed: 7000,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
@@ -118,7 +118,7 @@ const ReviewCarousel = () => {
                                         <p className={`font-light capitalize text-xs ${data.id % 2 == 0 ? 'text-white' : 'text-gray-500'}`}>{data.location}</p>
                                     </div>
                                     <FaQuoteLeft />
-                                    <p className="text-sm text-center">{data.reviewtext}</p>
+                                    <p className="text-sm text-justify line-clamp-6">{data.reviewtext}</p>
                                     <FaQuoteRight className=" ml-auto" />
                                 </div>
                             </div>
