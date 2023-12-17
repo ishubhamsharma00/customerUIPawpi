@@ -261,12 +261,12 @@ const Home = () => {
                 src={items.name}
                 key={items.id}
                 onClick={() => handleActiveBrand(items.id)}
-                className={`cursor-pointer duration-500 p-8 rounded-t-full h-32 w-40 ${activeBrand === items.id ? 'bg-[#AED2FF] scale-110 duration-500' : 'bg-white'}`}
+                className={`cursor-pointer duration-500 p-6 pb-3 rounded-t-full h-32 w-40 ${activeBrand === items.id ? 'bg-[#AED2FF] duration-500' : 'bg-white'}`}
               />
             ))}
           </div>
           {/* cards */}
-          <div className="w-full h-full bg-[#AED2FF]  border-2 border-blue-300">
+          <div className="w-full h-full bg-[#AED2FF]">
             <div className="w-[90%] flex justify-between flex-wrap items-center h-full m-auto py-14">
               {filteredProducts.map((item) => (
                 <div key={item.id} className="flex flex-col items-center gap-1 w-[22%] mb-8 bg-white rounded-lg">
@@ -276,38 +276,6 @@ const Home = () => {
                   <p className="text-[#7ACB0C]">{item.price}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-
-        {/* fidele products */}
-        <div className="h-full w-full flex flex-col">
-          {/* <div className="w-[90%] overflow-y-hidden px-4 pt-4 m-auto flex items-center justify-between gap-14 overflow-x-auto">
-            {brands.map((items) => <>
-              <img src={items.name} key={items.id} onClick={() => { handleActiveBrand(items.id) }}
-                className={`cursor-pointer duration-500 p-4 pb-0 rounded-t-full ${activeBrand === items.id ? 'bg-[#AED2FF] scale-110 duration-500' : 'bg-white'}`} />
-            </>)}
-          </div> */}
-
-          <div className="w-full h-full bg-[#AED2FF]">
-            <div>
-              <img src={FideleText} alt="text" className="h-44 w-40 z-50 ml-32 my-10 justify-start items-start" />
-            </div>
-
-            <div className="w-[90%] flex justify-center gap-12 items-center h-full m-auto pb-14 -mt-20 ">
-
-              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                <img src={Fidele1} className="h-full w-full" />
-              </div>
-              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                <img src={Fidele2} className="h-full w-full" />
-              </div>
-              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                <img src={Fidele3} className="h-full w-full" />
-              </div>
-              <div className="w-1/5 rounded-md bg-white p-4 flex flex-col items-center justify-between gap-4">
-                <img src={Fidele4} className="h-full w-full" />
-              </div>
             </div>
           </div>
         </div>
@@ -346,7 +314,6 @@ const Home = () => {
             <button className="w-1/4 rounded-full bg-[#FF6969] p-1 text-white font-semibold py-1 mt-4">Shop Now</button>
           </div>
         </div>
-
 
 
         {/* Popular Sub-Categories */}
@@ -522,7 +489,7 @@ const Home = () => {
         </div>
 
         {/*REVIEW-SLIDER*/}
-        <div className="w-[85%] flex flex-col gap-4 text-center m-auto h-full mt-6">
+        <div className="w-[95%] flex flex-col gap-4 text-center m-auto h-full mt-6">
           <p className=" text-3xl  uppercase font-bold font-Raleway tracking-wide">what our customers<br /> said about us</p>
           <p className="w-2/3 m-auto  font-semibold font-Raleway uppercase text-black">"Our customers' voices echo the love and trust they've found in our pet products, shaping our journey with heartfelt testimonials."</p>
           <div className="h-full w-full -z-10">
