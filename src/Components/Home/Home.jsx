@@ -83,6 +83,7 @@ import tNeRight from '../../Images/t&eRight.png';
 
 import followUs from '../../Images/followUs.png';
 import followUsInsta from '../../Images/followUsInsta.png';
+import PopularCategories from "./PopularCategories";
 const Home = () => {
 
   //useState for animation activation
@@ -142,44 +143,8 @@ const Home = () => {
         </div>
 
         {/*POPULAR-CATEGORIES*/}
-        <div className="flex items-center justify-between w-[90%] m-auto h-full px-6 py-10 gap-20 overflow-x-auto ">
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Dog} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-[#AED2FF] rounded-xl">
-            <img src={Cat} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#AED2FF] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-[#A8DF8E] rounded-xl">
-            <img src={Food} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#A8DF8E]  duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-[#C23373] rounded-xl">
-            <img src={Toys} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#C23373] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-[#FBD85D] rounded-xl">
-            <img src={Garbs} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#FBD85D] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-[#E8D2A6] rounded-xl">
-            <img src={Extra} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#E8D2A6] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-[#BFACE2] rounded-xl">
-            <img src={Bed} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#BFACE2] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-red-500 rounded-xl">
-            <img src={Toys} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-red-500 duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-          <div className="h-28 w-28 bg-[#FBD85D] rounded-xl">
-            <img src={Garbs} alt="dog" className="w-full h-full" />
-            <div className="h-28 w-28 relative -top-28 border rounded-xl border-[#FBD85D] duration-500 rotate-45 hover:rotate-90 hover:duration-500" ></div>
-          </div>
-        </div>
+        <PopularCategories/>
+
 
         {/* Popular Products */}
         <div className="bg-[#3AAFA9] h-full w-full flex flex-col">
