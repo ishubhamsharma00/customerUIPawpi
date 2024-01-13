@@ -10,13 +10,13 @@ import Extra from '../../Images/PopularCategoryHomepage/extra.png';
 import Bed from '../../Images/PopularCategoryHomepage/beds.png';
 
 const categories = [
-  { id: 1, name: 'Dogs', image: Dog, bgColor: 'bg-red-500', bordercolor: "red-500" },
-  { id: 2, name: 'Cats', image: Cat, bgColor: 'bg-[#AED2FF]', bordercolor: "[#AED2FF]" },
-  { id: 3, name: 'Food', image: Food, bgColor: 'bg-[#A8DF8E]', bordercolor: "[#A8DF8E]" },
-  { id: 4, name: 'Toys', image: Toys, bgColor: 'bg-[#C23373]', bordercolor: "[#C23373]" },
-  { id: 5, name: 'Garbs', image: Garbs, bgColor: 'bg-[#FBD85D]', bordercolor: "[#FBD85D]" },
-  { id: 6, name: 'Extra', image: Extra, bgColor: 'bg-[#E8D2A6]', bordercolor: "[#E8D2A6]" },
-  { id: 7, name: 'Bed', image: Bed, bgColor: 'bg-[#BFACE2]', bordercolor: "[#BFACE2]" },
+  { id: 1, name: 'Dogs', image: Dog, bgColor: 'red-500', bordercolor: "red-500" },
+  { id: 2, name: 'Cats', image: Cat, bgColor: '[#AED2FF]', bordercolor: "[#AED2FF]" },
+  { id: 3, name: 'Food', image: Food, bgColor: '[#A8DF8E]', bordercolor: "[#A8DF8E]" },
+  { id: 4, name: 'Toys', image: Toys, bgColor: '[#C23373]', bordercolor: "[#C23373]" },
+  { id: 5, name: 'Garbs', image: Garbs, bgColor: '[#FBD85D]', bordercolor: "[#FBD85D]" },
+  { id: 6, name: 'Extra', image: Extra, bgColor: '[#E8D2A6]', bordercolor: "[#E8D2A6]" },
+  { id: 7, name: 'Bed', image: Bed, bgColor: '[#BFACE2]', bordercolor: "[#BFACE2]" },
 ];
 
 
@@ -26,7 +26,7 @@ const PopularCategories = () => {
       {categories.map((category) => (
         <Link to={`/category/${category.name}`} key={category.id}>
           <div className="flex flex-col items-center">
-            <div className={`h-28 w-28 rounded-xl ${category.bgColor}`}>
+            <div className={`h-28 w-28 rounded-xl bg-${category.bgColor}`}>
               <img src={category.image} alt={category.name} className="w-full h-full p-4" />
               <div className={`h-28 w-28 relative -top-28 border rounded-xl border-${category.bordercolor} duration-500 rotate-45 hover:rotate-90 hover:duration-500`} />
             </div>
