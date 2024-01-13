@@ -22,8 +22,12 @@ import AboutUs from '../Components/AboutUs/AboutUs';
 import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
 import OrderTracking from '../Components/OrderTracking/OrderTracking';
 import FAQ from '../Components/FAQ/FAQ';
+<<<<<<< HEAD
 import ProfilePage from '../Components/ProfilePage/ProfilePage';
 import PetProfile from '../Components/PetProfile/PetProfile';
+=======
+import CartUi from '../Components/CartUI/CartUi';
+>>>>>>> a6e452d ( cart ui updated)
 
 
 const DefaultHome = () => {
@@ -51,6 +55,20 @@ const DefaultHome = () => {
 
           {/* These are pages from footer */}
           {type === 'contactus' && <Contact/>}
+<<<<<<< HEAD
+=======
+          {type === 'blog' && <Blog/>}
+          {type === 'vet' && <Vet/>}
+          {type === 'faq' && <FAQ/>} 
+          {type === 'thankyou' && <Thankyou/>}
+          {type === 'aboutus' && <AboutUs/>}
+          {type === 'privacypolicy' && <PrivacyPolicy/>}
+          {type === 'ordertracking' && <OrderTracking/>}
+          {type === 'cartui' && <CartUi/>}
+
+
+
+>>>>>>> a6e452d ( cart ui updated)
 
 
           {pt === 'food' && <Dog/> }
