@@ -322,11 +322,21 @@ const NavLg = ({ location, login, cart }) => {
                     }
                     {item.name === "Brands" &&
                       <div className='w-[88%] h-full flex justify-between'>
-                        <div className='w-[70%] bg-red-400 h-60 flex flex-wrap'>
-
+                        <div className='w-[70%] xl:h-96 h-80 flex flex-wrap p-6 overflow-y-auto'>
+                          {item.sublinks.map((brandDetails)=>
+                          <div className='h-full w-full xl:h-[90%] flex-wrap flex items-center justify-between xl:gap-12 gap-5'>
+                            {brandDetails.sublink.map((innerItem)=>
+                            <div className='h-[28%] w-[30%] xl:h-[28%] xl:w-[18%] flex  items-center justify-center shadow-lg rounded-lg'>
+                              <img src={innerItem.logo} 
+                              alt={`${innerItem.name}`}
+                              className='h-full w-full scale-x-75 scale-y-90 xl:scale-75'
+                              />
+                          </div>
+                            )}
+                          </div>)}
                         </div>
-                        <div className='w-[28%]'>
-                          <img src={BrandsNavbar} alt='image' className='rounded-xl w-full' />
+                        <div className='w-[28%] h-80 xl:h-96'>
+                          <img src={BrandsNavbar} alt='image' className='rounded-xl w-full h-full' />
                         </div>
                       </div>
                     }
