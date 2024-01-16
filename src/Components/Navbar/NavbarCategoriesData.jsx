@@ -24,7 +24,7 @@ import kong from '../../Images/Brands/kong.png';
 import nulo from '../../Images/Brands/nulo.png';
 import nutro from '../../Images/Brands/nutro.png';
 import Pedigree from '../../Images/Brands/Pedigree.png';
-import royalCanin from '../../Images/Brands/royalCanin.png';
+import royalCanin from '../../Images/Brands/royalcanin.png';
 import trixie from '../../Images/Brands/trixie.png';
 
 

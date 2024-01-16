@@ -1,6 +1,6 @@
 import React from 'react'
 import NUTRO from "../../Images/Brands/nutro.png";
-import ROYALCANIN from "../../Images/Brands/royalCanin.png";
+import ROYALCANIN from "../../Images/Brands/royalcanin.png";
 import ACANA from "../../Images/Brands/acana.png";
 import KONG from "../../Images/Brands/kong.png";
 import NULO from "../../Images/Brands/nulo.png";
