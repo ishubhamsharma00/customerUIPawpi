@@ -193,7 +193,7 @@ const Home = () => {
 
         {/*HERO-CAROUSEL */}
         <div className="w-full h-full lg:-z-10 outline-none">
-          <img src={MainBanner} alt="mainBanner" className=" h-screen w-screen" />
+          <img src={MainBanner} alt="mainBanner" className="md:h-screen md:w-screen" />
           {/* <HeroCarousal /> */}
         </div>
 
