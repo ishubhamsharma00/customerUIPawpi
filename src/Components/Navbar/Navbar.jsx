@@ -26,6 +26,18 @@ import LocationPopUpModel from './LocationPopUp';
 import Cart from './Cart';
 import axios from 'axios';
 
+// Import for Breeds
+import Labrador from '../../Images/StartPage/WelcomeAssets/Dog/labrador.png';
+import Dalmatian from '../../Images/StartPage/WelcomeAssets/Dog/dalmatian.png';
+import Pomeranian from '../../Images/StartPage/WelcomeAssets/Dog/pomeranian.png';
+import Husky from '../../Images/StartPage/WelcomeAssets/Dog/husky.png';
+import Indie from '../../Images/StartPage/WelcomeAssets/Dog/indie.png';
+import Shihtzu from '../../Images/StartPage/WelcomeAssets/Dog/shihtzu.png';
+
+// Import of Lifestage
+import Puppy from '../../Images/NavbarAssets/puppy.png';
+import Adult from '../../Images/NavbarAssets/adult.png';
+import Senior from '../../Images/NavbarAssets/senior.png';
 
 //for small devices/mobile
 const NavSm = ({ login, cart }) => {
@@ -276,7 +288,8 @@ const NavLg = ({ location, login, cart }) => {
     getUserData();
   })
 
-
+  const Breeds=[Labrador, Dalmatian, Pomeranian, Husky, Indie, Shihtzu, Labrador, Dalmatian, Pomeranian, Husky, Indie, Shihtzu]
+  const Lifestage=[Puppy, Adult, Senior]
 
   return (
     <>
@@ -307,7 +320,7 @@ const NavLg = ({ location, login, cart }) => {
               {item.name === selectedItem && showDropdown && (
                 <>
                   <div className='h-2 w-2 relative -top-3 left-0 rounded-full bg-yellow-300'></div>
-                  <div className="absolute text-black left-0 top-14 w-full flex justify-center bg-white mt-2 py-6 shadow-lg ">
+                  <div className="absolute text-black left-0 top-14 w-full flex justify-center bg-gradient-to-b from-white to-gray-200 mt-2 py-6 shadow-lg ">
                     {(item.name === "Dog" || item.name === "Cat") &&
                       <div className='h-full w-4/5 flex-wrap flex justify-start'>
                         {item.sublinks.map((subItems) =>
@@ -341,13 +354,17 @@ const NavLg = ({ location, login, cart }) => {
                       </div>
                     }
                     {item.name === "Breeds" &&
-                      <div className='w-[85%] h-60 flex justify-between bg-red-500 overflow-x-auto'>
-                        {/* //images */}
+                      <div className='w-[100%] px-[5%] h-60 flex justify-between gap-16 items-center overflow-x-auto'>
+                        {Breeds.map((BreedImage)=>
+                        <img src={BreedImage} alt={BreedImage} key={BreedImage} className='h-[60%] w-[15%] shadow-xl rounded-xl cursor-pointer bg-gray-50 hover:duration-500 hover:scale-90 duration-500'/>
+                        )}
                       </div>
                     }
                     {item.name === "Lifestage" &&
-                      <div className='w-[85%] h-60 flex justify-between bg-red-500'>
-                        {/* //images */}
+                      <div className='w-[95%] h-60 flex justify-center'>
+                        {Lifestage.map((items)=>
+                        <img src={items} alt={items} key={items} className='w-[30%] scale-75 cursor-pointer hover:duration-700 duration-700 hover:scale-90' />
+                        )}
                       </div>
                     }
                   </div>
