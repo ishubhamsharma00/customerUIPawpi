@@ -1,11 +1,11 @@
 import DefaultHOC from "./HOC/DefaultHOC";
 import DefaultHome from "./pages/DefaultHome";
-import Temp from "./pages/Temp";
+// import Temp from "./pages/Temp";
 import Home from "./Components/Home/Home";
 import AccountPage from "./pages/AccountPage";
 import SupportPage from "./pages/SupportPage";
 import HeroProductPage from "./Components/HeroProductPage/HeroProductPage";
-import Checkout from "./Components/Account/Checkout";
+// import Checkout from "./Components/Account/Checkout";
 import AuthPage from "./pages/AuthPage";
 import CheckoutHOC from "./HOC/CheckoutHOC";
 
@@ -16,16 +16,17 @@ import DefaultBreed from "./pages/DefaultBreed";
 import DefaultLifeStage from "./pages/DefaultLifeStage";
 import Start from "./Components/Start/Start";
 import StartDog from "./Components/Start/Dog";
-import OrderTracking from "./Components/OrderTracking/OrderTracking";
-import OrderOverview from "./Components/OrderOverview/OrderOverview";
-import FAQ from "./Components/FAQ/FAQ";
-import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
-import AboutUs from "./Components/AboutUs/AboutUs";
-import Thankyou from "./Components/Thankyou/Thankyou";
-import Contact from "./Components/Support/Contact";
-import Vet from "./Components/Vet/Vet";
-import Blog from "./Components/Blog/Blog";
+// import OrderTracking from "./Components/OrderTracking/OrderTracking";
+// import OrderOverview from "./Components/OrderOverview/OrderOverview";
+// import FAQ from "./Components/FAQ/FAQ";
+// import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
+// import AboutUs from "./Components/AboutUs/AboutUs";
+// import Thankyou from "./Components/Thankyou/Thankyou";
+// import Contact from "./Components/Support/Contact";
+// import Vet from "./Components/Vet/Vet";
+// import Blog from "./Components/Blog/Blog";
 import Signup from "./Components/Login and Signup/Signup";
+import { Collection } from "./pages";
 
 
 function App() {
@@ -93,6 +94,19 @@ function App() {
 
       <CheckoutHOC path="/newUser/signup" exact component={Signup} />
       <DefaultHOC path="/checkout/:ct" exact component={AuthPage} />
+
+
+      {/* 
+      -----------------------------------------------------------------------------------------
+                        New Routing Please Don't Touch it Except Tara
+      -----------------------------------------------------------------------------------------
+      */}
+
+      <CheckoutHOC path="/xx/yy/" exact component={Start} />
+      <DefaultHOC path="/xx/yy/home" exact component={Home} />
+      <DefaultHOC path='/xx/yy/collections/:producttype' exact component={ Collection } />
+      <DefaultHOC path='/xx/yy/product/:productId' exact component={ HeroProductPage } />
+    
     </>
   );
 };
