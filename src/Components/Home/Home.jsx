@@ -94,15 +94,14 @@ import AJ from "../../Images/Brands/aj.png";
 import HILLS from "../../Images/Brands/hills.png";
 import TRIXIE from "../../Images/Brands/trixie.png";
 import Marquee from 'react-fast-marquee';
+
+
 const Home = () => {
 
   //useState for animation activation
   const [animationActivate, setAnimationActivate] = useState(false);
   const [greenAnimationActivate, setGreenAnimationActivate] = useState(false);
   const [pinkAnimationActivate, setPinkAnimationActivate] = useState(false);
-
-
-
 
   const brands = [
     {
@@ -176,6 +175,57 @@ const Home = () => {
     // Add more products as needed
   ];
 
+  const PopularProducts=[
+    {
+      link: '',
+      image: Redshampoo,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, incidunt.",
+      stars: 5,
+      price: 2100
+    },
+    {
+      link: '',
+      image: Xmint,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, incidunt.",
+      stars: 5,
+      price: 2100
+    },
+    {
+      link: '',
+      image: Bowjerky,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, incidunt.",
+      stars: 5,
+      price: 2100
+    },
+    {
+      link: '',
+      image: BubbleUp,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, incidunt.",
+      stars: 5,
+      price: 2100
+    },
+    {
+      link: '',
+      image: Redshampoo,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, incidunt.",
+      stars: 5,
+      price: 2100
+    },
+    {
+      link: '',
+      image: Bowjerky,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, incidunt.",
+      stars: 5,
+      price: 2100
+    },
+    {
+      link: '',
+      image: BubbleUp,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, incidunt.",
+      stars: 5,
+      price: 2100
+    }
+  ]
 
 
   //useState for active Brand Product selection
@@ -208,79 +258,41 @@ const Home = () => {
             <img src={popularProductsGif} alt="gif" className="h-14 w-14 md:h-16 md:w-16" />
           </div>
           {/* Cards */}
-          <div className="flex items-center justify-between m-auto h-full gap-10 md:gap-20 w-full md:w-[90%] px-6 md:px-0 py-8 overflow-x-auto">
-            <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-2 md:gap-4">
+          <div className="flex items-center justify-between m-auto h-full gap-10 md:gap-20 w-full px-6 md:px-16 py-8 overflow-x-auto">
+            {PopularProducts.map((data)=>
+            <div className="rounded-md bg-white p-6 flex flex-col items-center hover:duration-500 hover:scale-110  duration-500 cursor-pointer hover:bg-violet-50 justify-between gap-2 md:gap-4">
               <div>
-                <img src={Redshampoo} className="h-44" />
+                <img src={data.image} alt={data.image} key={data.image} className="h-44" />
               </div>
               <div className="flex flex-col items-center md:text-base text-sm text-justify gap-1">
-                <p className="text-[#1D4BEF] w-40 line-clamp-3 ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                <p className="text-base">@@@@@</p>
-                <p className="text-[#7ACB0C] text-lg font-semibold">2100</p>
+                <p className="text-[#1D4BEF] w-40 line-clamp-3 ">{data.description}</p>
+                <p className="text-base">{data.stars}stars</p>
+                <p className="text-[#7ACB0C] text-lg font-semibold">{data.price}</p>
               </div>
             </div>
-            <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
-              <div>
-                <img src={Xmint} className="h-44 w-36" />
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                <p>@@@@@</p>
-                <p className="text-[#7ACB0C]">2100</p>
-              </div>
-            </div>
-            <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
-              <div>
-                <img src={Bowjerky} className="h-44 w-36" />
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                <p>@@@@@</p>
-                <p className="text-[#7ACB0C]">2100</p>
-              </div>
-            </div>
-            <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
-              <div>
-                <img src={BubbleUp} className="h-44 w-36" />
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                <p>@@@@@</p>
-                <p className="text-[#7ACB0C]">2100</p>
-              </div>
-            </div>
-            <div className="rounded-md bg-white p-6 flex flex-col items-center justify-between gap-4">
-              <div>
-                <img src={Xmint} className="h-44 w-36" />
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <p className="text-[#1D4BEF] w-40 line-clamp-3 text-xs text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias!</p>
-                <p>@@@@@</p>
-                <p className="text-[#7ACB0C]">2100</p>
-              </div>
-            </div>
+            )}
           </div>
         </div>
 
         {/* Brands & Selected Brand's top products */}
         <div className="h-full w-full flex flex-col">
-          <div className="w-[90%] overflow-y-hidden px-4 pt-4 m-auto flex items-center justify-between gap-14 overflow-x-auto">
+          <div className="w-full md:px-16 overflow-y-hidden px-4 pt-4 m-auto flex items-center justify-between gap-4 md:gap-14 overflow-x-auto">
             {brands.map((items) => (
               <img
                 src={items.name}
                 key={items.id}
                 onClick={() => handleActiveBrand(items.id)}
-                className={`cursor-pointer duration-500 p-6 pb-3 rounded-t-full h-32 w-40 ${activeBrand === items.id ? 'bg-[#AED2FF] duration-500' : 'bg-white'}`}
+                className={`cursor-pointer duration-500 md:p-6 md:pb-3 rounded-t-full pb-1 p-2 h-24 w-32 md:h-32 md:w-40 ${activeBrand === items.id ? 'bg-[#AED2FF] duration-500' : 'bg-white duration-500'}`}
               />
             ))}
           </div>
           {/* cards */}
           <div className="w-full h-full bg-[#AED2FF]">
-            <div className="w-[90%] flex justify-between flex-wrap items-center h-full m-auto py-14">
+            <div className="w-[90%] flex justify-between flex-wrap items-center h-full m-auto py-10 md:py-14">
               {filteredProducts.map((item) => (
-                <div key={item.id} className="flex flex-col items-center gap-1 w-[22%] mb-8 bg-white rounded-lg">
+                <div key={item.id} className="flex flex-col items-center gap-1 w-[45%] md:w-[22%] mb-8 bg-gradient-to-b from-[#AED2FF] to-white rounded-lg">
                   <img src={item.name} alt={`Dog ${item.id}`} className="h-48 w-40 p-8" />
-                  <p className="text-[#1D4BEF] line-clamp-3 text-xs text-center overflow-hidden max-h-[3.5rem]">{item.description}</p>
+                  <p className="text-[#1D4BEF] line-clamp-2 text-xs text-center overflow-hidden max-h-[3.5rem]">{item.description}</p>
                   <p>{item.rating}</p>
                   <p className="text-[#7ACB0C]">{item.price}</p>
                 </div>
@@ -290,52 +302,52 @@ const Home = () => {
         </div>
 
         {/* Information Texts */}
-        <div className="h-full w-full px-10 flex justify-around items-center">
-          <div className="w-[45%] h-full grid grid-cols-2 gap-5">
+        <div className="h-full w-full px-10 md:flex flex flex-col md:flex-row gap-14 justify-around items-center">
+          <div className="md:w-[45%] h-full grid grid-cols-2 gap-5">
             <div className="flex flex-col gap-1">
-              <img src={appleGif} alt="gif" className="h-12 w-12" />
+              <img src={appleGif} alt="gif" className="h-16 w-16" />
               <p className="font-semibold">Feed. Frolic.</p>
-              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
+              <p className="text-xs text-justify">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
             </div>
 
             <div className="flex flex-col gap-1">
-              <img src={clothGif} alt="gif" className="h-12 w-12" />
+              <img src={clothGif} alt="gif" className="h-16 w-16" />
               <p className="font-semibold">Style. Snuggle.</p>
-              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
+              <p className="text-xs text-justify">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
             </div>
 
             <div className="flex flex-col gap-1">
-              <img src={boatGif} alt="gif" className="h-12 w-12" />
+              <img src={boatGif} alt="gif" className="h-16 w-16" />
               <p className="font-semibold">Munch. Mingle.</p>
-              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
+              <p className="text-xs text-justify">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
             </div>
 
             <div className="flex flex-col gap-1">
-              <img src={pawGif} alt="gif" className="h-12 w-12" />
+              <img src={pawGif} alt="gif" className="h-16 w-16" />
               <p className="font-semibold">Groom. Jive.</p>
-              <p className="text-xs">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
+              <p className="text-xs text-justify">etbus maxime saepe vero. Culpa sunt, possimus illo ipsa incidunt sit sequi quam dicta, inventore quo laboriosam modi quisquam doloribus! Possimus, labore. Laudantium mollitia quos rem nostrum vero alias. Quas accusantium minima tempore unde optio corporis recusandae delectus hic, quaerat facere, aspernatur illum odit, eius sit nam labore harum. Asperiores consequuntur porro quisquam dolorem esse ratione a magni, error voluptatibus rem?</p>
             </div>
           </div>
 
-          <div className="h-full w-[45%] flex flex-col">
+          <div className="h-full md:w-[45%] flex flex-col">
             <p className="font-bold pb-1 text-2xl">"Discover Unlimited Pet Delights!"</p>
-            <p className="text-xs tracking-wide leading-relaxed">amet libero consectetur repudiandae reprehenderit nostrum voluptate! Repudiandae quod provident iure deserunt dignissimos cupiditate eum ducimus placeat illum nostrum culpa, iusto quo ut officia dolore doloremque eligendi, eveniet expedita, deleniti repellendus temporibus accusantium. Aliquam ipsum harum labore explicabo aspernatur nihil enim? Beatae fugit dolores, tempora repudiandae assumenda non quasi architecto, commodi temporibus cum vel distinctio aliquam quia, ut harum eaque nulla provident. Animi, obcaecati eligendi excepturi fuga, sequi, autem laboriosam recusandae nam aspernatur quisquam iste a quia ratione quae ex delectus laborum sint laudantium aperiam dolor. Fugit itaque explicabo ea tenetur doloremque magni nemo expedita quidem. In quam autem reprehenderit voluptates possimus tenetur quae ullam voluptatem molestiae, alias magni delectus natus iure! Quasi quia incidunt blanditiis. Ipsam placeat atque veniam fugiat inventore. Placeat tenetur sed, ipsum libero optio, nobis perferendis amet incidunt, tempore dolores natus aspernatur illo. Laborum, hic. Magni ea repellat possimus mollitia nesciunt doloremque repellendus porro animi. Error accusantium distinctio ipsa. Porro, reiciendis! Provident, pariatur eum officiis quos quis exercitationem beatae eligendi cum rem atque ipsa nisi hic iste laborum in alias sunt, facilis nostrum voluptas? Provident aspernatur odit deleniti soluta dolore itaque minus vero distinctio neque quibusdam aut similique autem, iure facilis culpa quis accusamus illum ea doloribus praesentium dolorum id numquam voluptatibus nam? Perferendis maxime, aspernatur sequi voluptatum architecto adipisci commodi debitis ducimus officia id in labore, accusantium earum ipsa eaque vero repudiandae temporibus sunt nihil quidem soluta consequatur. Harum, assumenda! Quo, suscipit perspiciatis, unde ea, reiciendis consequatur eveniet iste molestias nisi porro cum cupiditate dicta modi?</p>
-            <button className="w-1/4 rounded-full bg-[#FF6969] p-1 text-white font-semibold py-1 mt-4">Shop Now</button>
+            <p className="text-xs tracking-wide leading-relaxed text-justify">amet libero consectetur repudiandae reprehenderit nostrum voluptate! Repudiandae quod provident iure deserunt dignissimos cupiditate eum ducimus placeat illum nostrum culpa, iusto quo ut officia dolore doloremque eligendi, eveniet expedita, deleniti repellendus temporibus accusantium. Aliquam ipsum harum labore explicabo aspernatur nihil enim? Beatae fugit dolores, tempora repudiandae assumenda non quasi architecto, commodi temporibus cum vel distinctio aliquam quia, ut harum eaque nulla provident. Animi, obcaecati eligendi excepturi fuga, sequi, autem laboriosam recusandae nam aspernatur quisquam iste a quia ratione quae ex delectus laborum sint laudantium aperiam dolor. Fugit itaque explicabo ea tenetur doloremque magni nemo expedita quidem. In quam autem reprehenderit voluptates possimus tenetur quae ullam voluptatem molestiae, alias magni delectus natus iure! Quasi quia incidunt blanditiis. Ipsam placeat atque veniam fugiat inventore. Placeat tenetur sed, ipsum libero optio, nobis perferendis amet incidunt, tempore dolores natus aspernatur illo. Laborum, hic. Magni ea repellat possimus mollitia nesciunt doloremque repellendus porro animi. Error accusantium distinctio ipsa. Porro, reiciendis! Provident, pariatur eum officiis quos quis exercitationem beatae eligendi cum rem atque ipsa nisi hic iste laborum in alias sunt, facilis nostrum voluptas? Provident aspernatur odit deleniti soluta dolore itaque minus vero distinctio neque quibusdam aut similique autem, iure facilis culpa quis accusamus illum ea doloribus praesentium dolorum id numquam voluptatibus nam? Perferendis maxime, aspernatur sequi voluptatum architecto adipisci commodi debitis ducimus officia id in labore, accusantium earum ipsa eaque vero repudiandae temporibus sunt nihil quidem soluta consequatur. Harum, assumenda! Quo, suscipit perspiciatis, unde ea, reiciendis consequatur eveniet iste molestias nisi porro cum cupiditate dicta modi?</p>
+            <button className="w-1/2 md:w-1/4 rounded-full bg-[#FF6969] p-1 text-white font-semibold py-1 mt-4">Shop Now</button>
           </div>
         </div>
 
 
         {/* Popular Sub-Categories */}
-        <div className="flex my-6 bg-white gap-2 px-12 flex-col">
-          <p className="relative my-4 left-8 font-bold tracking-wide text-2xl">Popular Categories</p>
-          <div className="w-[88%] m-auto h-full flex items-center justify-between">
+        <div className="flex my-3 md:my-6 bg-white gap-1 md:gap-2 md:px-12 flex-col">
+          <p className="relative my-2 md:my-4 left-8 font-bold tracking-wide text-2xl">Popular Categories</p>
+          <div className="w-full px-8 md:px-0 md:w-[88%] gap-6 md:gap-0 m-auto h-full flex items-center overflow-x-auto justify-between">
             <div className="flex flex-col items-center">
-              <img src={Chews} alt='popularSubCategories' className="bg-[#FF9B82] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p className="font-Raleway font-semibold text-xl" >Chews</p>
+              <img src={Chews} alt='popularSubCategories' className="bg-[#FF9B82] shadow-xl rounded-lg mb-3 h-32 w-32 p-2" />
+              <p className="font-Raleway font-semibold text-xl">Chews</p>
             </div>
             <div className="flex flex-col items-center">
               <img src={BoneToys} alt='popularSubCategories' className="bg-[#AED2FF] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p className="font-Raleway font-semibold text-xl ">Toys</p>
+              <p className="font-Raleway font-semibold text-xl">Toys</p>
             </div>
             <div className="flex flex-col items-center">
               <img src={Leashes} alt='popularSubCategories' className="bg-[#94dc94] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
