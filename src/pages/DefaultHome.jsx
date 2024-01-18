@@ -35,22 +35,7 @@ const DefaultHome = () => {
     <>
     {/* main pages link */}
         <div className='my-12'>
-          {type === 'dog' && <Dog/>}
-          {type === 'cat' && <Cat />}
-          {/* {type === 'breed' && <Breed />} */}
-          {/* {type === 'brands' && <Brands />} */}
-          {/* {type === 'lifestage' && <Lifestage />} */}
-          {type === 'clothes' && <Clothes />}
-          {type === 'toys' && <Toys />}
-          {type === 'accessories' && <Accessories />}
-          {type === 'food' && <Food />}
-   
 
-
-
-
-
-          {/* These are pages from footer */}
           {type === 'contactus' && <Contact/>}
           {type === 'profilepage' && <ProfilePage />}
           {type === 'petprofilepage' && <PetProfile />}
@@ -62,25 +47,6 @@ const DefaultHome = () => {
           {type === 'thankyou' && <Thankyou />}
           {type === 'vet' && <Vet />}
           {type === 'blog' && <Blog />}
-
-
-
-
-
-          {pt === 'food' && <Dog/> }
-          {pt === 'dog' && <Dog/> }
-          {pt === 'cat' && <Dog/> }
-          {pt === 'toy' && <Dog/> }
-          {pt === 'garbs' && <Dog /> }
-          {pt === 'extras' && <Dog /> }
-
-          {pt === 'treats' && <Dog /> }
-          {pt === 'shampoo' && <Dog /> }
-          {pt === 'bodysplash' && <Dog /> }
-          {pt === 'conditioner' && <Dog /> }
-          {pt === 'foamcleanser' && <Dog /> }
-          {pt === 'wetwipes' && <Dog /> }
-          {pt === 'brushes' && <Dog /> }
 
         </div>
     </>
