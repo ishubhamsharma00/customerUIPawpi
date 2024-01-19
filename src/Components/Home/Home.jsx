@@ -227,6 +227,38 @@ const Home = () => {
     }
   ]
 
+  const PopularSubCategories=[
+    {
+      image: Chews,
+      name: 'Chews',
+      link: '',
+      bgColor: '#FF9B82'
+    },
+    {
+      image: BoneToys,
+      name: 'BoneToys',
+      link: '',
+      bgColor: '#AED2FF'
+    },
+    {
+      image: Leashes,
+      name: 'Leashes',
+      link: '',
+      bgColor: '#94dc94'
+    },
+    {
+      image: DandruffShampoo,
+      name: 'Shampoos',
+      link: '',
+      bgColor: '#FBD85D'
+    },
+    {
+      image: Treats,
+      name: 'Treats',
+      link: '',
+      bgColor: '#FFA1F5'
+    }
+  ];
 
   //useState for active Brand Product selection
   const [activeBrand, setActiveBrand] = useState(1);
@@ -339,13 +371,16 @@ const Home = () => {
 
         {/* Popular Sub-Categories */}
         <div className="flex my-3 md:my-6 bg-white gap-1 md:gap-2 md:px-12 flex-col">
-          <p className="relative my-2 md:my-4 left-8 font-bold tracking-wide text-2xl">Popular Categories</p>
-          <div className="w-full px-8 md:px-0 md:w-[88%] gap-6 md:gap-0 m-auto h-full flex items-center overflow-x-auto justify-between">
-            <div className="flex flex-col items-center">
-              <img src={Chews} alt='popularSubCategories' className="bg-[#FF9B82] shadow-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p className="font-Raleway font-semibold text-xl">Chews</p>
-            </div>
-            <div className="flex flex-col items-center">
+          <p className="relative my-3 md:my-4 left-8 font-bold tracking-wide text-2xl">Popular Categories</p>
+          <div className="w-full px-8 md:px-0 md:w-[88%] gap-6 md:gap-0 m-auto h-full flex items-center overflow-x-auto md:justify-between">
+            {PopularSubCategories.map((data)=>
+              <div className="flex w-44 md:w-32 flex-col items-center mt-2">
+                <img src={data.image} alt={data.name} className={`bg-[${data.bgColor}] shadow-xl rounded-lg mb-3 w-full p-2`} />
+                <p className="font-Raleway font-semibold text-xl">{data.name}</p>
+              </div>
+            )}
+            
+            {/* <div className="flex flex-col items-center">
               <img src={BoneToys} alt='popularSubCategories' className="bg-[#AED2FF] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
               <p className="font-Raleway font-semibold text-xl">Toys</p>
             </div>
@@ -364,7 +399,7 @@ const Home = () => {
             <div className="flex flex-col items-center">
               <img src={Chews} alt='popularSubCategories' className="bg-[#FF9B82] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
               <p className="font-Raleway font-semibold text-xl">Chews</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
