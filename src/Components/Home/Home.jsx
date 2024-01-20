@@ -372,39 +372,18 @@ const Home = () => {
         {/* Popular Sub-Categories */}
         <div className="flex my-3 md:my-6 bg-white gap-1 md:gap-2 md:px-12 flex-col">
           <p className="relative my-3 md:my-4 left-8 font-bold tracking-wide text-2xl">Popular Categories</p>
-          <div className="w-full px-8 md:px-0 md:w-[88%] gap-6 md:gap-0 m-auto h-full flex items-center overflow-x-auto md:justify-between">
+          <div className="w-full px-8 md:px-0 md:w-[88%] gap-6 md:gap-0 m-auto h-full flex items-center overflow-x-auto justify-between">
             {PopularSubCategories.map((data)=>
-              <div className="flex w-44 md:w-32 flex-col items-center mt-2">
-                <img src={data.image} alt={data.name} className={`bg-[${data.bgColor}] shadow-xl rounded-lg mb-3 w-full p-2`} />
-                <p className="font-Raleway font-semibold text-xl">{data.name}</p>
+              <div className="flex flex-col items-center mt-2">
+                <img src={data.image} alt={data.name} className={`bg-[${data.bgColor}] shadow-xl rounded-lg mb-3 w-32 h-32 p-1 md:p-2`} />
+                <p className="font-Raleway md:px-0 px-4 font-semibold text-xl">{data.name}</p>
               </div>
             )}
-            
-            {/* <div className="flex flex-col items-center">
-              <img src={BoneToys} alt='popularSubCategories' className="bg-[#AED2FF] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p className="font-Raleway font-semibold text-xl">Toys</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src={Leashes} alt='popularSubCategories' className="bg-[#94dc94] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p className="font-Raleway font-semibold text-xl" >Leashes</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src={DandruffShampoo} alt='popularSubCategories' className="bg-[#FBD85D] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p className="font-Raleway font-semibold text-xl" >Shampoo</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src={Treats} alt='popularSubCategories' className="bg-[#FFA1F5] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p className="font-Raleway font-semibold text-xl">Treats</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src={Chews} alt='popularSubCategories' className="bg-[#FF9B82] shadow-xl font-Raleway font-semibold text-xl rounded-lg mb-3 h-32 w-32 p-2" />
-              <p className="font-Raleway font-semibold text-xl">Chews</p>
-            </div> */}
           </div>
         </div>
 
         {/* Shampoo Animations */}
-        <div className="w-full h-full flex">
+        <div className="hidden w-full h-full md:flex">
           <div className="m-auto h-screen w-1/3 relative z-20 overflow-hidden bg-transparent flex items-center justify-center" onMouseEnter={() => setAnimationActivate(true)} onMouseLeave={() => setAnimationActivate(false)} >
             <img src={shampoo} alt="shampooImage" className={`absolute z-10 -right-6 bottom-0 w-[52%] duration-500 ${animationActivate ? 'scale-125 -translate-x-[52px] -translate-y-5 duration-500' : ''}`} />
             <img src={left} alt="left" className={`absolute left-2 bottom-0 w-[64%] duration-500 ${animationActivate ? 'scale-125 translate-x-12 -translate-y-5 duration-500' : ''}`} />
@@ -429,15 +408,15 @@ const Home = () => {
         </div>
 
         {/* Our Values */}
-        <div className="h-full w-[70%] m-auto flex flex-col gap-12 items-center justify-center">
-          <p className="text-4xl font-semibold tracking-wide mt-6">Our Values</p>
+        <div className="h-full w-full md:w-[70%] m-auto flex flex-col gap-12 md:gap-12 items-center justify-center">
+          <p className="text-3xl md:text-4xl font-medium md:font-semibold tracking-wide mt-6">Our Values</p>
 
-          <div className="h-full w-full flex items-center justify-around">
-            <img src={ourValues1} alt="ourValuesImage1" className="w-[33%] scale-x-110 h-full rounded-md -z-10" />
-            <div className="h-full w-[42%]  flex flex-col gap-4">
-              <p className="text-2xl tracking-wider pr-6">"Our Compassionate Commitment: Elevating Pet Wellbeing Through Quality Products and Careful Curation."</p>
-              <p className="text-sm tracking-wide font-light">At Pawpi, we hold an unwavering commitment to the wellbeing of your beloved pets. Our journey is driven by a deep sense of compassion, ensuring that every product we offer meets the highest standards of quality and safety. We understand the importance of pets in your life, and our dedication to their happiness and health guides every decision we make.</p>
-              <div className="flex text-left text-sm items-center justify-between mt-4">
+          <div className="h-full w-full flex md:flex-row flex-col items-center justify-around">
+            <img src={ourValues1} alt="ourValuesImage1" className="w-[90%] md:w-[33%] md:scale-x-110 h-full rounded-md md:-z-10" />
+            <div className="h-full w-[90%] md:w-[42%] flex flex-col gap-2 md:gap-4">
+              <p className="text-xl md:text-2xl text-center md:text-left tracking-wider md:pr-6">"Our Compassionate Commitment: Elevating Pet Wellbeing Through Quality Products and Careful Curation."</p>
+              <p className="text-sm md:tracking-wide md:text-left text-justify font-light">At Pawpi, we hold an unwavering commitment to the wellbeing of your beloved pets. Our journey is driven by a deep sense of compassion, ensuring that every product we offer meets the highest standards of quality and safety. We understand the importance of pets in your life, and our dedication to their happiness and health guides every decision we make.</p>
+              <div className="flex text-left text-sm items-center justify-between md:mt-4">
                 <div className="flex flex-col gap-1">
                   <p className="text-[#FF3547] font-semibold text-lg">245</p>
                   <p className="text-xs font-thin">Happy Customers</p>
@@ -454,11 +433,11 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="h-full w-full flex items-center justify-around">
-            <div className="h-ful text-right w-[42%]  flex flex-col gap-4">
-              <p className="text-2xl tracking-wider pl-6">"Dedicated to Sustainability: Crafting Pet Happiness While Caring for Our Planet's Future."</p>
-              <p className="text-sm tracking-wide font-light">We believe in more than just pet happiness; we believe in a brighter future for our planet. That's why we are dedicated to sustainability in every aspect of our business. From eco-friendly product choices to responsible sourcing, we're committed to reducing our environmental footprint and contributing to a healthier world for both pets and people.</p>
-              <div className="flex text-left text-sm items-center justify-between mt-4">
+          <div className="h-full w-full flex md:flex-row flex-col items-center justify-around">
+            <div className="h-full text-right md:w-[42%] w-[90%] flex flex-col gap-2 md:gap-4">
+              <p className="text-xl md:text-2xl text-center md:text-right tracking-wider md:pl-6">"Dedicated to Sustainability: Crafting Pet Happiness While Caring for Our Planet's Future."</p>
+              <p className="text-sm md:tracking-wide md:text-right text-justify font-light">We believe in more than just pet happiness; we believe in a brighter future for our planet. That's why we are dedicated to sustainability in every aspect of our business. From eco-friendly product choices to responsible sourcing, we're committed to reducing our environmental footprint and contributing to a healthier world for both pets and people.</p>
+              <div className="flex text-left text-sm items-center justify-between md:mt-4">
                 <div className="flex flex-col gap-1">
                   <p className="text-[#FF3547] font-semibold text-lg">245</p>
                   <p className="text-xs font-thin">Happy Customers</p>
@@ -473,15 +452,15 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <img src={ourValues2} alt="ourValuesImage2" className="w-[33%] scale-x-110 h-full rounded-md -z-10" />
+            <img src={ourValues2} alt="ourValuesImage2" className="w-[90%] md:w-[33%] md:scale-x-110 h-full rounded-md md:-z-10" />
           </div>
 
-          <div className="h-full w-full flex items-center justify-around">
-            <img src={ourValues3} alt="ourValuesImage3" className="w-[33%] scale-x-110 h-full rounded-md -z-10" />
-            <div className="h-full w-[42%]  flex flex-col gap-4">
-              <p className="text-2xl tracking-wider pr-6">"Community Connection: Fostering Relationships, Sharing Knowledge, and Celebrating the Love of Pets."</p>
-              <p className="text-sm tracking-wide font-light"> Our pet-loving community isn't just about transactions; it's about building relationships. We're here to foster a sense of connection among pet enthusiasts. Our store is a hub where you can not only find the best products for your pets but also share experiences, knowledge, and the love you have for your furry companions. Together, we celebrate the joy of pet ownership.</p>
-              <div className="flex text-left text-sm items-center justify-between mt-4">
+          <div className="h-full w-full flex md:flex-row flex-col items-center justify-around">
+            <img src={ourValues3} alt="ourValuesImage3" className="w-[90%] md:w-[33%] md:scale-x-110 h-full rounded-md md:-z-10" />
+            <div className="h-full w-[90%] md:w-[42%] flex flex-col gap-2 md:gap-4">
+              <p className="text-xl md:text-2xl text-center md:text-left tracking-wider md:pr-6">"Community Connection: Fostering Relationships, Sharing Knowledge, and Celebrating the Love of Pets."</p>
+              <p className="text-sm md:tracking-wide md:text-left text-justify font-light"> Our pet-loving community isn't just about transactions; it's about building relationships. We're here to foster a sense of connection among pet enthusiasts. Our store is a hub where you can not only find the best products for your pets but also share experiences, knowledge, and the love you have for your furry companions. Together, we celebrate the joy of pet ownership.</p>
+              <div className="flex text-left text-sm items-center justify-between md:mt-4">
                 <div className="flex flex-col gap-1">
                   <p className="text-[#FF3547] font-semibold text-lg">245</p>
                   <p className="text-xs font-thin">Happy Customers</p>
@@ -545,9 +524,9 @@ const Home = () => {
         </div>
 
         {/*REVIEW-SLIDER*/}
-        <div className="w-[95%] flex flex-col gap-4 text-center m-auto h-full mt-6">
-          <p className=" text-3xl  uppercase font-bold font-Raleway tracking-wide">what our customers<br /> said about us</p>
-          <p className="w-2/3 m-auto  font-semibold font-Raleway uppercase text-black">"Our customers' voices echo the love and trust they've found in our pet products, shaping our journey with heartfelt testimonials."</p>
+        <div className="w-[95%] flex flex-col gap-3 md:gap-4 text-center m-auto h-full mt-6">
+          <p className="text-2xl md:text-3xl uppercase font-bold font-Raleway tracking-wide">what our customers<br /> said about us</p>
+          <p className="w-full md:w-2/3 m-auto font-semibold font-Raleway uppercase text-black">"Our customers' voices echo the love and trust they've found in our pet products, shaping our journey with heartfelt testimonials."</p>
           <div className="h-full w-full -z-10">
             <ReviewCarousel />
           </div>
@@ -559,10 +538,10 @@ const Home = () => {
         </div>
 
         {/* Toys & Entertainment */}
-        <div className="h-full w-[90%] flex flex-col gap-4 py-12 m-auto">
-          <div className="flex tracking-wider justify-between h-full w-full">
-            <p className="w-[32%] font-semibold h-full uppercase text-3xl">Toys & <br />Entertainment</p>
-            <p className="w-[67%] text-right text-2xl">"A Tail-Wagging Wonderland: Explore Our Diverse Selection<br /> of Pet Products and Accessories for Your Furry Friends"</p>
+        <div className="h-full w-[90%] flex flex-col gap-2 md:gap-4 py-12 m-auto">
+          <div className="flex md:flex-row flex-col tracking-wider gap-5 md:gap-0 md:justify-between h-full w-full">
+            <p className="w-full md:w-[32%] font-semibold h-full text-center md:text-left uppercase text-3xl">Toys & <br />Entertainment</p>
+            <p className="w-full md:w-[67%] tracking-normal md:tracking-wider text-justify md:text-right text-2xl">"A Tail-Wagging Wonderland: Explore Our Diverse Selection<br /> of Pet Products and Accessories for Your Furry Friends"</p>
           </div>
           <div className="h-full w-full flex justify-between items-center">
             <div className="w-[32.78%] h-full flex flex-col gap-2">
