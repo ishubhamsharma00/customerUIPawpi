@@ -16,6 +16,8 @@ import DefaultBreed from "./pages/DefaultBreed";
 import DefaultLifeStage from "./pages/DefaultLifeStage";
 import Start from "./Components/Start/Start";
 import StartDog from "./Components/Start/Dog";
+import StartCat from "./Components/Start/Cat";
+
 import OrderTracking from "./Components/OrderTracking/OrderTracking";
 import OrderOverview from "./Components/OrderOverview/OrderOverview";
 import FAQ from "./Components/FAQ/FAQ";
@@ -35,6 +37,8 @@ function App() {
 
       <CheckoutHOC path="/start/welcome" exact component={Start} />
       <CheckoutHOC path="/start/welcome/dog" exact component={StartDog} />
+      <CheckoutHOC path="/start/welcome/cat" exact component={StartCat} />
+
 
       <CheckoutHOC path="/auth/checkout" exact component={AuthPage} />
 
