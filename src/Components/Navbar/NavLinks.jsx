@@ -26,7 +26,7 @@ const NavLinks = (props) => {
                             <div className="flex items-center gap-3">
                                 <img src={link.icon} 
                                 alt="icons"
-                                className="h-12 w-12 p-2 lg:hidden bg-amber-600 rounded-full"
+                                className="h-8 w-8 p-2 lg:hidden bg-amber-600 rounded-full"
                                 />
                                 <Link to={link.id} className='hidden lg:contents'>{link.name}</Link>
                                 <h1 className="lg:hidden md:text-xl ">{link.name}</h1>
@@ -92,7 +92,7 @@ const NavLinks = (props) => {
                                     <div className='pt-2'>
                                         <h1 onClick={
                                             ()=> subHeading !== slinks.Head ? setSubHeading(slinks.Head): setSubHeading("")
-                                        } className='py-1 px-10 flex justify-between md:px-12 font-paw text-base md:text-lg'>
+                                        } className='py-1 px-14 flex justify-between md:px-12 font-paw text-base md:text-lg'>
                                             {slinks.Head}
                                             <span className='text-xl lg:hidden inline font-semibold'>
                                                             {
