@@ -1,12 +1,16 @@
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useState } from "react";
-import axios from "axios";
+import { Dialog, Transition } from '@headlessui/react';
+import { Fragment, useEffect, useState } from 'react';
+import axios from 'axios';
 
-import React from "react";
-import BoneDoodle from "../../Images/Doodles/bonedoodle.png";
-import PawDoodle from "../../Images/Doodles/pawdoodle.png";
+//import { FcGoogle } from "react-icons/fc";
+import React from 'react';
+import BoneDoodle from '../../Images/Doodles/bonedoodle.png';
+import PawDoodle from '../../Images/Doodles/pawdoodle.png';
+
+
 
 export default function SignIn({ isOpen, setIsOpen }) {
+
   function closeModal() {
     setIsOpen(false);
   }
@@ -30,9 +34,11 @@ export default function SignIn({ isOpen, setIsOpen }) {
         }
       );
     } else {
-      setError("Geolocation is not supported by your browser.");
+      setError('Geolocation is not supported by your browser.');
     }
-  };
+  }
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,30 +50,30 @@ export default function SignIn({ isOpen, setIsOpen }) {
         const results = response.data.results;
         if (results.length > 0) {
           for (const component of results[0].address_components) {
-            if (component.types.includes("postal_code")) {
+            if (component.types.includes('postal_code')) {
               setPincode(component.long_name);
-              localStorage.setItem("location", component.long_name);
+              localStorage.setItem("location",component.long_name)
               return;
             }
           }
         }
 
-        setError("Pincode not found.");
+        setError('Pincode not found.');
       } catch (error) {
-        setError("Error fetching pincode.");
+        setError('Error fetching pincode.');
       }
     };
 
     fetchData();
   }, [latitude, longitude]);
 
-  useEffect(() => {
-    if (pincode?.length == 6) {
-      localStorage.setItem("pincode", pincode);
+  useEffect(()=>{
+    if (pincode?.length==6){
+      localStorage.setItem("pincode",pincode);
       setIsOpen(false);
       setPincode(null);
     }
-  });
+  })
 
   return (
     <>
@@ -101,50 +107,51 @@ export default function SignIn({ isOpen, setIsOpen }) {
                     as="h3"
                     className="text-2xl font-paw px-10 flex justify-around pt-4 font-bold leading-6 text-gray-600"
                   >
-                    <img
-                      src={PawDoodle}
+                    <img src={PawDoodle}
                       alt="pawDoodle"
-                      className="h-14 -mt-4 w-14 opacity-60 hover:animate-bounce"
-                    />
+                      className="h-14 -mt-4 w-14 opacity-60 hover:animate-bounce" />
 
                     <h1>Change Location</h1>
 
-                    <img
-                      src={BoneDoodle}
+                    <img src={BoneDoodle}
                       alt="boneDoodle"
-                      className="h-14 -mt-4 w-14 opacity-50 hover:animate-spin "
-                    />
+                      className="h-14 -mt-4 w-14 opacity-50 hover:animate-spin " />
                   </Dialog.Title>
                   <div className="w-full flex py-4 gap-12 px-6 justify-around items-center">
-                    <div
-                      className="w-1/3 flex justify-center text-lg font-paw font-semibold py-2 bg-purple-500 rounded-lg text-white cursor-pointer hover:ring-purple-500 hover:ring-4 hover:duration-500"
+                    <div className='w-1/3 flex justify-center text-lg font-paw font-semibold py-2 bg-purple-500 rounded-lg text-white cursor-pointer hover:ring-purple-500 hover:ring-4 hover:duration-500'
                       onClick={LocationDetect}
                     >
                       Detect my location
+                      
                     </div>
-                    <div className="h-14 w-16 text-xl rounded-full border-2 flex justify-center items-center">
+                    <div className='h-14 w-16 text-xl rounded-full border-2 flex justify-center items-center'>
                       OR
                     </div>
-                    <div className="w-1/2">
-                      <input
-                        type="number"
-                        name="location"
-                        id="location"
-                        placeholder="Pincode"
-                        className="py-2 border-2 border-gray-300 outline-none px-4 w-full rounded-lg text-lg"
-                        onChange={(e) => setPincode(e.target.value)}
-                      />
+                    <div className='w-1/2'>
+                      <input type="number" name="location" id="location" placeholder='Pincode' className='py-2 border-2 border-gray-300 outline-none px-4 w-full rounded-lg text-lg' onChange={(e)=>setPincode(e.target.value)}/>
                     </div>
-                    {latitude && (
-                      <>
-                        <div>{latitude}</div>
-                      </>
-                    )}
-                    {longitude && (
-                      <>
-                        <div>{longitude}</div>
-                      </>
-                    )}
+                    {
+                      latitude && (
+                        <>
+                          <div>
+                            {
+                              latitude
+                            }
+                          </div>
+                        </>
+                      )
+                    }
+                    {
+                      longitude && (
+                        <>
+                          <div>
+                            {
+                              longitude
+                            }
+                          </div>
+                        </>
+                      )
+                    }
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
@@ -153,5 +160,5 @@ export default function SignIn({ isOpen, setIsOpen }) {
         </Dialog>
       </Transition>
     </>
-  );
+  )
 }
