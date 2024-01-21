@@ -45,7 +45,7 @@ const NavSm = ({ login, cart, location }) => {
   // const [openLocation, setOpenLocation] = useState(false);
   // const openLocationmodal = () => setOpenLocation(true);
 
-  const [authUser, setAuthUser] = useState(true);
+  const [authUser, setAuthUser] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   return (
     <>
@@ -130,10 +130,10 @@ const NavSm = ({ login, cart, location }) => {
             ) : (
               <>
                 <div
-                  className="flex items-center justify-center w-full h-full bg-purple-500 font-paw text-white text-xl rounded-md "
+                  className="flex items-center justify-center w-full h-full font-paw text-white text-xl rounded-md "
                   onClick={login}
                 >
-                  <h1>{/* <CgProfile /> */}</h1>
+                  <img src={accountPin} className="w-full h-full" alt="account"/>
                 </div>
               </>
             )}
@@ -143,10 +143,10 @@ const NavSm = ({ login, cart, location }) => {
             <img
               src={locationPin}
               alt="locationIcon"
-              className="h-5 w-5"
+              className="h-4 w-7"
               onClick={location}
             />
-            <p className="text-xs text-gray-400">
+            <p className="text-[9px] text-gray-400">
               {localStorage.getItem("pincode")}
             </p>
           </div>
@@ -155,7 +155,7 @@ const NavSm = ({ login, cart, location }) => {
             className="flex items-center justify-center w-[40%] h-2/3"
             onClick={cart}
           >
-            <img src={CART} alt="cart" className="w-full h-full" />
+            <img src={cartPin} alt="cart" className="w-full h-full" />
           </div>
 
           {/* HAmburger */}
