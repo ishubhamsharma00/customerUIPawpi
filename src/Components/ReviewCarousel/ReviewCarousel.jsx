@@ -52,7 +52,7 @@ const ReviewCarousel = () => {
             location: "Bikaner, Rajasthan",
             reviewtext: "Jai Shri Krishna! 🙏🐾 I wanted to express my gratitude for the excellent service and quality pet products provided by this website. 🛍️🌺"
 
-                + " As a pet parent  having access to a reliable and diverse range of pet supplies is a blessing. 🐕💖 The website's commitment to customer satisfaction is truly commendable. 🌟😊"  + " The user-friendly interface, quality products, and efficient delivery have elevated the pet care experience. 👏🏡🐾"
+                + " As a pet parent  having access to a reliable and diverse range of pet supplies is a blessing. 🐕💖 The website's commitment to customer satisfaction is truly commendable. 🌟😊" + " The user-friendly interface, quality products, and efficient delivery have elevated the pet care experience. 👏🏡🐾"
 
                 + " Thank you for making the journey of pet parenting even more joyful! I highly recommend it to all my fellow pet enthusiasts. 🌈🐾",
         },
@@ -85,7 +85,7 @@ const ReviewCarousel = () => {
             profilephoto: "https://wallpapers.com/images/hd/cute-dynamic-cat-painting-vidcr63oige4h93a.webp",
             name: "Ananya Patel",
             location: "Ahmedabad, Gujarat",
-            reviewtext: "🌈 Namaste from Ahmedabad! Ananya Patel here, and I must say this pet website is a blessing for Indian pet parents. 🐾🇮🇳 The diverse range of products accommodates the unique needs of our furry friends. 🛒🐕"  + " The user-friendly interface made it a breeze to navigate, and the attention to detail in product descriptions is commendable. The seamless ordering process and swift delivery exceeded my expectations. 🚚💨"
+            reviewtext: "🌈 Namaste from Ahmedabad! Ananya Patel here, and I must say this pet website is a blessing for Indian pet parents. 🐾🇮🇳 The diverse range of products accommodates the unique needs of our furry friends. 🛒🐕" + " The user-friendly interface made it a breeze to navigate, and the attention to detail in product descriptions is commendable. The seamless ordering process and swift delivery exceeded my expectations. 🚚💨"
                 + " I recently ordered pet supplies, and the delivery was quick and hassle-free. 📦🚚 Kudos to the team for prioritizing customer satisfaction. 😊🌟 Highly recommended for all pet lovers in India!"
 
         },
@@ -122,7 +122,7 @@ const ReviewCarousel = () => {
                                     <FaQuoteRight className=" ml-auto" />
                                 </div>
                             </div>
-                         
+
                         ))
                     }
                 </Slider>
@@ -132,22 +132,17 @@ const ReviewCarousel = () => {
                 <Slider {...settingsMd}>
                     {
                         ReviewCardDetails.map((data) => (
-                            <div className="items-center px-10 py-6">
-                                <div className="flex h-72 w-full flex-col pt-4 items-center shadow-[6px_6px_10px_2px] shadow-slate-600 rounded-xl">
-                                    <div className="h-20 w-20 items-center mb-2 rounded-full">
-                                        <img src={data.profilephoto}
-                                            alt="profileimage"
-                                            className="h-full w-full rounded-full"
-                                        />
+                            <div className="p-10 pb-16 overflow-hidden">
+                                <div className={`h-full flex rounded-xl text-left flex-col border border-gray-200 gap-3 p-6 shadow-2xl 
+                                ${data.id % 2 == 0 ? 'text-white bg-[#9747FF]' : 'text-black bg-white'}`}>
+                                    <img src={data.profilephoto} alt="profilePhoto" className="rounded-full w-14 h-14" />
+                                    <div className="tracking-wide flex flex-col ">
+                                        <p className={`text-lg uppercase`}>{data.name}</p>
+                                        <p className={`font-light capitalize text-xs ${data.id % 2 == 0 ? 'text-white' : 'text-gray-500'}`}>{data.location}</p>
                                     </div>
-
-                                    <div className="font-paw px-4 text-lg mb-4 font-semibold">
-                                        <h1>{data.name}</h1>
-                                    </div>
-
-                                    <div className="text-md px-4 font-paw text-gray-500 ">
-                                        <h1>{data.reviewtext}</h1>
-                                    </div>
+                                    <FaQuoteLeft />
+                                    <p className="text-sm text-justify line-clamp-6">{data.reviewtext}</p>
+                                    <FaQuoteRight className=" ml-auto" />
                                 </div>
                             </div>
                         ))
@@ -159,22 +154,17 @@ const ReviewCarousel = () => {
                 <Slider {...settingsSm}>
                     {
                         ReviewCardDetails.map((data) => (
-                            <div className="items-center px-14 py-8">
-                                <div className="flex h-60 w-full flex-col py-4 items-center shadow-[6px_6px_10px_2px] shadow-slate-600 rounded-xl">
-                                    <div className="h-20 w-20 items-center mb-2 rounded-full">
-                                        <img src={data.profilephoto}
-                                            alt="profileimage"
-                                            className="h-full w-full rounded-full"
-                                        />
+                            <div className="p-10 pb-16 overflow-hidden">
+                                <div className={`h-full flex rounded-xl text-left flex-col border border-gray-200 gap-3 p-6 shadow-2xl 
+                                    ${data.id % 2 == 0 ? 'text-white bg-[#9747FF]' : 'text-black bg-white'}`}>
+                                    <img src={data.profilephoto} alt="profilePhoto" className="rounded-full w-14 h-14" />
+                                    <div className="tracking-wide flex flex-col ">
+                                        <p className={`text-lg uppercase`}>{data.name}</p>
+                                        <p className={`font-light capitalize text-xs ${data.id % 2 == 0 ? 'text-white' : 'text-gray-500'}`}>{data.location}</p>
                                     </div>
-
-                                    <div className="font-paw text-lg mb-2 font-semibold">
-                                        <h1>{data.name}</h1>
-                                    </div>
-
-                                    <div className="text-md px-4 font-paw text-gray-500 ">
-                                        <h1>{data.reviewtext}</h1>
-                                    </div>
+                                    <FaQuoteLeft />
+                                    <p className="text-sm text-justify line-clamp-6">{data.reviewtext}</p>
+                                    <FaQuoteRight className=" ml-auto" />
                                 </div>
                             </div>
                         ))
