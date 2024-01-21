@@ -684,6 +684,8 @@ const NavLg = ({ location, login, cart }) => {
                   </>
                 )
               }
+
+              
             </div>
 
             <div className="flex items-center justify-center w-[20%]">
