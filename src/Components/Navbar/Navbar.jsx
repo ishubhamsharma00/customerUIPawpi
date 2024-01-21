@@ -45,7 +45,7 @@ const NavSm = ({ login, cart, location }) => {
   // const [openLocation, setOpenLocation] = useState(false);
   // const openLocationmodal = () => setOpenLocation(true);
 
-  const [authUser, setAuthUser] = useState(true);
+  const [authUser, setAuthUser] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   return (
     <>
@@ -97,7 +97,7 @@ const NavSm = ({ login, cart, location }) => {
                     />
                     {isDropDownOpen && (
                       <>
-                        <div className="absolute shadow-lg top-8 right-0 w-24 z-10 bg-white flex flex-col gap-2 border-2 rounded-lg font-paw">
+                        <div className="absolute shadow-lg top-10 right-0 w-24 z-10 bg-white flex flex-col gap-2 border-2 rounded-lg font-paw">
                           <div className="flex flex-col gap-2 pl-2 py-4">
                             <Link
                               to={"/user/profile"}
@@ -130,10 +130,10 @@ const NavSm = ({ login, cart, location }) => {
             ) : (
               <>
                 <div
-                  className="flex items-center justify-center w-full h-full bg-purple-500 font-paw text-white text-xl rounded-md "
+                  className="flex items-center justify-center w-full h-full font-paw text-white rounded-md"
                   onClick={login}
                 >
-                  <h1>{/* <CgProfile /> */}</h1>
+                  <img src={accountPin} alt="account" className="w-full h-full"/>
                 </div>
               </>
             )}
@@ -143,10 +143,10 @@ const NavSm = ({ login, cart, location }) => {
             <img
               src={locationPin}
               alt="locationIcon"
-              className="h-5 w-5"
+              className="h-4 w-8"
               onClick={location}
             />
-            <p className="text-xs text-gray-400">
+            <p className="text-[9px] text-gray-400">
               {localStorage.getItem("pincode")}
             </p>
           </div>
@@ -155,7 +155,7 @@ const NavSm = ({ login, cart, location }) => {
             className="flex items-center justify-center w-[40%] h-2/3"
             onClick={cart}
           >
-            <img src={CART} alt="cart" className="w-full h-full" />
+            <img src={cartPin} alt="cart" className="w-full h-full" />
           </div>
 
           {/* HAmburger */}
@@ -701,6 +701,7 @@ const NavLg = ({ location, login, cart }) => {
 };
 
 const Navbar = () => {
+
   const [openLocation, setOpenLocation] = useState(false);
   const openLocationmodal = () => setOpenLocation(true);
 
