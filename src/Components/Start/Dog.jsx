@@ -46,32 +46,33 @@ const Dog = () => {
     }
 
     return (
-        <div className='font-raleway relative overflow-hidden h-screen w-screen px-6 py-12 flex flex-col justify-between'>
-            <Link to='/' className='flex flex-col items-center absolute right-1 md:right-10  top-5 h-12 w-12'>
+        <div className='font-raleway relative overflow-hidden h-screen w-screen p-6 lg:py-12 flex flex-col gap-8 lg:justify-around'>
+            <Link to='/home' className='flex flex-col items-center absolute right-1 md:right-10  top-5 h-12 w-12'>
                 <img src={homeGif} alt='homeGif' className='h-10 w-10' />
                 <p className='text-[9px] text-slate-400'>Skip</p>
             </Link>
             {selectedBreed && selectedAge && selectedColor &&
-                <Link to='/dog' className='flex flex-col items-center absolute right-10   md:bottom-20 h-12 w-12'>
+                <Link to='/home/dog' className='flex flex-col items-center absolute right-10 cursor-pointer md:bottom-20 h-12 w-12'>
                     <img src={moveGif} alt='moveGif' className='h-10 w-10' />
                     <p className='text-[9px] text-slate-400'>Move to Next Page</p>
                 </Link>
             }
 
             {/* dog gang */}
-            <div className='hidden md:block absolute w-[30%] right-[10%] bottom-[5%] md:top-64 md:right-12'>
+            {/* <div className='hidden md:block absolute w-[30%] right-[10%] bottom-[5%] md:top-64 md:right-12'>
                 <img src={dogGang} alt='dogGangImage' className='w-full' />
-            </div>
+            </div> */}
 
             {/* BREED */}
 
-            <p className="text-4xl m-auto -mt-8  ">Choose your Pet</p>
-            <p className='text-2xl font-bold tracking-wide h-[5%] my-1'>Breed : </p>
-            <div className='flex flex-col h-[30%] w-full'>
-                <div className='flex flex-wrap  h-[60%] w-[100%] md:h-[85%] md:w-full items-center justify-start gap-8 overflow-x-auto 2xl:gap-16'>
+            <p className="text-4xl m-0 lg:-mt-8  ">Choose your Pet</p>
+            <div className='flex flex-col gap-2 w-full'>
+            <p className='text-2xl font-bold tracking-wide my-1'>Breed : </p>
+
+                <div className='flex flex-wrap w-[100%] md:h-[85%] md:w-full items-center justify-start gap-8 overflow-x-auto 2xl:gap-16'>
                     {/* Labrador */}
                     <div className={`relative rounded-xl  h-24 w-20 md:h-[85%] md:w-[12%] bg-[#FF9B9B] shadow-lg flex items-center justify-center first-letter: ${selectedBreed === 'Labrador' ? 'border-2 border-blue-400 rounded-xl' : ''} `}  onMouseEnter={() => handleIsHover('Labrador')} onMouseLeave={() => setIsHover('')} onClick={() => { handleBreedClick('Labrador') }}>
-                        <img src={Labrador} alt='labrador' className={`h-full `} />
+                        <img src={Labrador} alt='labrador' className='w-full h-full' />
                         
                         {isHover === 'Labrador' &&
                             <div className='hidden lg:block absolute py-2 bottom-0 rounded-xl -right-44 z-10 bg-white shadow-md border border-l-0 border-slate-200 h-full w-44 xl:w-56 xl:-right-56 2xl:w-60 2xl:-right-60 flex flex-col justify-around text-xs' onMouseEnter={() => setIsHover('')}>
@@ -146,7 +147,7 @@ const Dog = () => {
 
 
             {/* AGE */}
-            <div className=' hidden lg:block flex flex-col h-[50%] w-full'>
+            <div className='hidden lg:flex flex-col lg:h-[50%] w-full py-8 md:py-0'>
                 <p className='text-2xl font-bold tracking-wide my-2'>Age :</p>
                 <div className='flex  lg:pb-24 items-center gap-10 overflow-x-auto md:h-[50%] lg:h-[85%]'>
                     {/* Puppy */}
@@ -221,7 +222,7 @@ const Dog = () => {
             </div>
             {/*  age cards for small and medium screen  */}
 
-            <div className="lg:hidden flex flex-col h-[30%] md:h-[540%] w-full ">
+            <div className="lg:hidden flex flex-col md:h-[540%]  w-full ">
                 <p className="text-2xl font-bold tracking-wide my-2">Age :</p>
                 <div className="flex items-center gap-10 overflow-x-auto  md:h-[50%] lg:h-[85%]">
                     {/* Puppy */}

@@ -54,7 +54,7 @@ const NavSm = ({ login, cart, location }) => {
 
       <div className="flex fixed bg-white z-50 shadow-xl items-center justify-around h-16 w-full px-1">
         <div className="flex items-center w-[12%] justify-center">
-          <Link to="/">
+          <Link to="/home">
             <img src={NavSmLOGO}
               alt="LOGO"
               className="h-full w-full scale-125" />
@@ -299,7 +299,7 @@ const NavLg = ({ location, login, cart }) => {
   return (
     <>
       <div className='fixed h-16 text-xs w-screen bg-white flex items-center shadow-xl py-2 px-5 justify-between'>
-        <Link to="/" className='h-16 w-32 p-1'>
+        <Link to="/home" className='h-16 w-32 p-1'>
           <img
             src={yellowLogo}
             alt='logo'
