@@ -232,31 +232,31 @@ const Home = () => {
       image: Chews,
       name: 'Chews',
       link: '',
-      bgColor: '#FF9B82'
+      bgColor: 'bg-[#FF9B82]'
     },
     {
       image: BoneToys,
       name: 'BoneToys',
       link: '',
-      bgColor: '#AED2FF'
+      bgColor: 'bg-[#AED2FF]'
     },
     {
       image: Leashes,
       name: 'Leashes',
       link: '',
-      bgColor: '#94dc94'
+      bgColor: 'bg-[#94dc94]'
     },
     {
       image: DandruffShampoo,
       name: 'Shampoos',
       link: '',
-      bgColor: '#FBD85D'
+      bgColor: 'bg-[#FBD85D]'
     },
     {
       image: Treats,
       name: 'Treats',
       link: '',
-      bgColor: '#FFA1F5'
+      bgColor: 'bg-[#FFA1F5]'
     }
   ];
 
@@ -371,11 +371,11 @@ const Home = () => {
 
         {/* Popular Sub-Categories */}
         <div className="flex my-3 md:my-6 bg-white gap-1 md:gap-2 md:px-12 flex-col">
-          <p className="relative my-3 md:my-4 left-8 font-bold tracking-wide text-2xl">Popular Categories</p>
+          <p className="px-10 my-3 md:my-4 left-8 font-bold tracking-wide text-2xl">Popular Sub Categories</p>
           <div className="w-full px-8 md:px-0 md:w-[88%] gap-6 md:gap-0 m-auto h-full flex items-center overflow-x-auto justify-between">
             {PopularSubCategories.map((data)=>
               <div className="flex flex-col items-center mt-2">
-                <img src={data.image} alt={data.name} className={`bg-[${data.bgColor}] shadow-xl rounded-lg mb-3 w-32 h-32 p-1 md:p-2`} />
+                <img src={data.image} alt={data.name} className={`${data.bgColor} shadow-xl rounded-lg mb-3 w-32 h-32 p-1 md:p-2`} />
                 <p className="font-Raleway md:px-0 px-4 font-semibold text-xl">{data.name}</p>
               </div>
             )}
@@ -539,20 +539,22 @@ const Home = () => {
 
         {/* Toys & Entertainment */}
         <div className="h-full w-[90%] flex flex-col gap-2 md:gap-4 py-12 m-auto">
-          <div className="flex md:flex-row flex-col tracking-wider gap-5 md:gap-0 md:justify-between h-full w-full">
-            <p className="w-full md:w-[32%] font-semibold h-full text-center md:text-left uppercase text-3xl">Toys & <br />Entertainment</p>
-            <p className="w-full md:w-[67%] tracking-normal md:tracking-wider text-justify md:text-right text-2xl">"A Tail-Wagging Wonderland: Explore Our Diverse Selection<br /> of Pet Products and Accessories for Your Furry Friends"</p>
+          <div className="flex md:flex-row flex-col tracking-wider gap-3 md:gap-0 md:justify-between h-full w-full">
+            <p className="hidden md:block w-[32%] font-semibold h-full text-left uppercase text-3xl">Toys & <br />Entertainment</p>
+            <p className="hidden md:block w-[67%] tracking-wider text-right text-2xl">"A Tail-Wagging Wonderland: Explore Our Diverse Selection<br /> of Pet Products and Accessories for Your Furry Friends"</p>
+            <p className="md:hidden w-full md:w-[32%] font-semibold h-full text-center md:text-left uppercase text-2xl md:text-3xl">Toys & Entertainment</p>
+            <p className="md:hidden w-full md:w-[67%] tracking-normal md:tracking-wider text-justify md:text-right md:text-2xl">"A Tail-Wagging Wonderland: Explore Our Diverse Selection of Pet Products and Accessories for Your Furry Friends"</p>
           </div>
-          <div className="h-full w-full flex justify-between items-center">
-            <div className="w-[32.78%] h-full flex flex-col gap-2">
-              <button className="w-1/2 rounded-full bg-[#FF6969] tracking-wider text-xl text-white font-[500] py-5 my-6">SHOP NOW</button>
-              <img src={tNeLeft} alt="tNeLeftImage" className="rounded-lg w-full" />
+          <div className="h-full w-full flex md:flex-row flex-col justify-between items-center gap-2 md:gap-0">
+            <div className="w-[90%] md:w-[32.78%] items-center justify-center md:items-start h-full flex  md:flex-col gap-2">
+              <button className="w-[45%] h-1/4 md:w-1/2 scale-75 md:scale-100 rounded-full bg-[#FF6969] tracking-wider text-xl text-white font-[500] py-5 my-6">SHOP NOW</button>
+              <img src={tNeLeft} alt="tNeLeftImage" className="rounded-lg w-[45%] md:w-full" />
             </div>
-            <div className="w-[33.33%] h-full flex flex-col gap-2">
-              <img src={tNeMiddleTop} alt="tNeMiddleTopImage" className="rounded-lg w-full" />
-              <img src={tNeMiddleBottom} alt="tNeMiddleBottomImage" className="rounded-lg w-full" />
+            <div className="w-[90%] md:w-[33.33%] h-full flex items-center justify-center md:flex-col gap-2">
+              <img src={tNeMiddleTop} alt="tNeMiddleTopImage" className="rounded-lg w-[45%] md:w-full" />
+              <img src={tNeMiddleBottom} alt="tNeMiddleBottomImage" className="rounded-lg w-[45%] md:w-full" />
             </div>
-            <div className="w-[32.67%] h-full flex flex-col">
+            <div className="w-[84%] md:w-[32.67%] h-full flex flex-col">
               <img src={tNeRight} alt="tNeRightImage" className="rounded-lg w-full" />
             </div>
           </div>
@@ -561,20 +563,20 @@ const Home = () => {
         {/* Follow Us */}
         <div className="w-full h-full relative">
           <img src={followUsInsta} alt="followUsImage" className="w-full" />
-          <div className="w-[60%] absolute top-[15%] left-[3%]">
-            <div className="w-2/3 flex flex-col gap-8 text-center m-auto">
-              <p className="text-white drop-shadow-2xl font-Raleway font-semibold text-5xl tracking-wider border-b-8 rounded-full border-white uppercase">Be Our instafam <br /> follow us </p>
-              <a href="https://www.instagram.com/gopawpi" target="_blank" className="text-white font-extrabold text-7xl drop-shadow-2xl tracking-widest">@gopawpi</a>
+          <div className="w-[70%] md:w-[60%] absolute top-[3%] md:top-[15%] md:left-[3%]">
+            <div className="w-[85%] md:w-2/3 flex flex-col gap-3 md:gap-8 text-center m-auto">
+              <p className="text-white drop-shadow-2xl font-Raleway font-semibold text-xl md:text-5xl tracking-wider border-b-8 rounded-full border-white uppercase">Be Our instafam <br /> follow us </p>
+              <a href="https://www.instagram.com/gopawpi" target="_blank" className="text-white font-extrabold text-3xl md:text-7xl drop-shadow-2xl tracking-widest">@gopawpi</a>
             </div>
-            <div className="flex items-center gap-12 mx-4 pt-32 w-full flex-wrap">
-              <img src={Image1} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={Image2} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={Image3} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={Image4} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={Image3} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={Image1} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
-              <img src={tNeLeft} className="w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+            <div className="flex md:scale-100 scale-90 items-center gap-2 md:gap-12 mx-1 md:mx-4 pt-2 md:pt-32 w-full flex-wrap">
+              <img src={Image1} className="w-[28%] md:w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image2} className="w-[28%] md:w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image3} className="w-[28%] md:w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image4} className="w-[28%] md:w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image3} className="w-[28%] md:w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="w-[28%] md:w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={Image1} className="hidden md:block w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
+              <img src={tNeLeft} className="hidden md:block w-1/5 rounded-lg shadow-xl duration-300 hover:scale-90 hover:duration-300" />
 
             </div>
           </div>
