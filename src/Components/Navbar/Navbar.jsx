@@ -40,12 +40,12 @@ import Adult from '../../Images/NavbarAssets/adult.png';
 import Senior from '../../Images/NavbarAssets/senior.png';
 
 //for small devices/mobile
-const NavSm = ({ login, cart }) => {
+const NavSm = ({ login, cart, location }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   // const [openLocation, setOpenLocation] = useState(false);
   // const openLocationmodal = () => setOpenLocation(true);
 
-  const [authUser, setAuthUser] = useState(true);
+  const [authUser, setAuthUser] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   return (
     <>
@@ -54,24 +54,19 @@ const NavSm = ({ login, cart }) => {
 
       <div className="flex fixed bg-white z-50 shadow-xl items-center justify-around h-16 w-full px-1">
         <div className="flex items-center w-[12%] justify-center">
-          <Link to="/">
+          <Link to="/home">
             <img src={NavSmLOGO}
               alt="LOGO"
               className="h-full w-full scale-125" />
           </Link>
         </div>
 
-        <div className="flex items-center w-[45%] h-8 px-1 justify-between bg-navback rounded-md border border-bordergray">
-          <input type="search"
-            className="h-full w-full text-xs text-black font-paw outline-none bg-navback placeholder-black"
-            placeholder="For FURR BABIES....."
+        <div className="flex items-center w-[45%] h-8 px-2 justify-between bg-navback rounded-md border border-bordergray">
+        <input type="search"
+            className="w-full h-full text-gray-600 placeholder:font-light outline-none bg-[#F4F5F5] placeholder-[#A4A3A6]"
+            placeholder="Search"
           />
-          <div className="h-4 w-4 mb-1">
-            <img src={SEARCH}
-              alt="searchIcon"
-              className="w-full h-full"
-            />
-          </div>
+          <GoSearch className='text-lg text-[#A4A3A6]' />
         </div>
 
         <div className="h-2/3 w-[33%] flex items-center justify-between gap-3">
@@ -85,12 +80,12 @@ const NavSm = ({ login, cart }) => {
                     <div className='flex justify-center items-center cursor-pointer'
                       onClick={() => setIsDropDownOpen((prev) => !prev)}
                     >
-                      <img src='https://media.licdn.com/dms/image/D4D03AQEDTLNoP8Jxpg/profile-displayphoto-shrink_800_800/0/1684957189400?e=1691625600&v=beta&t=1IMB5rcwp-hSlhFx6qFdt_nzp8IKWdaDpyiPfGZADz8'
+                      <img src='https://media.licdn.com/dms/image/D4D03AQEDTLNoP8Jxpg/profile-displayphoto-shrink_800_800/0/1684957189400?e=1691625600&v=beta&t=1IMB5rcwp-hSlhFx6qFdt_nzp8IKWdaDpyiPfGZADz8' alt='user'
                         className={`flex items-center justify-center border border-black w-8 h-8 rounded-full cursor-pointer`} />
                       {
                         isDropDownOpen && (
                           <>
-                            <div className="absolute shadow-lg top-8 right-0 w-24 z-10 bg-white flex flex-col gap-2 border-2 rounded-lg font-paw">
+                            <div className="absolute shadow-lg top-12 right-0 w-24 z-10 bg-white flex flex-col gap-2 border-2 rounded-lg font-paw">
                               <div className='flex flex-col gap-2 pl-2 py-4'>
                                 <Link to={"/user/profile"} className='text-sm rounded-md'>My Profile</Link>
                                 <Link to={"/user/addresses"} className='text-sm rounded-md'>My Address</Link>
@@ -104,25 +99,35 @@ const NavSm = ({ login, cart }) => {
                     </div>
                   </div>
                 </>
-              ) : (
-                <>
-                  <div className="flex items-center justify-center w-full h-full bg-purple-500 font-paw text-white text-xl rounded-md " onClick={login}>
-                    <h1 >
-                      {/* <CgProfile /> */}
-                    </h1>
-                  </div>
-                </>
-              )
-            }
+            ) : (
+              <>
+                <div
+                  className="flex items-center justify-center w-full h-full font-paw text-white text-xl rounded-md "
+                  onClick={login}
+                >
+                  <img src={accountPin} className="w-full h-full" alt="account"/>
+                </div>
+              </>
+            )}
           </div>
 
-          <div className="flex items-center justify-center w-[25%] h-2/3"
+          <div className="flex flex-col items-center gap-1">
+            <img
+              src={locationPin}
+              alt="locationIcon"
+              className="h-4 w-7"
+              onClick={location}
+            />
+            <p className="text-[9px] text-gray-400">
+              {localStorage.getItem("pincode")}
+            </p>
+          </div>
+
+          <div
+            className="flex items-center justify-center w-[40%] h-2/3"
             onClick={cart}
           >
-            <img src={CART}
-              alt="cart"
-              className="w-full h-full"
-            />
+            <img src={cartPin} alt="cart" className="w-full h-full" />
           </div>
 
           {/* HAmburger */}
@@ -294,7 +299,7 @@ const NavLg = ({ location, login, cart }) => {
   return (
     <>
       <div className='fixed h-16 text-xs w-screen bg-white flex items-center shadow-xl py-2 px-5 justify-between'>
-        <Link to="/" className='h-16 w-32 p-1'>
+        <Link to="/home" className='h-16 w-32 p-1'>
           <img
             src={yellowLogo}
             alt='logo'
@@ -622,14 +627,14 @@ const Navbar = () => {
       <Cart open={open} setOpen={setOpen} />
       <nav>
 
-        <div className="md:hidden z-10 mb-16 overflow-hidden">
-          <NavSm login={openLoginPopUp} cart={openCartPopUp} />
+        <div className="lg:hidden z-10 mb-16 overflow-hidden">
+          <NavSm login={openLoginPopUp} location={openLocationmodal} cart={openCartPopUp} />
         </div>
 
 
-        <div className="hidden md:flex lg:hidden mb-24 z-10 overflow-hidden ">
+        {/* <div className="hidden md:flex lg:hidden mb-24 z-10 overflow-hidden ">
           <NavMd login={openLoginPopUp} cart={openCartPopUp} />
-        </div>
+        </div> */}
 
 
         <div className={`hidden transition-all ease-in-out lg:flex z-10 overflow-hidden ${show ? "fixed top-0 duration-200" : "fixed top-[-100%] duration-1000"}`}>

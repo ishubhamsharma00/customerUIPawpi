@@ -33,17 +33,18 @@ import Signup from "./Components/Login and Signup/Signup";
 function App() {
   return (
     <>
-      <DefaultHOC path="/" exact component={Home} />
+      <DefaultHOC path="/home" exact component={Home} />
 
-      <CheckoutHOC path="/start/welcome" exact component={Start} />
-      <CheckoutHOC path="/start/welcome/dog" exact component={StartDog} />
+      <CheckoutHOC path="/" exact component={Start} />
+      <CheckoutHOC path="/welcome/dog" exact component={StartDog} />
+      <CheckoutHOC path="/welcome/cat" exact component={StartDog} />
       <CheckoutHOC path="/start/welcome/cat" exact component={StartCat} />
 
 
       <CheckoutHOC path="/auth/checkout" exact component={AuthPage} />
 
 
-      <DefaultHOC path="/:type" exact component={DefaultHome} />
+      <DefaultHOC path="home/:type" exact component={DefaultHome} />
 
 
       <DefaultHOC path="/dog/:type" exact component={DefaultDog} />
