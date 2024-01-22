@@ -4,6 +4,30 @@ import CatIcon from '../../Images/SlideNavbarSmScreen/CatIcon.png';
 import DogIcon from '../../Images/SlideNavbarSmScreen/DogIcon.png';
 import LifestageIcon from '../../Images/SlideNavbarSmScreen/LifestageIcon.png';
 
+import acana from '../../Images/Brands/acana.png';
+import aj from '../../Images/Brands/aj.png';
+import all4pets from '../../Images/Brands/all4pets.png';
+import ardenGrange from '../../Images/Brands/ardenGrange.png';
+import barkOutLoud from '../../Images/Brands/barkOutLoud.png';
+import Basil from '../../Images/Brands/Basil.png';
+import BioPetActive from '../../Images/Brands/BioPetActive.png';
+import chipChops from '../../Images/Brands/chipChops.png';
+import Dogaholic from '../../Images/Brands/Dogaholic.png';
+import drools from '../../Images/Brands/drools.png';
+import DrPets from '../../Images/Brands/DrPets.png';
+import FarminaNnD from '../../Images/Brands/FarminaNnD.png';
+import Fidele from '../../Images/Brands/Fidele.png';
+import Fido from '../../Images/Brands/Fido.png';
+import Gnawlers from '../../Images/Brands/Gnawlers.png';
+import hills from '../../Images/Brands/hills.png';
+import kong from '../../Images/Brands/kong.png';
+import nulo from '../../Images/Brands/nulo.png';
+import nutro from '../../Images/Brands/nutro.png';
+import Pedigree from '../../Images/Brands/Pedigree.png';
+import royalCanin from '../../Images/Brands/royalcanin.png';
+import trixie from '../../Images/Brands/trixie.png';
+
+
 export const links = [
     {
       name: "Dog",
@@ -249,179 +273,294 @@ export const links = [
       icon: BrandIcon,
       sublinks: [
         {
-          Head: "A",
-          sublinksid : "a",
-          sublink: [
-            { name: "ALL4PET", link: "/" , sublinkid :  "ALL4PET"},            
-            { name: "ARDEN GRANGE", link: "/" , sublinkid :  "ARDEN GRANGE"},
+          Head: "Brands",
+          sublinksid : "brands",
+          sublink: 
+        [
+          {
+            name: "ALL4PETS",
+            link: "/brands/all4pets",
+            logo: all4pets,
+          },{
+            name: "Acana",
+            link: "/brands/acana",
+            logo: acana,
+          },
+          {
+            name: "aj",
+            link: "/brands/aj",
+            logo: aj,
+          },
+          {
+            name: "Arden Grange",
+            link: "/brands/arden_grange",
+            logo: ardenGrange,
+          },
+          {
+            name: "Bark Out Loud",
+            link: "/brands/bark_out_loud",
+            logo: barkOutLoud,
+          },
+          {
+            name: "Basil",
+            link: "/brands/basil",
+            logo: Basil,
+          },
+          {
+            name: "Bio Pet Active",
+            link: "/brands/bio_pet_active",
+            logo: BioPetActive,
+          },
+          {
+            name: "Chip Chops",
+            link: "/brands/chip_chops",
+            logo: chipChops,
+          },
+          {
+            name: "Dogaholic",
+            link: "/brands/dogaholic",
+            logo: Dogaholic,
+          },
+          {
+            name: "Drools",
+            link: "/brands/drools",
+            logo: drools,
+          },
+          {
+            name: "Dr.Pets",
+            link: "/brands/dr_pets",
+            logo: DrPets,
+          },
+          {
+            name: "Farmina N&D",
+            link: "/brands/farmina_NnD",
+            logo: FarminaNnD,
+          },
+          {
+            name: "Fidele",
+            link: "/brands/fidele",
+            logo: Fidele,
+          },
+          {
+            name: "Fido",
+            link: "/brands/fido",
+            logo: Fido,
+          },
+          {
+            name: "Gnawlers",
+            link: "/brands/gnawlers",
+            logo: Gnawlers,
+          },
+          {
+            name: "Hills",
+            link: "/brands/hills",
+            logo: hills,
+          },
+          {
+            name: "Kong",
+            link: "/brands/kong",
+            logo: kong,
+          },
+          {
+            name: "Nulo",
+            link: "/brands/nulo",
+            logo: nulo,
+          },
+          {
+            name: "Nutro",
+            link: "/brands/nutro",
+            logo: nutro,
+          },
+          {
+            name: "Pedigree",
+            link: "/brands/pedigree",
+            logo: Pedigree,
+          },
+          {
+            name: "Royal Canin",
+            link: "/brands/royal_canin",
+            logo: royalCanin,
+          },
+          {
+            name: "Trixie",
+            link: "/brands/trixie",
+            logo: trixie,
+          }
+        ]}
+      //   {
+      //     Head: "A",
+      //     sublinksid : "a",
+      //     sublink: [
+      //       { name: "ALL4PET", link: "/" , sublinkid :  "ALL4PET"},            
+      //       { name: "ARDEN GRANGE", link: "/" , sublinkid :  "ARDEN GRANGE"},
        
-          ],
-        },
-        {
-          Head: "B",
-          sublinksid : "b",
-          sublink: [
-             { name: "Bark Out Loud", link: "/" , sublinkid :  "Bark Out Loud"},            
-             { name: "Basil", link: "/" , sublinkid :  "Basil"},            
-             { name: "Bio Pet Active", link: "/" , sublinkid :  "Bio Pet Active"},            
-             { name: "BOW", link: "/" , sublinkid :  "BOW"},            
-          ],
-        },
-        {
-          Head: "C",
-          sublinksid : "c",
-          sublink: [
-             { name: "Chelsea", link: "/" , sublinkid :  "Chelsea"},            
-             { name: "Chip Chop", link: "/" , sublinkid :  "Chip Chop"},            
-             { name: "Cuddle", link: "/" , sublinkid :  "Cuddle"},            
-             { name: "Dental Bites", link: "/" , sublinkid :  "Dental Bites"},   
-             { name: "Dogaholic", link: "/" , sublinkid :  "Dogaholic"},   
-             { name: "DR PETS", link: "/" , sublinkid :  "DR PETS"},   
-             { name: "Dr.Pet", link: "/" , sublinkid :  "Dr.Pet"},   
-             { name: "Drools", link: "/" , sublinkid :  "Drools"},   
-             { name: "DUX", link: "/" , sublinkid :  "DUX"},   
-          ],
-        },
-        {
-          Head: "D",
-          sublinksid : "d",
-          sublink: [          
-             { name: "Dental Bites", link: "/" , sublinkid :  "Dental Bites"},   
-             { name: "Dogaholic", link: "/" , sublinkid :  "Dogaholic"},   
-             { name: "DR PETS", link: "/" , sublinkid :  "DR PETS"},   
-             { name: "Dr.Pet", link: "/" , sublinkid :  "Dr.Pet"},   
-             { name: "Drools", link: "/" , sublinkid :  "Drools"},   
-             { name: "DUX", link: "/" , sublinkid :  "DUX"},   
-          ],
-        },
-        {
-          Head: "F",
-          sublinksid : "f",
-          sublink: [
-             { name: "Farmina N&D", link: "/" , sublinkid :  "Farmina N&D"},            
-             { name: "FEEDO", link: "/" , sublinkid :  "FEEDO"},            
-             { name: "FIDELE", link: "/" , sublinkid :  "FIDELE"},            
-             { name: "Fido", link: "/" , sublinkid :  "Fido"},   
-             { name: "First Meow", link: "/" , sublinkid :  "First Meow"},   
-             { name: "Fofos", link: "/" , sublinkid :  "Dr.Pet"},   
-             { name: "Fresh For Paws", link: "/" , sublinkid :  "Fresh For Paws"},   
-             { name: "Gnawlers", link: "/" , sublinkid :  "Gnawlers"},   
-             { name: "Go Pets", link: "/" , sublinkid :  "Go Pets"},   
-             { name: "Goodies", link: "/" , sublinkid :  "Goodies"},   
-          ],
-        },
+      //     ],
+      //   },
+      //   {
+      //     Head: "B",
+      //     sublinksid : "b",
+      //     sublink: [
+      //        { name: "Bark Out Loud", link: "/" , sublinkid :  "Bark Out Loud"},            
+      //        { name: "Basil", link: "/" , sublinkid :  "Basil"},            
+      //        { name: "Bio Pet Active", link: "/" , sublinkid :  "Bio Pet Active"},            
+      //        { name: "BOW", link: "/" , sublinkid :  "BOW"},            
+      //     ],
+      //   },
+      //   {
+      //     Head: "C",
+      //     sublinksid : "c",
+      //     sublink: [
+      //        { name: "Chelsea", link: "/" , sublinkid :  "Chelsea"},            
+      //        { name: "Chip Chop", link: "/" , sublinkid :  "Chip Chop"},            
+      //        { name: "Cuddle", link: "/" , sublinkid :  "Cuddle"},            
+      //        { name: "Dental Bites", link: "/" , sublinkid :  "Dental Bites"},   
+      //        { name: "Dogaholic", link: "/" , sublinkid :  "Dogaholic"},   
+      //        { name: "DR PETS", link: "/" , sublinkid :  "DR PETS"},   
+      //        { name: "Dr.Pet", link: "/" , sublinkid :  "Dr.Pet"},   
+      //        { name: "Drools", link: "/" , sublinkid :  "Drools"},   
+      //        { name: "DUX", link: "/" , sublinkid :  "DUX"},   
+      //     ],
+      //   },
+      //   {
+      //     Head: "D",
+      //     sublinksid : "d",
+      //     sublink: [          
+      //        { name: "Dental Bites", link: "/" , sublinkid :  "Dental Bites"},   
+      //        { name: "Dogaholic", link: "/" , sublinkid :  "Dogaholic"},   
+      //        { name: "DR PETS", link: "/" , sublinkid :  "DR PETS"},   
+      //        { name: "Dr.Pet", link: "/" , sublinkid :  "Dr.Pet"},   
+      //        { name: "Drools", link: "/" , sublinkid :  "Drools"},   
+      //        { name: "DUX", link: "/" , sublinkid :  "DUX"},   
+      //     ],
+      //   },
+      //   {
+      //     Head: "F",
+      //     sublinksid : "f",
+      //     sublink: [
+      //        { name: "Farmina N&D", link: "/" , sublinkid :  "Farmina N&D"},            
+      //        { name: "FEEDO", link: "/" , sublinkid :  "FEEDO"},            
+      //        { name: "FIDELE", link: "/" , sublinkid :  "FIDELE"},            
+      //        { name: "Fido", link: "/" , sublinkid :  "Fido"},   
+      //        { name: "First Meow", link: "/" , sublinkid :  "First Meow"},   
+      //        { name: "Fofos", link: "/" , sublinkid :  "Dr.Pet"},   
+      //        { name: "Fresh For Paws", link: "/" , sublinkid :  "Fresh For Paws"},   
+      //        { name: "Gnawlers", link: "/" , sublinkid :  "Gnawlers"},   
+      //        { name: "Go Pets", link: "/" , sublinkid :  "Go Pets"},   
+      //        { name: "Goodies", link: "/" , sublinkid :  "Goodies"},   
+      //     ],
+      //   },
 
-        {
-          Head: "G",
-          sublinksid : "g",
-          sublink: [
-            { name: "Gnawlers", link: "/" , sublinkid :  "Gnawlers"},   
-            { name: "Go Pets", link: "/" , sublinkid :  "Go Pets"},   
-            { name: "Goodies", link: "/" , sublinkid :  "Goodies"},   
-          ],
-        },
-        {
-          Head: "H",
-          sublinksid : "h",
-          sublink: [
-             { name: "Healthy Bites", link: "/" , sublinkid :  "Healthy Bites"},            
-          ],
-        },
-        {
-          Head: "J",
-          sublinksid : "j",
-          sublink: [
-             { name: "Jinny", link: "/" , sublinkid :  "Jinny"},            
-          ],
-        },
-        {
-          Head: "K",
-          sublinksid : "k",
-          sublink: [
-             { name: "KIT KAT", link: "/" , sublinkid :  "KIT KAT"}, 
-             { name: "Kittos", link: "/" , sublinkid :  "Kittos"}, 
-             { name: "Kitty Licks", link: "/" , sublinkid :  "Kitty Licks"},            
-             { name: "Krrispy Bites", link: "/" , sublinkid :  "Krrispy Bites"},
-          ],
-        },
-        {
-          Head: "L",
-          sublinksid : "l",
-          sublink: [
-             { name: "LARA", link: "/" , sublinkid :  "LARA"}, 
-             { name: "Lozalo", link: "/" , sublinkid :  "Lozalo"}, 
-          ],
-        },
-        {
-          Head: "M",
-          sublinksid : "m",
-          sublink: [
-             { name: "Mera Dog", link: "/" , sublinkid :  "Mera Dog"}, 
-             { name: "MYBEAU", link: "/" , sublinkid :  "MYBEAU"}, 
-          ],
-        },
-        {
-          Head: "N",
-          sublinksid : "n",
-          sublink: [
-             { name: "Natural Remedies", link: "/" , sublinkid :  "Natural Remedies"}, 
-          ],
-        },
-        {
-          Head: "P",
-          sublinksid : "p",
-          sublink: [
-             { name: "Pawpaya", link: "/" , sublinkid :  "Pawpaya"}, 
-             { name: "Pet Perfect", link: "/" , sublinkid :  "Pet Perfect"}, 
-             { name: "Pet Toy", link: "/" , sublinkid :  "Pet Toy"}, 
-             { name: "Petaholic", link: "/" , sublinkid :  "Petaholic"}, 
-             { name: "Petcare", link: "/" , sublinkid :  "Petcare"}, 
-             { name: "Petspoon", link: "/" , sublinkid :  "Petspoon"}, 
-             { name: "Procott", link: "/" , sublinkid :  "Procott"}, 
-             { name: "PRODIET", link: "/" , sublinkid :  "PRODIET"}, 
-             { name: "Purina Felix", link: "/" , sublinkid :  "Purina Felix"}, 
-         ],
-        },
-        {
-          Head: "R",
-          sublinksid : "r",
-          sublink: [
-             { name: "Rena", link: "/" , sublinkid :  "Rena"}, 
+      //   {
+      //     Head: "G",
+      //     sublinksid : "g",
+      //     sublink: [
+      //       { name: "Gnawlers", link: "/" , sublinkid :  "Gnawlers"},   
+      //       { name: "Go Pets", link: "/" , sublinkid :  "Go Pets"},   
+      //       { name: "Goodies", link: "/" , sublinkid :  "Goodies"},   
+      //     ],
+      //   },
+      //   {
+      //     Head: "H",
+      //     sublinksid : "h",
+      //     sublink: [
+      //        { name: "Healthy Bites", link: "/" , sublinkid :  "Healthy Bites"},            
+      //     ],
+      //   },
+      //   {
+      //     Head: "J",
+      //     sublinksid : "j",
+      //     sublink: [
+      //        { name: "Jinny", link: "/" , sublinkid :  "Jinny"},            
+      //     ],
+      //   },
+      //   {
+      //     Head: "K",
+      //     sublinksid : "k",
+      //     sublink: [
+      //        { name: "KIT KAT", link: "/" , sublinkid :  "KIT KAT"}, 
+      //        { name: "Kittos", link: "/" , sublinkid :  "Kittos"}, 
+      //        { name: "Kitty Licks", link: "/" , sublinkid :  "Kitty Licks"},            
+      //        { name: "Krrispy Bites", link: "/" , sublinkid :  "Krrispy Bites"},
+      //     ],
+      //   },
+      //   {
+      //     Head: "L",
+      //     sublinksid : "l",
+      //     sublink: [
+      //        { name: "LARA", link: "/" , sublinkid :  "LARA"}, 
+      //        { name: "Lozalo", link: "/" , sublinkid :  "Lozalo"}, 
+      //     ],
+      //   },
+      //   {
+      //     Head: "M",
+      //     sublinksid : "m",
+      //     sublink: [
+      //        { name: "Mera Dog", link: "/" , sublinkid :  "Mera Dog"}, 
+      //        { name: "MYBEAU", link: "/" , sublinkid :  "MYBEAU"}, 
+      //     ],
+      //   },
+      //   {
+      //     Head: "N",
+      //     sublinksid : "n",
+      //     sublink: [
+      //        { name: "Natural Remedies", link: "/" , sublinkid :  "Natural Remedies"}, 
+      //     ],
+      //   },
+      //   {
+      //     Head: "P",
+      //     sublinksid : "p",
+      //     sublink: [
+      //        { name: "Pawpaya", link: "/" , sublinkid :  "Pawpaya"}, 
+      //        { name: "Pet Perfect", link: "/" , sublinkid :  "Pet Perfect"}, 
+      //        { name: "Pet Toy", link: "/" , sublinkid :  "Pet Toy"}, 
+      //        { name: "Petaholic", link: "/" , sublinkid :  "Petaholic"}, 
+      //        { name: "Petcare", link: "/" , sublinkid :  "Petcare"}, 
+      //        { name: "Petspoon", link: "/" , sublinkid :  "Petspoon"}, 
+      //        { name: "Procott", link: "/" , sublinkid :  "Procott"}, 
+      //        { name: "PRODIET", link: "/" , sublinkid :  "PRODIET"}, 
+      //        { name: "Purina Felix", link: "/" , sublinkid :  "Purina Felix"}, 
+      //    ],
+      //   },
+      //   {
+      //     Head: "R",
+      //     sublinksid : "r",
+      //     sublink: [
+      //        { name: "Rena", link: "/" , sublinkid :  "Rena"}, 
             
-      ],
-        },
-        {
-          Head: "S",
-          sublinksid : "s",
-          sublink: [
-             { name: "SNIFFY", link: "/" , sublinkid :  "SNIFFY"}, 
-             { name: "Superpet", link: "/" , sublinkid :  "Superpet"},   
-      ],
-        },
-        {
-          Head: "T",
-          sublinksid : "t",
-          sublink: [
-             { name: "Trixie", link: "/" , sublinkid :  "Trixie"}, 
-      ],
-        },
-        {
-          Head: "V",
-          sublinksid : "v",
-          sublink: [
-             { name: "Venworld", link: "/" , sublinkid :  "Venworld"}, 
-             { name: "Vibrac", link: "/" , sublinkid :  "Vibrac"},
-      ],
-        },
-        {
-          Head: "W",
-          sublinksid : "w",
-          sublink: [
-             { name: "Waggy Zone", link: "/" , sublinkid :  "Waggy Zone"}, 
-             { name: "Whoof Whoof", link: "/" , sublinkid :  "Whoof Whoof"},
-             { name: "Wiggles.in", link: "/" , sublinkid :  "Wiggles.in"}, 
-       ],
-        },
+      // ],
+      //   },
+      //   {
+      //     Head: "S",
+      //     sublinksid : "s",
+      //     sublink: [
+      //        { name: "SNIFFY", link: "/" , sublinkid :  "SNIFFY"}, 
+      //        { name: "Superpet", link: "/" , sublinkid :  "Superpet"},   
+      // ],
+      //   },
+      //   {
+      //     Head: "T",
+      //     sublinksid : "t",
+      //     sublink: [
+      //        { name: "Trixie", link: "/" , sublinkid :  "Trixie"}, 
+      // ],
+      //   },
+      //   {
+      //     Head: "V",
+      //     sublinksid : "v",
+      //     sublink: [
+      //        { name: "Venworld", link: "/" , sublinkid :  "Venworld"}, 
+      //        { name: "Vibrac", link: "/" , sublinkid :  "Vibrac"},
+      // ],
+      //   },
+      //   {
+      //     Head: "W",
+      //     sublinksid : "w",
+      //     sublink: [
+      //        { name: "Waggy Zone", link: "/" , sublinkid :  "Waggy Zone"}, 
+      //        { name: "Whoof Whoof", link: "/" , sublinkid :  "Whoof Whoof"},
+      //        { name: "Wiggles.in", link: "/" , sublinkid :  "Wiggles.in"}, 
+      //  ],
+      //   },
       ],
     },
     {

@@ -23,7 +23,7 @@ import moveGif from '../../Images/StartPage/WelcomeAssets/moveGif.gif';
 
 const Dog = () => {
     const [isHover, setIsHover] = useState('');
-    const handleIsHover = (key) => {
+    const handleIsHover = (key) => { 
         setIsHover(key);
     }
 

@@ -26,14 +26,26 @@ import LocationPopUpModel from './LocationPopUp';
 import Cart from './Cart';
 import axios from 'axios';
 
+// Import for Breeds
+import Labrador from '../../Images/StartPage/WelcomeAssets/Dog/labrador.png';
+import Dalmatian from '../../Images/StartPage/WelcomeAssets/Dog/dalmatian.png';
+import Pomeranian from '../../Images/StartPage/WelcomeAssets/Dog/pomeranian.png';
+import Husky from '../../Images/StartPage/WelcomeAssets/Dog/husky.png';
+import Indie from '../../Images/StartPage/WelcomeAssets/Dog/indie.png';
+import Shihtzu from '../../Images/StartPage/WelcomeAssets/Dog/shihtzu.png';
+
+// Import of Lifestage
+import Puppy from '../../Images/NavbarAssets/puppy.png';
+import Adult from '../../Images/NavbarAssets/adult.png';
+import Senior from '../../Images/NavbarAssets/senior.png';
 
 //for small devices/mobile
-const NavSm = ({ login, cart }) => {
+const NavSm = ({ login, cart, location }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   // const [openLocation, setOpenLocation] = useState(false);
   // const openLocationmodal = () => setOpenLocation(true);
 
-  const [authUser, setAuthUser] = useState(true);
+  const [authUser, setAuthUser] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   return (
     <>
@@ -92,25 +104,35 @@ const NavSm = ({ login, cart }) => {
                     </div>
                   </div>
                 </>
-              ) : (
-                <>
-                  <div className="flex items-center justify-center w-full h-full bg-purple-500 font-paw text-white text-xl rounded-md " onClick={login}>
-                    <h1 >
-                      {/* <CgProfile /> */}
-                    </h1>
-                  </div>
-                </>
-              )
-            }
+            ) : (
+              <>
+                <div
+                  className="flex items-center justify-center w-full h-full font-paw text-white text-xl rounded-md "
+                  onClick={login}
+                >
+                  <img src={accountPin} className="w-full h-full" alt="account"/>
+                </div>
+              </>
+            )}
           </div>
 
-          <div className="flex items-center justify-center w-[25%] h-2/3"
+          <div className="flex flex-col items-center gap-1">
+            <img
+              src={locationPin}
+              alt="locationIcon"
+              className="h-4 w-7"
+              onClick={location}
+            />
+            <p className="text-[9px] text-gray-400">
+              {localStorage.getItem("pincode")}
+            </p>
+          </div>
+
+          <div
+            className="flex items-center justify-center w-[40%] h-2/3"
             onClick={cart}
           >
-            <img src={CART}
-              alt="cart"
-              className="w-full h-full"
-            />
+            <img src={cartPin} alt="cart" className="w-full h-full" />
           </div>
 
           {/* HAmburger */}
@@ -276,12 +298,13 @@ const NavLg = ({ location, login, cart }) => {
     getUserData();
   })
 
-
+  const Breeds=[Labrador, Dalmatian, Pomeranian, Husky, Indie, Shihtzu, Labrador, Dalmatian, Pomeranian, Husky, Indie, Shihtzu]
+  const Lifestage=[Puppy, Adult, Senior]
 
   return (
     <>
       <div className='fixed h-16 text-xs w-screen bg-white flex items-center shadow-xl py-2 px-5 justify-between'>
-        <Link to="/" className='h-14 w-[10%] p-1'>
+        <Link to="/" className='h-16 w-32 p-1'>
           <img
             src={yellowLogo}
             alt='logo'
@@ -307,7 +330,7 @@ const NavLg = ({ location, login, cart }) => {
               {item.name === selectedItem && showDropdown && (
                 <>
                   <div className='h-2 w-2 relative -top-3 left-0 rounded-full bg-yellow-300'></div>
-                  <div className="absolute text-black left-0 top-14 w-full flex justify-center bg-white mt-2 py-6 shadow-lg ">
+                  <div className="absolute text-black left-0 top-14 w-full flex justify-center bg-gradient-to-b from-white to-gray-200 mt-2 py-6 shadow-lg ">
                     {(item.name === "Dog" || item.name === "Cat") &&
                       <div className='h-full w-4/5 flex-wrap flex justify-start'>
                         {item.sublinks.map((subItems) =>
@@ -322,22 +345,36 @@ const NavLg = ({ location, login, cart }) => {
                     }
                     {item.name === "Brands" &&
                       <div className='w-[88%] h-full flex justify-between'>
-                        <div className='w-[70%] bg-red-400 h-60 flex flex-wrap'>
-
+                        <div className='w-[70%] xl:h-96 h-80 flex flex-wrap p-6 overflow-y-auto'>
+                          {item.sublinks.map((brandDetails)=>
+                          <div className='h-full w-full xl:h-[90%] flex-wrap flex items-center justify-between xl:gap-12 gap-5'>
+                            {brandDetails.sublink.map((innerItem)=>
+                            <div className='h-[28%] w-[30%] xl:h-[28%] xl:w-[18%] flex  items-center justify-center shadow-lg rounded-lg'>
+                              <img src={innerItem.logo} 
+                              alt={`${innerItem.name}`}
+                              className='h-full w-full scale-x-75 scale-y-90 xl:scale-75'
+                              />
+                          </div>
+                            )}
+                          </div>)}
                         </div>
-                        <div className='w-[28%]'>
-                          <img src={BrandsNavbar} alt='image' className='rounded-xl w-full' />
+                        <div className='w-[28%] h-80 xl:h-96'>
+                          <img src={BrandsNavbar} alt='image' className='rounded-xl w-full h-full' />
                         </div>
                       </div>
                     }
                     {item.name === "Breeds" &&
-                      <div className='w-[85%] h-60 flex justify-between bg-red-500 overflow-x-auto'>
-                        {/* //images */}
+                      <div className='w-[100%] px-[5%] h-60 flex justify-between gap-16 items-center overflow-x-auto'>
+                        {Breeds.map((BreedImage)=>
+                        <img src={BreedImage} alt={BreedImage} key={BreedImage} className='h-[60%] w-[15%] shadow-xl rounded-xl cursor-pointer bg-gray-50 hover:duration-500 hover:scale-90 duration-500'/>
+                        )}
                       </div>
                     }
                     {item.name === "Lifestage" &&
-                      <div className='w-[85%] h-60 flex justify-between bg-red-500'>
-                        {/* //images */}
+                      <div className='w-[95%] h-60 flex justify-center'>
+                        {Lifestage.map((items)=>
+                        <img src={items} alt={items} key={items} className='w-[30%] scale-75 cursor-pointer hover:duration-700 duration-700 hover:scale-90' />
+                        )}
                       </div>
                     }
                   </div>
@@ -386,13 +423,17 @@ const NavLg = ({ location, login, cart }) => {
         </div>
 
         <div className='flex h-10 w-[20%] text-sm font-semibold tracking-wide px-3 items-center justify-between'>
-          
+          <div className='flex flex-col items-center gap-1'>
           <img
             src={locationPin}
             alt='locationIcon'
             className='h-8 w-8'
             onClick={location} />
+            <p className='text-xs text-gray-400'>
             {localStorage.getItem("pincode")}
+            </p>
+          </div>
+          
 
           <div className=''>
             {
