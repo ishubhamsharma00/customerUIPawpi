@@ -37,7 +37,7 @@ function App() {
 
       <CheckoutHOC path="/" exact component={Start} />
       <CheckoutHOC path="/welcome/dog" exact component={StartDog} />
-      <CheckoutHOC path="/welcome/cat" exact component={StartDog} />
+      <CheckoutHOC path="/welcome/cat" exact component={StartCat} />
       <CheckoutHOC path="/start/welcome/cat" exact component={StartCat} />
 
 
