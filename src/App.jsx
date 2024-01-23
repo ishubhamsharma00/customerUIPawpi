@@ -91,6 +91,7 @@ function App() {
       <CheckoutHOC path="/blog" exact component={Blog} /> */}
 
 
+{/* Routing Section */}
 
       <CheckoutHOC path="/newUser/signup" exact component={Signup} />
       <DefaultHOC path="/checkout/:ct" exact component={AuthPage} />
