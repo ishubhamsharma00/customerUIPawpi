@@ -5,6 +5,8 @@ import { useProductContext } from '../../context';
 
 const Collection = () => {
   const { producttype } = useParams();
+
+  console.log(producttype);
   
   const { getAllProducts, products } = useProductContext();
 

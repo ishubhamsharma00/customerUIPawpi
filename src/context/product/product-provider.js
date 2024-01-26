@@ -9,7 +9,7 @@ export const ProductProvider = ({children}) => {
 
   const getAllProducts = async (props) => {
     try {
-      const productResponse = await axios.get(`http://localhost:4000/product/url/${props}`);
+      const productResponse = await axios.get(`https://pawpi-back-end.onrender.com/product/url/${props}`);
       // const bannerResponse = await axios.get(`http://localhost:4000/banners/${props}`);
       if(productResponse.status === 200){
         setProducts(productResponse.data.productData);
