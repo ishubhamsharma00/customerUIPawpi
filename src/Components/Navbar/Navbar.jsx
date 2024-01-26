@@ -1,65 +1,70 @@
 import React, { useEffect, useState } from 'react';
 import { links } from './NavbarCategoriesData';
 import BrandsNavbar from '../../Images/NavbarAssets/BrandsNavbar.png';
-// import icons
+
 import yellowLogo from '../../Images/Logo/yellowLogo.png';
 import { GoSearch } from 'react-icons/go';
-import { TbChevronDown } from "react-icons/tb";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import { BiMenu } from 'react-icons/bi';
 import locationPin from '../../Images/NavbarAssets/location.png';
 import accountPin from '../../Images/NavbarAssets/account.png';
 import cartPin from '../../Images/NavbarAssets/cart.png';
-import yellowDot from '../../Images/NavbarAssets/yellowDot.png';
 
-// Import modules
 import NavSmLOGO from '../../Images/NavSmLOGO.png';
 import LOGO from "../../Images/Png-01.png";
-import NavbarCategories from './NavbarCategories';
 import SEARCH from "../../Images/loupe.png";
 import CART from "../../Images/shopping-cart.png";
-//import Signup from '../Login and Signup/Signup';
 import LoginPopup from '../Login and Signup/LoginPopup';
 import NavLinks from './NavLinks';
 import LocationPopUpModel from './LocationPopUp';
 import Cart from './Cart';
 import axios from 'axios';
 
+import Labrador from '../../Images/StartPage/WelcomeAssets/Dog/labrador.png';
+import Dalmatian from '../../Images/StartPage/WelcomeAssets/Dog/dalmatian.png';
+import Pomeranian from '../../Images/StartPage/WelcomeAssets/Dog/pomeranian.png';
+import Husky from '../../Images/StartPage/WelcomeAssets/Dog/husky.png';
+import Indie from '../../Images/StartPage/WelcomeAssets/Dog/indie.png';
+import Shihtzu from '../../Images/StartPage/WelcomeAssets/Dog/shihtzu.png';
 
-//for small devices/mobile
-const NavSm = ({ login, cart }) => {
+import Puppy from '../../Images/NavbarAssets/puppy.png';
+import Adult from '../../Images/NavbarAssets/adult.png';
+import Senior from '../../Images/NavbarAssets/senior.png';
+
+
+const NavSm = ({ login, cart, location, setSearchVal, serarchFilter }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   // const [openLocation, setOpenLocation] = useState(false);
   // const openLocationmodal = () => setOpenLocation(true);
 
-  const [authUser, setAuthUser] = useState(true);
+  const [authUser, setAuthUser] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
+  const handleSearchBar = (props) => {
+    setSearchVal(props);
+  }
+
   return (
     <>
       {/* <LocationPopUpModel isOpen={openLocation} setIsOpen={setOpenLocation} /> */}
 
-
       <div className="flex fixed bg-white z-50 shadow-xl items-center justify-around h-16 w-full px-1">
         <div className="flex items-center w-[12%] justify-center">
-          <Link to="/">
+          <Link to="/home">
             <img src={NavSmLOGO}
               alt="LOGO"
               className="h-full w-full scale-125" />
           </Link>
         </div>
 
-        <div className="flex items-center w-[45%] h-8 px-1 justify-between bg-navback rounded-md border border-bordergray">
-          <input type="search"
-            className="h-full w-full text-xs text-black font-paw outline-none bg-navback placeholder-black"
-            placeholder="For FURR BABIES....."
+        <div className="flex items-center w-[45%] h-8 px-2 justify-between bg-navback rounded-md border border-bordergray">
+        <input type="search"
+            className="w-full h-full text-gray-600 placeholder:font-light outline-none bg-[#F4F5F5] placeholder-[#A4A3A6]"
+            placeholder="Search"
+            onChange={(e)=> handleSearchBar(e.target.value)}
           />
-          <div className="h-4 w-4 mb-1">
-            <img src={SEARCH}
-              alt="searchIcon"
-              className="w-full h-full"
-            />
-          </div>
+          <GoSearch className='text-lg text-[#A4A3A6]' onClick={serarchFilter} />
         </div>
 
         <div className="h-2/3 w-[33%] flex items-center justify-between gap-3">
@@ -73,12 +78,12 @@ const NavSm = ({ login, cart }) => {
                     <div className='flex justify-center items-center cursor-pointer'
                       onClick={() => setIsDropDownOpen((prev) => !prev)}
                     >
-                      <img src='https://media.licdn.com/dms/image/D4D03AQEDTLNoP8Jxpg/profile-displayphoto-shrink_800_800/0/1684957189400?e=1691625600&v=beta&t=1IMB5rcwp-hSlhFx6qFdt_nzp8IKWdaDpyiPfGZADz8'
+                      <img src='https://media.licdn.com/dms/image/D4D03AQEDTLNoP8Jxpg/profile-displayphoto-shrink_800_800/0/1684957189400?e=1691625600&v=beta&t=1IMB5rcwp-hSlhFx6qFdt_nzp8IKWdaDpyiPfGZADz8' alt='user'
                         className={`flex items-center justify-center border border-black w-8 h-8 rounded-full cursor-pointer`} />
                       {
                         isDropDownOpen && (
                           <>
-                            <div className="absolute shadow-lg top-8 right-0 w-24 z-10 bg-white flex flex-col gap-2 border-2 rounded-lg font-paw">
+                            <div className="absolute shadow-lg top-12 right-0 w-24 z-10 bg-white flex flex-col gap-2 border-2 rounded-lg font-paw">
                               <div className='flex flex-col gap-2 pl-2 py-4'>
                                 <Link to={"/user/profile"} className='text-sm rounded-md'>My Profile</Link>
                                 <Link to={"/user/addresses"} className='text-sm rounded-md'>My Address</Link>
@@ -92,25 +97,35 @@ const NavSm = ({ login, cart }) => {
                     </div>
                   </div>
                 </>
-              ) : (
-                <>
-                  <div className="flex items-center justify-center w-full h-full bg-purple-500 font-paw text-white text-xl rounded-md " onClick={login}>
-                    <h1 >
-                      {/* <CgProfile /> */}
-                    </h1>
-                  </div>
-                </>
-              )
-            }
+            ) : (
+              <>
+                <div
+                  className="flex items-center justify-center w-full h-full font-paw text-white text-xl rounded-md "
+                  onClick={login}
+                >
+                  <img src={accountPin} className="w-full h-full" alt="account"/>
+                </div>
+              </>
+            )}
           </div>
 
-          <div className="flex items-center justify-center w-[25%] h-2/3"
+          <div className="flex flex-col items-center gap-1">
+            <img
+              src={locationPin}
+              alt="locationIcon"
+              className="h-4 w-7"
+              onClick={location}
+            />
+            <p className="text-[9px] text-gray-400">
+              {localStorage.getItem("pincode")}
+            </p>
+          </div>
+
+          <div
+            className="flex items-center justify-center w-[40%] h-2/3"
             onClick={cart}
           >
-            <img src={CART}
-              alt="cart"
-              className="w-full h-full"
-            />
+            <img src={cartPin} alt="cart" className="w-full h-full" />
           </div>
 
           {/* HAmburger */}
@@ -132,7 +147,7 @@ const NavSm = ({ login, cart }) => {
 };
 
 // for medium devices/tablets
-const NavMd = ({ login, cart }) => {
+const NavMd = ({ login, cart, serarchFilter }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [authUser, setAuthUser] = useState(true);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
@@ -235,7 +250,7 @@ const NavMd = ({ login, cart }) => {
 };
 
 // for large devices
-const NavLg = ({ location, login, cart }) => {
+const NavLg = ({ location, login, cart, setSearchVal, serarchFilter }) => {
 
   //useState for activating the navbarItem click
   const [navbarDogActive, setNavbarDogActive] = useState(false);
@@ -257,6 +272,10 @@ const NavLg = ({ location, login, cart }) => {
     setShowDropdown(true);
   };
 
+  const handleSearchBar = (props) => {
+    setSearchVal(props);
+  }
+
   const getUserData = async()=>{
     try {
       if (localStorage.getItem("_id")){
@@ -276,12 +295,13 @@ const NavLg = ({ location, login, cart }) => {
     getUserData();
   })
 
-
+  const Breeds=[Labrador, Dalmatian, Pomeranian, Husky, Indie, Shihtzu, Labrador, Dalmatian, Pomeranian, Husky, Indie, Shihtzu]
+  const Lifestage=[Puppy, Adult, Senior]
 
   return (
     <>
       <div className='fixed h-16 text-xs w-screen bg-white flex items-center shadow-xl py-2 px-5 justify-between'>
-        <Link to="/" className='h-16 w-32 p-1'>
+        <Link to="/home" className='h-16 w-32 p-1'>
           <img
             src={yellowLogo}
             alt='logo'
@@ -292,8 +312,9 @@ const NavLg = ({ location, login, cart }) => {
           <input type="search"
             className="w-full h-full text-gray-600 placeholder:font-light outline-none bg-[#F4F5F5] placeholder-[#A4A3A6]"
             placeholder="Search"
+            onChange={(e)=> handleSearchBar(e.target.value)}
           />
-          <GoSearch className='text-lg text-[#A4A3A6]' />
+          <GoSearch className='text-lg text-[#A4A3A6]' onClick={serarchFilter} />
         </div>
 
         <div className='flex h-16 w-[30%] text-sm font-semibold tracking-wide  items-center justify-between'>
@@ -307,7 +328,7 @@ const NavLg = ({ location, login, cart }) => {
               {item.name === selectedItem && showDropdown && (
                 <>
                   <div className='h-2 w-2 relative -top-3 left-0 rounded-full bg-yellow-300'></div>
-                  <div className="absolute text-black left-0 top-14 w-full flex justify-center bg-white mt-2 py-6 shadow-lg ">
+                  <div className="absolute text-black left-0 top-14 w-full flex justify-center bg-gradient-to-b from-white to-gray-200 mt-2 py-6 shadow-lg ">
                     {(item.name === "Dog" || item.name === "Cat") &&
                       <div className='h-full w-4/5 flex-wrap flex justify-start'>
                         {item.sublinks.map((subItems) =>
@@ -341,13 +362,17 @@ const NavLg = ({ location, login, cart }) => {
                       </div>
                     }
                     {item.name === "Breeds" &&
-                      <div className='w-[85%] h-60 flex justify-between bg-red-500 overflow-x-auto'>
-                        {/* //images */}
+                      <div className='w-[100%] px-[5%] h-60 flex justify-between gap-16 items-center overflow-x-auto'>
+                        {Breeds.map((BreedImage)=>
+                        <img src={BreedImage} alt={BreedImage} key={BreedImage} className='h-[60%] w-[15%] shadow-xl rounded-xl cursor-pointer bg-gray-50 hover:duration-500 hover:scale-90 duration-500'/>
+                        )}
                       </div>
                     }
                     {item.name === "Lifestage" &&
-                      <div className='w-[85%] h-60 flex justify-between bg-red-500'>
-                        {/* //images */}
+                      <div className='w-[95%] h-60 flex justify-center'>
+                        {Lifestage.map((items)=>
+                        <img src={items} alt={items} key={items} className='w-[30%] scale-75 cursor-pointer hover:duration-700 duration-700 hover:scale-90' />
+                        )}
                       </div>
                     }
                   </div>
@@ -416,6 +441,7 @@ const NavLg = ({ location, login, cart }) => {
                     <div className='flex gap-1 justify-center items-center' onMouseLeave={() => setIsDropDownOpen(false)}>
                       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWk8uZf12aY_Sc1TWTOi5ha_4R6E4zUq28AWKGff7iAX5_pFSizOvu1nBeff56OqrovZY&usqp=CAU'
                         className={`flex hover:scale-125 hover:duration-500 items-center justify-center border border-black w-10 h-10 rounded-full cursor-pointer`}
+                        alt=''
                         onMouseEnter={() => setIsDropDownOpen(true)}
                       />
 
@@ -458,7 +484,6 @@ const NavLg = ({ location, login, cart }) => {
           <NavbarCategories />
         </div> */}
       </div>
-      ////
       {/* <div className="w-full flex fixed flex-col z-10 shadow-lg bg-white items-center h-24 pt-1"> 
         <div className="flex items-center justify-around px-6 py-2 h-3/5 w-full">
           <div className="w-1/5 h-24 flex mt-6 items-center pt-4">
@@ -552,16 +577,17 @@ const NavLg = ({ location, login, cart }) => {
 
 const Navbar = () => {
   const [openLocation, setOpenLocation] = useState(false);
-  const openLocationmodal = () => setOpenLocation(true);
-
-  const [openLogin, setIsLogin] = useState(false);
-  const openLoginPopUp = () => setIsLogin(true);
-
   const [open, setOpen] = useState(false);
-  const openCartPopUp = () => setOpen(true);
-
+  const [openLogin, setIsLogin] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [show, setShow] = useState(true);
+  const [searchVal, setSearchVal] = useState('');
+
+  const openLocationmodal = () => setOpenLocation(true);
+  const openLoginPopUp = () => setIsLogin(true);
+  const openCartPopUp = () => setOpen(true);
+
+  
   const ControlNavbar = () => {
     const currentScrollPos = window.scrollY
     if (currentScrollPos > prevScrollPos) {
@@ -571,6 +597,15 @@ const Navbar = () => {
       setShow(true)
     }
     // setPrevScrollPos(currentScrollPos)
+  }
+
+  const serarchFilter = async()=>{
+    try {
+      const response = await axios.post("https://pawpi-back-end.onrender.com/product/search", { searchString: searchVal});
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(()=>{
@@ -583,18 +618,14 @@ const Navbar = () => {
     let currentScrollPosition = 0;
 
     window.addEventListener('scroll', function (e) {
-
-      // Get the new Value
       currentScrollPosition = window.pageYOffset;
 
-      //Subtract the two and conclude
       if (previousScrollPosition < currentScrollPosition) {
         setShow(false);
       } else {
         setShow(true);
       }
 
-      // Update the previous value
       previousScrollPosition = currentScrollPosition;
     });
   }, []);
@@ -605,25 +636,24 @@ const Navbar = () => {
       <Cart open={open} setOpen={setOpen} />
       <nav>
 
-        <div className="md:hidden z-10 mb-16 overflow-hidden">
-          <NavSm login={openLoginPopUp} cart={openCartPopUp} />
+        <div className="lg:hidden z-10 mb-16 overflow-hidden">
+          <NavSm login={openLoginPopUp} serarchFilter={serarchFilter} location={openLocationmodal} cart={openCartPopUp} searchVal={searchVal} setSearchVal={setSearchVal} />
         </div>
 
 
-        <div className="hidden md:flex lg:hidden mb-24 z-10 overflow-hidden ">
+        {/* <div className="hidden md:flex lg:hidden mb-24 z-10 overflow-hidden ">
           <NavMd login={openLoginPopUp} cart={openCartPopUp} />
-        </div>
+        </div> */}
 
 
         <div className={`hidden transition-all ease-in-out lg:flex z-10 overflow-hidden ${show ? "fixed top-0 duration-200" : "fixed top-[-100%] duration-1000"}`}>
           <LocationPopUpModel isOpen={openLocation} setIsOpen={setOpenLocation} />
 
-          <NavLg location={openLocationmodal} login={openLoginPopUp} cart={openCartPopUp} />
+          <NavLg location={openLocationmodal} serarchFilter={serarchFilter} login={openLoginPopUp} cart={openCartPopUp} searchVal={searchVal} setSearchVal={setSearchVal} />
         </div>
 
       </nav>
     </>
   )
 }
-// hidden transition-all ease-in-out lg:flex z-50 overflow-hidden ${show? "fixed top-0 duration-1000":"fixed top-[-100%] duration-1000"}
 export default Navbar;
