@@ -1,32 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { links } from './NavbarCategoriesData';
 import BrandsNavbar from '../../Images/NavbarAssets/BrandsNavbar.png';
-// import icons
+
 import yellowLogo from '../../Images/Logo/yellowLogo.png';
 import { GoSearch } from 'react-icons/go';
-import { TbChevronDown } from "react-icons/tb";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import { BiMenu } from 'react-icons/bi';
 import locationPin from '../../Images/NavbarAssets/location.png';
 import accountPin from '../../Images/NavbarAssets/account.png';
 import cartPin from '../../Images/NavbarAssets/cart.png';
-import yellowDot from '../../Images/NavbarAssets/yellowDot.png';
 
-// Import modules
 import NavSmLOGO from '../../Images/NavSmLOGO.png';
 import LOGO from "../../Images/Png-01.png";
-import NavbarCategories from './NavbarCategories';
 import SEARCH from "../../Images/loupe.png";
 import CART from "../../Images/shopping-cart.png";
-//import Signup from '../Login and Signup/Signup';
 import LoginPopup from '../Login and Signup/LoginPopup';
 import NavLinks from './NavLinks';
 import LocationPopUpModel from './LocationPopUp';
 import Cart from './Cart';
 import axios from 'axios';
 
-// Import for Breeds
 import Labrador from '../../Images/StartPage/WelcomeAssets/Dog/labrador.png';
 import Dalmatian from '../../Images/StartPage/WelcomeAssets/Dog/dalmatian.png';
 import Pomeranian from '../../Images/StartPage/WelcomeAssets/Dog/pomeranian.png';
@@ -34,23 +28,26 @@ import Husky from '../../Images/StartPage/WelcomeAssets/Dog/husky.png';
 import Indie from '../../Images/StartPage/WelcomeAssets/Dog/indie.png';
 import Shihtzu from '../../Images/StartPage/WelcomeAssets/Dog/shihtzu.png';
 
-// Import of Lifestage
 import Puppy from '../../Images/NavbarAssets/puppy.png';
 import Adult from '../../Images/NavbarAssets/adult.png';
 import Senior from '../../Images/NavbarAssets/senior.png';
 
-//for small devices/mobile
-const NavSm = ({ login, cart, location }) => {
+
+const NavSm = ({ login, cart, location, setSearchVal, serarchFilter }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   // const [openLocation, setOpenLocation] = useState(false);
   // const openLocationmodal = () => setOpenLocation(true);
 
   const [authUser, setAuthUser] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
+  const handleSearchBar = (props) => {
+    setSearchVal(props);
+  }
+
   return (
     <>
       {/* <LocationPopUpModel isOpen={openLocation} setIsOpen={setOpenLocation} /> */}
-
 
       <div className="flex fixed bg-white z-50 shadow-xl items-center justify-around h-16 w-full px-1">
         <div className="flex items-center w-[12%] justify-center">
@@ -65,8 +62,9 @@ const NavSm = ({ login, cart, location }) => {
         <input type="search"
             className="w-full h-full text-gray-600 placeholder:font-light outline-none bg-[#F4F5F5] placeholder-[#A4A3A6]"
             placeholder="Search"
+            onChange={(e)=> handleSearchBar(e.target.value)}
           />
-          <GoSearch className='text-lg text-[#A4A3A6]' />
+          <GoSearch className='text-lg text-[#A4A3A6]' onClick={serarchFilter} />
         </div>
 
         <div className="h-2/3 w-[33%] flex items-center justify-between gap-3">
@@ -149,7 +147,7 @@ const NavSm = ({ login, cart, location }) => {
 };
 
 // for medium devices/tablets
-const NavMd = ({ login, cart }) => {
+const NavMd = ({ login, cart, serarchFilter }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [authUser, setAuthUser] = useState(true);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
@@ -252,7 +250,7 @@ const NavMd = ({ login, cart }) => {
 };
 
 // for large devices
-const NavLg = ({ location, login, cart }) => {
+const NavLg = ({ location, login, cart, setSearchVal, serarchFilter }) => {
 
   //useState for activating the navbarItem click
   const [navbarDogActive, setNavbarDogActive] = useState(false);
@@ -273,6 +271,10 @@ const NavLg = ({ location, login, cart }) => {
     setSelectedItem(option === selectedItem ? null : option);
     setShowDropdown(true);
   };
+
+  const handleSearchBar = (props) => {
+    setSearchVal(props);
+  }
 
   const getUserData = async()=>{
     try {
@@ -310,8 +312,9 @@ const NavLg = ({ location, login, cart }) => {
           <input type="search"
             className="w-full h-full text-gray-600 placeholder:font-light outline-none bg-[#F4F5F5] placeholder-[#A4A3A6]"
             placeholder="Search"
+            onChange={(e)=> handleSearchBar(e.target.value)}
           />
-          <GoSearch className='text-lg text-[#A4A3A6]' />
+          <GoSearch className='text-lg text-[#A4A3A6]' onClick={serarchFilter} />
         </div>
 
         <div className='flex h-16 w-[30%] text-sm font-semibold tracking-wide  items-center justify-between'>
@@ -438,6 +441,7 @@ const NavLg = ({ location, login, cart }) => {
                     <div className='flex gap-1 justify-center items-center' onMouseLeave={() => setIsDropDownOpen(false)}>
                       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWk8uZf12aY_Sc1TWTOi5ha_4R6E4zUq28AWKGff7iAX5_pFSizOvu1nBeff56OqrovZY&usqp=CAU'
                         className={`flex hover:scale-125 hover:duration-500 items-center justify-center border border-black w-10 h-10 rounded-full cursor-pointer`}
+                        alt=''
                         onMouseEnter={() => setIsDropDownOpen(true)}
                       />
 
@@ -480,7 +484,6 @@ const NavLg = ({ location, login, cart }) => {
           <NavbarCategories />
         </div> */}
       </div>
-      ////
       {/* <div className="w-full flex fixed flex-col z-10 shadow-lg bg-white items-center h-24 pt-1"> 
         <div className="flex items-center justify-around px-6 py-2 h-3/5 w-full">
           <div className="w-1/5 h-24 flex mt-6 items-center pt-4">
@@ -574,16 +577,17 @@ const NavLg = ({ location, login, cart }) => {
 
 const Navbar = () => {
   const [openLocation, setOpenLocation] = useState(false);
-  const openLocationmodal = () => setOpenLocation(true);
-
-  const [openLogin, setIsLogin] = useState(false);
-  const openLoginPopUp = () => setIsLogin(true);
-
   const [open, setOpen] = useState(false);
-  const openCartPopUp = () => setOpen(true);
-
+  const [openLogin, setIsLogin] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [show, setShow] = useState(true);
+  const [searchVal, setSearchVal] = useState('');
+
+  const openLocationmodal = () => setOpenLocation(true);
+  const openLoginPopUp = () => setIsLogin(true);
+  const openCartPopUp = () => setOpen(true);
+
+  
   const ControlNavbar = () => {
     const currentScrollPos = window.scrollY
     if (currentScrollPos > prevScrollPos) {
@@ -593,6 +597,15 @@ const Navbar = () => {
       setShow(true)
     }
     // setPrevScrollPos(currentScrollPos)
+  }
+
+  const serarchFilter = async()=>{
+    try {
+      const response = await axios.post("https://pawpi-back-end.onrender.com/product/search", { searchString: searchVal});
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(()=>{
@@ -605,18 +618,14 @@ const Navbar = () => {
     let currentScrollPosition = 0;
 
     window.addEventListener('scroll', function (e) {
-
-      // Get the new Value
       currentScrollPosition = window.pageYOffset;
 
-      //Subtract the two and conclude
       if (previousScrollPosition < currentScrollPosition) {
         setShow(false);
       } else {
         setShow(true);
       }
 
-      // Update the previous value
       previousScrollPosition = currentScrollPosition;
     });
   }, []);
@@ -628,7 +637,7 @@ const Navbar = () => {
       <nav>
 
         <div className="lg:hidden z-10 mb-16 overflow-hidden">
-          <NavSm login={openLoginPopUp} location={openLocationmodal} cart={openCartPopUp} />
+          <NavSm login={openLoginPopUp} serarchFilter={serarchFilter} location={openLocationmodal} cart={openCartPopUp} searchVal={searchVal} setSearchVal={setSearchVal} />
         </div>
 
 
@@ -640,12 +649,11 @@ const Navbar = () => {
         <div className={`hidden transition-all ease-in-out lg:flex z-10 overflow-hidden ${show ? "fixed top-0 duration-200" : "fixed top-[-100%] duration-1000"}`}>
           <LocationPopUpModel isOpen={openLocation} setIsOpen={setOpenLocation} />
 
-          <NavLg location={openLocationmodal} login={openLoginPopUp} cart={openCartPopUp} />
+          <NavLg location={openLocationmodal} serarchFilter={serarchFilter} login={openLoginPopUp} cart={openCartPopUp} searchVal={searchVal} setSearchVal={setSearchVal} />
         </div>
 
       </nav>
     </>
   )
 }
-// hidden transition-all ease-in-out lg:flex z-50 overflow-hidden ${show? "fixed top-0 duration-1000":"fixed top-[-100%] duration-1000"}
 export default Navbar;
