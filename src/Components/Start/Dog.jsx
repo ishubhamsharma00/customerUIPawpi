@@ -52,7 +52,7 @@ const Dog = () => {
                 <p className='text-[9px] text-slate-400'>Skip</p>
             </Link>
             {selectedBreed && selectedAge && selectedColor &&
-                <Link to='/home/dog' className='flex flex-col items-center absolute right-10 cursor-pointer md:bottom-20 h-12 w-12'>
+                <Link to='/home/dog-product' className='flex flex-col items-center absolute right-10 cursor-pointer md:bottom-20 h-12 w-12'>
                     <img src={moveGif} alt='moveGif' className='h-10 w-10' />
                     <p className='text-[9px] text-slate-400'>Move to Next Page</p>
                 </Link>

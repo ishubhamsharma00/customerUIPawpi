@@ -1,6 +1,6 @@
 // LoadingPage.js
 import React from 'react';
-import loading from '../../Images/loading page/load.gif'; 
+import loading from '../../Images/loading page/loader.gif'; 
 
 const LoadingPage = () => {
   return (

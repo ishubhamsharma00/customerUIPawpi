@@ -2,7 +2,6 @@ import React from 'react'
 import { AiFillStar } from "react-icons/ai";
 import { BiRupee } from "react-icons/bi";
 import {FaHeart} from "react-icons/fa";
-import Dog from '../Dog/Dog';
 const ProductCard = (data) => {
   return (
     <>
