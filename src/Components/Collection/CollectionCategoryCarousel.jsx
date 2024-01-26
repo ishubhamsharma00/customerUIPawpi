@@ -2,11 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import DogCategoryDetails from "./DogCategoryDetails";
 import { PetNextArrow, PetPrevArrow } from "../HeroCarousal/ArrowCarousel";
 import { Link } from "react-router-dom";
+import CollectionCategoryDetails from "./CollectionCategoryDetails";
 
-const DogCategoryCarousel = () => {
+const CollectionCategoryCarousel = () => {
  
     const settingsLg = {
       arrows: true,
@@ -47,7 +47,7 @@ const DogCategoryCarousel = () => {
     <div className="hidden lg:contents">
       <Slider {...settingsLg}>
       {
-        DogCategoryDetails.map((data)=>(
+        CollectionCategoryDetails.map((data)=>(
               <div className="h-60 w-full pt-20 pl-12 pr-12">
                 <Link to={`/dogs/${data.id}`} className="h-full w-full">
                   <div className="h-32 w-32 rounded-3xl relative" style={{backgroundColor:data.backgroundColor}}>
@@ -69,7 +69,7 @@ const DogCategoryCarousel = () => {
     <div className="hidden md:contents lg:hidden">
       <Slider {...settingsMd}>
       {
-        DogCategoryDetails.map((data)=>(
+        CollectionCategoryDetails.map((data)=>(
           <div className="h-56 w-full pt-16 pl-10 pr-12">
           <Link to={`/dogs/${data.id}`} className="h-full w-full">
             <div className="h-28 w-32 rounded-3xl relative" style={{backgroundColor:data.backgroundColor}}>
@@ -91,7 +91,7 @@ const DogCategoryCarousel = () => {
     <div className="md:hidden">
       <Slider {...settingsSm}>
       {
-        DogCategoryDetails.map((data)=>(
+        CollectionCategoryDetails.map((data)=>(
           <div className="h-52 w-full pt-14 mt-6 mx-3">
           <Link to={`/dogs/${data.id}`} className="h-full w-full">
             <div className="h-24 w-28 rounded-3xl relative" style={{backgroundColor:data.backgroundColor}}>
@@ -112,4 +112,4 @@ const DogCategoryCarousel = () => {
     </>
   );
 };
-export default DogCategoryCarousel;
+export default CollectionCategoryCarousel;

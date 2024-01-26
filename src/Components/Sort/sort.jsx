@@ -3,7 +3,7 @@
 // import { BiChevronDown } from "react-icons/bi";
 
 import { useState } from "react";
-import CardDetails from "../Dog/DogCardDetail";
+import CardDetails from "../Collection/CollectionCardDetail";
 // function classNames(...classes) {
 //   return classes.filter(Boolean).join(" ");
 // }
