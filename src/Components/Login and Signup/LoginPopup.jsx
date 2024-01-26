@@ -5,7 +5,6 @@ import AnimalsDoodle from '../../Images/Doodles/animalsdoodle.png';
 import { FcGoogle } from 'react-icons/fc';
 
 import { Link } from 'react-router-dom';
-import Signup from './Signup';
 import axios from 'axios';
 //import LoginPopupBackground from '../../Images/LoginPopupEssentials/LoginPopupBackground.png';
 
@@ -30,7 +29,7 @@ export default function LoginPopup({ isOpen, setIsOpen }) {
       try {
         const response = await axios.post("https://pawpi-back-end.onrender.com/auth/signin", { credentials: user });
         console.log(response)
-        if (response.status = 200) {
+        if (response.status === 200) {
           alert("login success");
           setIsOpen(false);
           localStorage.setItem("_id", response.data._id);
@@ -42,10 +41,10 @@ export default function LoginPopup({ isOpen, setIsOpen }) {
   }
 
   const googleLogin = () => {
-    window.location.href = "http://localhost:4000/auth/google"
+    window.location.href = "https://pawpi-back-end.onrender.com/auth/google"
   }
   const facebookLogin = () => {
-    window.location.href = "http://localhost:4000/auth/facebook"
+    window.location.href = "https://pawpi-back-end.onrender.com/auth/facebook"
   }
   const handlelogin = (e) => {
     setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
