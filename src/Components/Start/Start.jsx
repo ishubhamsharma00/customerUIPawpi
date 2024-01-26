@@ -14,6 +14,7 @@ const Start = () => {
     //dog animation useState
     const [dogAnimation,setDogAnimation]=useState(false);
     const [catAnimation,setCatAnimation]=useState(false);
+
     return (
         <div className='overflow-hidden w-screen px-8 py-4 pb-8 h-screen flex flex-col items-center justify-between'>
             <div className='w-full h-[10%]'>
@@ -22,7 +23,7 @@ const Start = () => {
                     className='h-full m-auto' />
             </div>
 
-            <Link to='/start/welcome/dog' className="w-full h-[41%] cursor-pointer relative" onMouseEnter={()=>setDogAnimation(true)} onMouseLeave={()=>setDogAnimation(false)}>
+            <Link to='/welcome/dog' className="w-full h-[41%] cursor-pointer relative" onMouseEnter={()=>setDogAnimation(true)} onMouseLeave={()=>setDogAnimation(false)}>
                 <img src={backgroundDogBanner} alt='backgroundImageDog' className='h-full w-full' />
                 <img src={dogImage} alt='dogImage' className={`absolute z-10 left-[8%] -bottom-[44px] h-[75%] duration-700 ${dogAnimation ? 'translate-x-20 -translate-y-6 scale-150 duration-700':''}`} />
                 <div className="absolute left-[30%] top-8 h-[60%]">
@@ -37,7 +38,7 @@ const Start = () => {
                 </div>
             </Link>
 
-            <Link to='/start/welcome/cat' className="w-full h-[41%] cursor-pointer relative" onMouseEnter={()=>setCatAnimation(true)} onMouseLeave={()=>setCatAnimation(false)}>
+            <Link to='/welcome/cat' className="w-full h-[41%] cursor-pointer relative" onMouseEnter={()=>setCatAnimation(true)} onMouseLeave={()=>setCatAnimation(false)}>
                 <img src={backgroundImageCat} alt='backgroundImageCat' className='h-full w-full' />
                 <img src={catImage} alt='dogImage' className={`absolute right-[8%] -bottom-[9px] h-[85%] duration-700 ${catAnimation ? '-translate-x-20 -translate-y-[53px] scale-150 duration-700':''}`} />
                 <div className="absolute right-[30%] top-8 h-[60%]">
@@ -52,7 +53,7 @@ const Start = () => {
                 </div>
             </Link>
 
-            <Link to='/' className='flex flex-col items-center absolute right-10 top-5 h-12 w-12'>
+            <Link to='/home' className='flex flex-col items-center absolute right-10 top-5 h-12 w-12'>
                 <img src={homeGif} alt='homeGif' className='h-10 w-10'/>
                 <p className='text-[9px] text-slate-400'>Skip</p>
             </Link>

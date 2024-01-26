@@ -26,11 +26,47 @@ import { Collection } from "./pages";
 function App() {
   return (
     <>
-      <DefaultHOC path="/" exact component={Home} />
+      <DefaultHOC path="/home" exact component={Home} />
 
       <CheckoutHOC path="/start/welcome" exact component={Start} />
       <CheckoutHOC path="/start/welcome/dog" exact component={StartDog} />
       <CheckoutHOC path="/auth/checkout" exact component={AuthPage} />
+
+      <CheckoutHOC path="/" exact component={Start} />
+      <CheckoutHOC path="/welcome/dog" exact component={StartDog} />
+      <CheckoutHOC path="/welcome/cat" exact component={StartDog} />
+
+      <CheckoutHOC path="/auth/checkout" exact component={AuthPage} />
+
+
+      <DefaultHOC path="home/:type" exact component={DefaultHome} />
+
+
+      <DefaultHOC path="/dog/:type" exact component={DefaultDog} />
+      <DefaultHOC path="/dog/:type/:subtype" exact component={DefaultDog} />
+
+      <DefaultHOC path="/cat/:type" exact component={DefaultCat} />
+      <DefaultHOC path="/cat/:type/:subtype" exact component={DefaultCat} />
+
+      <DefaultHOC path="/breed/:type" exact component={DefaultBreed} />
+      <DefaultHOC path="/breed/:type/:subtype" exact component={DefaultBreed} />
+
+      <DefaultHOC path="/brand/:type" exact component={DefaultBrands} />
+      <DefaultHOC path="/brand/:type/:subtype" exact component={DefaultBrands} />
+
+      <DefaultHOC path="/lifestage/:type" exact component={DefaultLifeStage} />
+      <DefaultHOC path="/lifestage/:type/:subtype" exact component={DefaultLifeStage} />
+
+
+      <DefaultHOC path="/product/:pt" exact component={DefaultHome} />
+
+      {/* 
+      pt = product type (like - food, toys, extras..etc) 
+      */}
+
+      {/* Access product by using product id */}
+      <DefaultHOC path="/products/:id" exact component={HeroProductPage} />
+
 
       <DefaultHOC path="/user/:at" exact component={AccountPage} />
 
@@ -50,6 +86,7 @@ function App() {
       <CheckoutHOC path="/blog" exact component={Blog} /> */}
 
 
+{/* Routing Section */}
 
       <CheckoutHOC path="/newUser/signup" exact component={Signup} />
       <DefaultHOC path="/checkout/:ct" exact component={AuthPage} />
