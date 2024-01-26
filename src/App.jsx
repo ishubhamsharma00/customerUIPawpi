@@ -26,6 +26,7 @@ import Contact from "./Components/Support/Contact";
 import Vet from "./Components/Vet/Vet";
 import Blog from "./Components/Blog/Blog";
 import Signup from "./Components/Login and Signup/Signup";
+import LoadingPage from "./Components/LoadingPage/Loadingpage";
 
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
       <CheckoutHOC path="/" exact component={Start} />
       <CheckoutHOC path="/welcome/dog" exact component={StartDog} />
       <CheckoutHOC path="/welcome/cat" exact component={StartDog} />
+      {/* <CheckoutHOC path="/welcome/load" exact component={LoadingPage} /> */}
+
 
       <CheckoutHOC path="/auth/checkout" exact component={AuthPage} />
 
