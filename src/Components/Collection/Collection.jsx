@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 import CollectionCategoryCarousel from "./CollectionCategoryCarousel";
 import { useProductContext } from "../../context";
 import LoadingPage from "../LoadingPage/Loadingpage";
+import WoofBanner from '../../Images/DogsPage/woof.png'
+import DogSuppliesBanner from '../../Images/DogsPage/dogsupplies.png'
+
 
 const CollectionComponent = () => {
   const [openSort, setOpenSort] = useState(false);
@@ -35,7 +38,6 @@ const CollectionComponent = () => {
     }
   };
 
-  console.log('products', products)
 
   if(!products ){
     return(
@@ -117,7 +119,7 @@ const CollectionComponent = () => {
 
         <div className="w-full h-[70vh]">
           <img
-            src={products[0].photos[0]}
+            src={DogSuppliesBanner}
             alt="DogSuppliesBanner"
             className="w-full h-full"
           />
@@ -198,9 +200,9 @@ const CollectionComponent = () => {
                 </Link>
               ))}
             </div>
-
-            <div className="w-full h-full">
-              <img src={products[0]?.photos[0]} alt="DogWoofBanner" className="" />
+ 
+            <div className="w-full h-full py-4 lg:py-8">
+              <img src={WoofBanner} alt="DogWoofBanner" className="" />
             </div>
 
             <div className=" grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-8 py-3 px-2">
