@@ -324,7 +324,7 @@ const NavLg = ({ location, login, cart, setSearchVal, serarchFilter }) => {
               onMouseEnter={() => toggleDropdown(item.name)}
               onMouseLeave={() => { toggleDropdown(null); setShowDropdown(false) }}
             >
-              <Link to={`/collections/${item.id}`} className='h-full px-4 flex items-center cursor-pointer'>{item.name} KKKK</Link>
+              <Link to={`/collections/${item.id}`} className='h-full px-4 flex items-center cursor-pointer'>{item.name}</Link>
               {item.name === selectedItem && showDropdown && (
                 <>
                   <div className='h-2 w-2 relative -top-3 left-0 rounded-full bg-yellow-300'></div>
