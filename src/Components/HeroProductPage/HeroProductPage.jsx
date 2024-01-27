@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {RiShareForwardFill} from 'react-icons/ri';
 import TestingImage from '../../Images/foodtesting.png';
 import { FaHeart,FaMinus,FaPlus } from 'react-icons/fa';
@@ -20,13 +20,22 @@ import TestingImage6 from '../../Images/DogsPage/dogsupplies.png';
 import TestingImage7 from '../../Images/DogsPage/food.png';
 import TestingImage8 from '../../Images/DogsPage/toys.png';
 import {BsChevronDown, BsChevronUp} from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import codIcon from '../../Images/codIcon.png';
 import exchangeIcon from '../../Images/exchangeIcon.png';
 import securePaymentIcon from '../../Images/securePaymentIcon.png';
+import { useProductContext } from '../../context';
+import LoadingPage from '../LoadingPage/Loadingpage';
 
 const HeroProductPage = () => {
+
+    const { productId } = useParams();
+    const [productData, setProductData] = useState();
+    const [loading, setLoading] = useState(true);
+
+
+    const { getProductData } = useProductContext();
 
     // useState for main-image and sub-images
     const [mainImage, setMainImage] = useState(TestingImage);
@@ -189,6 +198,23 @@ const HeroProductPage = () => {
         },
     
     ];
+
+    const getProductDataFun = async() => {
+        setLoading(true);
+        const response = await getProductData(productId);
+        setProductData(response.data);
+        setLoading(false);
+    }
+
+    useEffect(()=>{
+        getProductDataFun()
+    }, [productId])
+
+    if(loading){
+        return(
+            <LoadingPage />
+        )
+    }
 
   return (
     <div className='md:mt-24 pt-2 h-full w-full flex flex-col gap-6 bg-white md:px-6 px-2'>

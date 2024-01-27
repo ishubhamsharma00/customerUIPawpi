@@ -7,6 +7,7 @@ import Filterbar from "../FilterSidebar/Filterbar";
 import { Link } from "react-router-dom";
 import CollectionCategoryCarousel from "./CollectionCategoryCarousel";
 import { useProductContext } from "../../context";
+import LoadingPage from "../LoadingPage/Loadingpage";
 
 const CollectionComponent = () => {
   const [openSort, setOpenSort] = useState(false);
@@ -38,7 +39,7 @@ const CollectionComponent = () => {
 
   if(!products ){
     return(
-      <h1 className="text-6xl">Loading.....</h1>
+      <LoadingPage />
     )
   }
 
@@ -145,7 +146,7 @@ const CollectionComponent = () => {
               { products && products.length > 0 &&  products.map((data, index) => (
                 <Link
                   key={index}
-                  to={"/products/11"}
+                  to={`/products/${data._id}`}
                   className="h-full flex flex-col   cursor-pointer w-full  items-center justify-center bg-[#FAF9F9] outline-none border-2 rounded-xl "
                 >
                   <div className="h-40 rounded-3xl w-full flex mt-3 px-2">
@@ -206,7 +207,7 @@ const CollectionComponent = () => {
               {products && products.length > 0 && products.map((data, index) => (
                 <Link
                   key={index}
-                  to={`/products/${data._id}`}
+                  to={`/product/${data._id}`}
                   className="h-full flex flex-col  cursor-pointer w-full  items-center justify-center bg-[#FAF9F9] outline-none border-2 rounded-xl "
                 >
                   <div className="h-40 rounded-3xl w-full flex mt-3 px-2">

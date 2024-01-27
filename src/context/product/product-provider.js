@@ -23,8 +23,20 @@ export const ProductProvider = ({children}) => {
     }
   };
 
+  const getProductData = async (props) => {
+    try {
+      const productResponse = await axios.get(`https://pawpi-back-end.onrender.com/product/find/${props}`);
+      if(productResponse.status === 200){
+        return productResponse.data;
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  };
+
+
   return(
-    <ProductContext.Provider value={{products,banners, setProducts, getAllProducts}}>
+    <ProductContext.Provider value={{products,banners, setProducts, getAllProducts, getProductData}}>
       {children}
     </ProductContext.Provider>
   )
