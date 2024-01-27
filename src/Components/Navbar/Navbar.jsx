@@ -333,9 +333,9 @@ const NavLg = ({ location, login, cart, setSearchVal, serarchFilter }) => {
                       <div className='h-full w-4/5 flex-wrap flex justify-start'>
                         {item.sublinks.map((subItems) =>
                           <div className='flex my-4 flex-col w-1/5'>
-                            <Link to={subItems.sublinksid} className='hover:font-extrabold hover:duration-200 duration-200 tracking-wider my-1'>{subItems.Head}</Link>
+                            <Link to={`/collections/${subItems.sublinksid}`} className='hover:font-extrabold hover:duration-200 duration-200 tracking-wider my-1'>{subItems.Head}</Link>
                             <div className='font-normal text-xs'>{subItems.sublink.map((subSubItems) =>
-                              <Link to={`${subItems.sublinksid}/${subSubItems.sublinkid}`} className='flex flex-col hover:underline hover:underline-offset-1'>{subSubItems.name}</Link>)}
+                              <Link to={`collections/${subSubItems.sublinkid}`} className='flex flex-col hover:underline hover:underline-offset-1'>{subSubItems.name}</Link>)}
                             </div>
                           </div>
                         )}

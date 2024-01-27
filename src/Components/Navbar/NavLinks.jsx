@@ -28,7 +28,7 @@ const NavLinks = (props) => {
                                 alt="icons"
                                 className="h-8 w-8 p-2 lg:hidden bg-amber-600 rounded-full"
                                 />
-                                <Link to={link.id} className='hidden lg:contents'>{link.name}</Link>
+                                <Link to={`/collections/${link.id}`} className='hidden lg:contents'>{link.name}</Link>
                                 <h1 className="lg:hidden md:text-xl ">{link.name}</h1>
                             </div>
                             
@@ -55,7 +55,7 @@ const NavLinks = (props) => {
                                             link.sublinks.map((mysublinks)=>(
                                                 <div key={mysublinks.sublinksid}>
                                                     <h1 className='cursor-pointer text-lg font-paw'>
-                                                        <Link to ={mysublinks.sublinksid}>{
+                                                        <Link to ={`/collections/${mysublinks.sublinksid}`}>{
                                                             mysublinks.Head
                                                         }
                                                         </Link>
@@ -64,7 +64,7 @@ const NavLinks = (props) => {
                                                     {
                                                         mysublinks.sublink.map((slink)=>(  
                                                             <li className='text-sm font-paw pl-2 mt-1' key={slink.sublinkid} >
-                                                                <Link to={slink.link}
+                                                                <Link to={`/collections/${slink.link}`}
                                                                 className="text-gray-500 hover:border-b-2 hover:border-purple-500 hover:duration-100" >
                                                                     {slink.name}
                                                                 </Link>
@@ -108,7 +108,7 @@ const NavLinks = (props) => {
                                             slinks.sublink.map((slink)=>(
                                                 <li className='py-1 pl-16 md:pl-20 text-gray-500 text-base font-paw md:text-md'>
                                                     
-                                                    <Link to={slink.link}> 
+                                                    <Link to={`/collections/${slink.link}`}> 
                                                         {slink.name}
                                                     </Link>
                                                 </li>
