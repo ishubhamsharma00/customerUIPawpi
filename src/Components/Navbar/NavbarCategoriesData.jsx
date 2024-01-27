@@ -169,7 +169,7 @@ export const links = [
     {
       name: "Cat",
       submenu: true,
-      id : "/cat-products",
+      id : "cat-products",
       icon: CatIcon,
       sublinks: [
         {
@@ -391,7 +391,7 @@ export const links = [
     {
       name: "Breeds",
       submenu: true,
-      id : "/breed",
+      id : "breed",
       icon: BreedIcon,
       sublinks: [
         {

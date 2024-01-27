@@ -324,7 +324,7 @@ const NavLg = ({ location, login, cart, setSearchVal, serarchFilter }) => {
               onMouseEnter={() => toggleDropdown(item.name)}
               onMouseLeave={() => { toggleDropdown(null); setShowDropdown(false) }}
             >
-              <Link to={item.id} className='h-full px-4 flex items-center cursor-pointer'>{item.name}</Link>
+              <Link to={`/collections/${item.id}`} className='h-full px-4 flex items-center cursor-pointer'>{item.name} KKKK</Link>
               {item.name === selectedItem && showDropdown && (
                 <>
                   <div className='h-2 w-2 relative -top-3 left-0 rounded-full bg-yellow-300'></div>
@@ -335,7 +335,7 @@ const NavLg = ({ location, login, cart, setSearchVal, serarchFilter }) => {
                           <div className='flex my-4 flex-col w-1/5'>
                             <Link to={`/collections/${subItems.sublinksid}`} className='hover:font-extrabold hover:duration-200 duration-200 tracking-wider my-1'>{subItems.Head}</Link>
                             <div className='font-normal text-xs'>{subItems.sublink.map((subSubItems) =>
-                              <Link to={`collections/${subSubItems.sublinkid}`} className='flex flex-col hover:underline hover:underline-offset-1'>{subSubItems.name}</Link>)}
+                              <Link to={`/collections/${subSubItems.sublinkid}`} className='flex flex-col hover:underline hover:underline-offset-1'>{subSubItems.name}</Link>)}
                             </div>
                           </div>
                         )}
